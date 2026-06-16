@@ -422,7 +422,7 @@ footer a:hover { color: var(--accent); }
 
 /* ── WF CARD ── */
 .wf-card { background: var(--bg); border-right: var(--bw) solid var(--border); border-bottom: var(--bw) solid var(--border); overflow: hidden; cursor: pointer; transition: background 0.15s; display: flex; flex-direction: column; }
-.wf-card:hover { background: var(--muted); }
+.wf-card:hover { background: var(--fg); }
 .wf-card:focus-visible { outline: var(--bw) solid var(--accent); outline-offset: -2px; }
 .wf-cover { height: 80px; }
 .wf-card-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
@@ -616,3 +616,64 @@ footer a:hover { color: var(--accent); }
   .wf-grid { grid-template-columns: 1fr; }
   .download-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── REFINEMENTS ── */
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed; top: 0; left: 0;
+  height: 2px; background: var(--accent);
+  z-index: 9999; width: 0%;
+  transition: width 0.08s linear;
+  pointer-events: none;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* Nav active section */
+.nav-links a.nav-active { color: var(--accent); }
+
+/* Hero accent word */
+.page-hero h1 .accent { color: var(--accent); }
+
+/* WF card child colours on dark hover */
+.wf-card:hover .wf-title     { color: var(--bg); }
+.wf-card:hover .wf-desc      { color: rgba(255,255,255,0.5); }
+.wf-card:hover .wf-author    { color: rgba(255,255,255,0.38); }
+.wf-card:hover .wf-tool-more { color: rgba(255,255,255,0.38); }
+
+/* Built-at card hover — invert */
+.built-at-card { transition: background 0.15s; }
+.built-at-card:hover { background: var(--fg); }
+.built-at-card:hover .built-at-co,
+.built-at-card:hover .built-at-period { color: rgba(255,255,255,0.88); }
+.built-at-card:hover .built-at-role   { color: var(--accent); }
+.built-at-card:hover .built-at-facts li { color: rgba(255,255,255,0.72); }
+.built-at-card:hover .built-at-facts li::before { color: var(--accent); }
+
+/* Skill card number */
+.skill-num {
+  font-family: var(--mono); font-size: 10px; font-weight: 700;
+  color: var(--accent); letter-spacing: 0.1em; display: block;
+  margin-bottom: 4px;
+}
+.skill-card:hover .skill-num { color: rgba(255,255,255,0.55); }
+
+/* Modal entrance animation */
+.wf-modal-panel {
+  animation: modalSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Engine panel left accent */
+.engine-panel { border-left-color: var(--accent); }

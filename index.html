@@ -11,6 +11,8 @@
 </head>
 <body>
 
+  <div id="scroll-progress" aria-hidden="true"></div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <nav aria-label="Primary">
@@ -38,9 +40,9 @@
   <header class="page-hero">
     <div class="container container-wide">
       <p class="eyebrow">Rasul Shaikh · AI GTM Engineer</p>
-      <h1>Signal to pipeline, end to end</h1>
+      <h1><span class="accent">Signal</span> to pipeline, end to end</h1>
       <p class="hero-sub">Engineers the full revenue motion - signal architecture, multi-channel outbound, demand gen, and pipeline attribution - then ships the Python agents and MCPs that make it run without manual coordination. $550K+ revenue and $3.5M+ pipeline across 3 B2B scale-ups.</p>
-      <dl class="metrics-bar metrics-inline">
+      <dl class="metrics-bar">
         <div><dt>Revenue built</dt><dd>$550K+</dd></div>
         <div><dt>Pipeline</dt><dd>$3.5M+</dd></div>
         <div><dt>Deploy time</dt><dd>3 days</dd></div>
@@ -53,7 +55,7 @@
   <section class="section engine-section" id="engine">
     <div class="container container-wide">
       <p class="section-label">GTM Context Engine</p>
-      <h2>Five playbooks, built and owned in-repo</h2>
+      <h2 class="reveal">Five playbooks, built and owned in-repo</h2>
       <p class="section-sub">Not links. Five production motions built and running across 300+ mailboxes. Schemas, n8n workflows, and generators live in 9 open-source repos. Route a motion + signal to get steps, tier, repo, and copy hook.</p>
 
       <div class="engine-motion-cards" id="engine-motion-cards"></div>
@@ -172,40 +174,47 @@
   <section class="section section-alt" id="skills">
     <div class="container container-wide">
       <p class="section-label">Playbook Library</p>
-      <h2>Seven frameworks, built in-repo</h2>
+      <h2 class="reveal">Seven frameworks, built in-repo</h2>
       <p class="section-sub">Production GTM systems built across 3+ years at B2B scale-ups: AI search, IT services, cybersecurity. Running across 250+ sending domains, 300+ mailboxes, 9 open-source repos.</p>
       <div class="skills-grid">
         <a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">01.</span>
           <h3>Signal Architecture</h3>
           <p>Multi-source signal capture: job changes, funding, hiring, website visitors, tech stack changes, competitor reviews. Tier scoring in Clay, auto-routed to the right playbook.</p>
           <span class="card-link">View repo</span>
         </a>
         <a href="https://github.com/rasulshaikh/gtm-clay-formula-library" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">02.</span>
           <h3>Clay Enrichment</h3>
           <p>6 production IIFE formulas: lead scoring, ICP fit, email quality, personalization hooks, reply intent classifier. 9-step waterfall for 90%+ email coverage.</p>
           <span class="card-link">View repo</span>
         </a>
         <a href="https://github.com/rasulshaikh/gtm-email-cadences" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">03.</span>
           <h3>Cold Email Systems</h3>
           <p>23 YAML cadences across signal, persona, vertical, and stage. MiniMax-generated hook per lead. 80-word gate enforced before upload. 1.5%+ reply rate in production.</p>
           <span class="card-link">View repo</span>
         </a>
         <a href="https://github.com/rasulshaikh/gtm-list-quality-scorecard" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">04.</span>
           <h3>List Quality Gate</h3>
           <p>Grade any list A+ to F across 8 dimensions. n8n blocks below grade B and alerts Slack. &lt;1% bounce enforced. Python scorecard running before every Smartlead upload.</p>
           <span class="card-link">View repo</span>
         </a>
         <a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">05.</span>
           <h3>n8n Automation</h3>
           <p>6 production workflows: full pipeline orchestrator, pre-send list gate, weekly deliverability audit, Clay push pipeline, content quality gate, signal activation.</p>
           <span class="card-link">View repo</span>
         </a>
         <a href="https://github.com/rasulshaikh/gtm-founder-led-loop" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">06.</span>
           <h3>Demand Gen Loop</h3>
           <p>Founder-led content loop: LinkedIn engager capture, Hot/Warm/Nurture scoring, warm outbound via MiniMax hooks, call mining for next content angle. SEMrush/Ahrefs stack-displacement targeting.</p>
           <span class="card-link">View repo</span>
         </a>
         <a href="https://github.com/rasulshaikh/gtm-ai-lead-scorer" target="_blank" rel="noopener" class="skill-card">
+          <span class="skill-num">07.</span>
           <h3>AI Lead Scoring</h3>
           <p>0-100 composite score: firmographic + technographic + behavioral. Claude Haiku batch processing. Qualification cut from 48h to 4h. Auto-routes to 4 Slack channels by signal type.</p>
           <span class="card-link">View repo</span>
@@ -217,7 +226,7 @@
   <section class="section" id="about">
     <div class="container container-wide">
       <p class="section-label">About</p>
-      <h2>GTM intelligence layer, end to end</h2>
+      <h2 class="reveal">GTM intelligence layer, end to end</h2>
       <div class="about-bio-grid">
         <div class="about-bio-text">
           <p>3+ years engineering full-stack GTM systems at B2B scale-ups in AI search, IT services, and cybersecurity. Raw signal in — Gong calls, CRM notes, intent data, content engagement, product signals. Clean, scored, routed action out. No weekly resets. Every interaction makes the system smarter.</p>
@@ -237,7 +246,7 @@
       </div>
       <div class="built-at">
         <p class="about-arch-label">Built at</p>
-        <div class="built-at-grid">
+        <div class="built-at-grid reveal">
           <div class="built-at-card">
             <span class="built-at-co">Omnibound AI</span>
             <span class="built-at-role">AI GTM Engineer</span>
@@ -310,7 +319,7 @@
   <section class="section section-downloads" id="downloads">
     <div class="container center container-wide">
       <p class="section-label">Exports</p>
-      <h2>PDFs and JSON</h2>
+      <h2 class="reveal">PDFs and JSON</h2>
       <div class="download-grid">
         <a href="profile/rasul-shaikh-gtm-engineer-2026.pdf" class="download-card"><span class="download-type">PDF</span><span class="download-title">Resume 2026</span><span class="download-desc">Full-stack GTM (Omnibound + RemoteState)</span></a>
         <a href="profile/resume-fullstack.md" class="download-card"><span class="download-type">MD</span><span class="download-title">Resume source</span><span class="download-desc">Full-stack markdown</span></a>
@@ -363,5 +372,40 @@
   </script>
   <script src="app.js"></script>
   <script src="engine.js"></script>
+  <script>
+    // Scroll progress bar
+    const prog = document.getElementById('scroll-progress');
+    if (prog) {
+      window.addEventListener('scroll', () => {
+        const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+        prog.style.width = Math.min(pct, 100) + '%';
+      }, { passive: true });
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length) {
+      const revealIO = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+      revealEls.forEach(el => revealIO.observe(el));
+    }
+
+    // Nav active section highlight
+    const navSections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    if (navSections.length && navLinks.length) {
+      const navIO = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            navLinks.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === '#' + e.target.id));
+          }
+        });
+      }, { rootMargin: '-30% 0px -65% 0px', threshold: 0 });
+      navSections.forEach(s => navIO.observe(s));
+    }
+  </script>
 </body>
 </html>
