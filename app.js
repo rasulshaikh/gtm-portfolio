@@ -140,6 +140,17 @@
         <p class="wf-modal-desc">${wf.description}</p>
         ${metrics ? `<dl class="wf-modal-metrics">${metrics}</dl>` : ''}
         ${steps ? `<h3>Steps</h3><ol class="wf-steps">${steps}</ol>` : ''}
+        ${(wf.formulas || []).length ? `
+        <div class="wf-formulas">
+          <h3>Clay formulas</h3>
+          <div class="wf-formula-list">
+            ${(wf.formulas).map(f => `
+            <div class="wf-formula-item">
+              <span class="wf-formula-label">${f.label}</span>
+              <pre class="wf-formula-code">${f.code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>
+            </div>`).join('')}
+          </div>
+        </div>` : ''}
         ${(wf.copy_preview || []).length ? `
         <div class="wf-copy-preview">
           <h3>Copy preview</h3>
