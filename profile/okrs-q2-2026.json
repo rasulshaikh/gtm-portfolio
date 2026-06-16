@@ -1,0 +1,40 @@
+{
+  "quarter": "Q2 2026",
+  "team": "GTM Engineering",
+  "north_star": "Positive reply rate on signal-led outbound",
+  "sets": [
+    {
+      "id": "A",
+      "label": "Quality Gates",
+      "objective": "Nothing reaches a prospect or CMS without passing an automated gate",
+      "key_results": [
+        "100% of lead lists grade B+ before Smartlead upload",
+        "Clay col 60 validator PASS rate >= 95% on exports",
+        "Content gate blocks 100% of near-duplicates (similarity >= 0.55) before publish"
+      ],
+      "rationale": "Volume without gates burns domains and SEO. Gates make scale safe."
+    },
+    {
+      "id": "B",
+      "label": "Deploy Velocity",
+      "objective": "Ship a new campaign in 3 days from ICP sign-off, not 2 weeks",
+      "key_results": [
+        "New campaign live in <= 3 business days from direction approval",
+        "144-variant copy assembled in Clay with zero manual paste",
+        "n8n push failure rate < 2% across Smartlead and HeyReach"
+      ],
+      "rationale": "Speed wins experiments. Automation removes the coordination tax."
+    },
+    {
+      "id": "C",
+      "label": "Compounding Loop",
+      "objective": "Turn replies, calls, and content into the next signal cycle",
+      "key_results": [
+        "80% of Hot-tier engagers contacted within 24 hours",
+        "4 founder posts per month sourced from call mining",
+        "Positive reply rate >= 2% on signal-led Omnibound campaigns"
+      ],
+      "rationale": "Outbound and content are one system. The loop is the moat."
+    }
+  ]
+}

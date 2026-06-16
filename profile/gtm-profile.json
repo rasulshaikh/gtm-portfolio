@@ -1,5 +1,5 @@
 {
-  "profile_version": "1.0",
+  "profile_version": "2.0",
   "updated": "2026-06-16",
   "name": "Rasul Shaikh",
   "title": "AI GTM Engineer",
@@ -10,7 +10,7 @@
     "github": "https://github.com/rasulshaikh",
     "linkedin": "https://linkedin.com/in/rasulshaikh"
   },
-  "headline": "Engineers the full revenue motion — signal architecture, multi-channel outbound, demand gen, and pipeline attribution — then ships the production Python, AI agents, and MCPs that make it run without human coordination.",
+  "headline": "Signal to pipeline, with gates at every handoff. Outbound systems end to end: capture, Clay intel, copy assembly, list QA, n8n routing, post-send health.",
   "metrics": {
     "revenue_generated": "$550K+",
     "pipeline_generated": "$3.5M+",
@@ -72,45 +72,19 @@
   },
   "workflow": {
     "name": "Signal-to-Pipeline Engine",
-    "phases": [
-      {
-        "id": 1,
-        "name": "Signal Capture",
-        "tools": ["PhantomBuster", "LinkedIn", "Crunchbase", "Trigify", "HeyReach"],
-        "output": "engagers.csv / signal feed"
-      },
-      {
-        "id": 2,
-        "name": "Enrich & Qualify",
-        "tools": ["Apollo", "Clay", "Prospeo", "Firecrawl", "Deepline"],
-        "output": "enriched lead table"
-      },
-      {
-        "id": 3,
-        "name": "Score & Route",
-        "tools": ["gtm-ai-lead-scorer", "Clay ICP formulas", "founder-led-loop/02"],
-        "output": "Hot / Warm / Nurture tiers"
-      },
-      {
-        "id": 4,
-        "name": "Personalize Copy",
-        "tools": ["MiniMax Text-01", "gtm-cold-email-personalizer", "Clay formulas"],
-        "output": "hooks, subject lines, body variants"
-      },
-      {
-        "id": 5,
-        "name": "Sequence & Send",
-        "tools": ["gtm-email-cadences", "Smartlead", "Instantly", "HeyReach"],
-        "output": "live campaigns"
-      },
-      {
-        "id": 6,
-        "name": "Mine & Compound",
-        "tools": ["founder-led-loop/04", "call notes", "reply classifier"],
-        "output": "content angles → next signal cycle"
-      }
+    "phases": 7,
+    "phase_list": [
+      {"id": 1, "name": "Capture Signal", "output": "engagers.csv"},
+      {"id": 2, "name": "Enrich", "output": "enriched_table"},
+      {"id": 3, "name": "Score and Route", "output": "Hot/Warm/Nurture"},
+      {"id": 4, "name": "Assemble Copy", "output": "variants + hooks"},
+      {"id": 5, "name": "Gate Before Send", "output": "PASS or blocked"},
+      {"id": 6, "name": "Send", "output": "live campaigns"},
+      {"id": 7, "name": "Mine and Loop", "output": "content angles"}
     ]
   },
+  "okrs": "profile/okrs-q2-2026.json",
+  "copy_framework": "profile/copy-framework.json",
   "copy_library": {
     "email_cadences": {
       "repo": "gtm-email-cadences",
@@ -165,7 +139,14 @@
       "url": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
       "path": "WORKFLOW.md + formulas/ + prompts/",
       "count": 60,
-      "description": "60-column Clay workflow: intel → citation → copy → purple-safety validation → Smartlead/HeyReach export"
+      "description": "60-column Clay workflow: intel to citation to copy to purple-safety validation to Smartlead/HeyReach export"
+    },
+    "content_gate": {
+      "repo": "gtm-neevcloud-content-gate",
+      "url": "https://github.com/rasulshaikh/gtm-neevcloud-content-gate",
+      "path": "run_gate.py",
+      "checks": 6,
+      "format": "Python PASS/FLAG/FAIL"
     },
     "list_quality_scorecard": {
       "repo": "gtm-list-quality-scorecard",
@@ -227,6 +208,34 @@
       "name": "gtm-omnibound-clay-workflow",
       "url": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
       "description": "60-column Clay workflow with purple-safety validation"
+    },
+    {
+      "name": "gtm-neevcloud-content-gate",
+      "url": "https://github.com/rasulshaikh/gtm-neevcloud-content-gate",
+      "description": "6-check content quality gate for high-volume publishing"
+    }
+  ],
+  "copy_case_studies": [
+    {
+      "client": "Omnibound AI",
+      "angle": "Signal-Led v14",
+      "strategy": "News type maps to buyer-behavior opener",
+      "variants": "144 E1 via hash-seeded Clayscript",
+      "reply_rate": "1.5%+"
+    },
+    {
+      "client": "RemoteState",
+      "angle": "Billboard + Persona",
+      "strategy": "Whole-offer subject lines for VP Eng and CTO",
+      "variants": "23 cadences with persona routing",
+      "arr_6mo": "$180K+"
+    },
+    {
+      "client": "NeevCloud",
+      "angle": "Content Gate",
+      "strategy": "QA before CMS, not after publish",
+      "checks": 6,
+      "proof": "0.96 similarity caught pre-publish"
     }
   ],
   "case_studies": [

@@ -130,9 +130,13 @@ def page2(c, data):
     draw_header(c, "Workflow & Copy Library", "Signal-to-Pipeline Engine")
     y = H - 160
 
-    y = draw_section(c, "6-Phase Workflow", y)
-    for phase in data["workflow"]["phases"]:
-        line = f"{phase['id']}. {phase['name']} — {', '.join(phase['tools'])} → {phase['output']}"
+    phases = data["workflow"].get("phase_list") or data["workflow"].get("phases", [])
+    phase_count = data["workflow"].get("phases", len(phases)) if isinstance(data["workflow"].get("phases"), int) else len(phases)
+    y = draw_section(c, f"{phase_count}-Phase Workflow", y)
+    for phase in phases:
+        tools = phase.get("tools", [])
+        tool_str = f" - {', '.join(tools)}" if tools else ""
+        line = f"{phase['id']}. {phase['name']}{tool_str} -> {phase['output']}"
         y = draw_body(c, line, y, size=9, leading=12)
 
     y -= 4
@@ -157,7 +161,7 @@ def page2(c, data):
     y = draw_section(c, "Case Studies", y)
     for cs in data["case_studies"]:
         metrics = " · ".join(f"{k}: {v}" for k, v in cs["metrics"].items())
-        y = draw_body(c, f"{cs['company']} — {cs['title']}", y, size=9.5, leading=12)
+        y = draw_body(c, f"{cs['company']} - {cs['title']}", y, size=9.5, leading=12)
         y = draw_body(c, f"   {metrics}", y, size=8.5, color=GRAY, leading=11)
 
 

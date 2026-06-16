@@ -1,14 +1,13 @@
 {
-  "workflow_version": "1.0",
+  "workflow_version": "2.0",
   "name": "GTM Signal-to-Pipeline Loop",
-  "description": "End-to-end motion from signal capture through personalized outbound to content mining. Each phase maps to an open-source repo or production toolchain.",
+  "description": "Seven phases from signal capture through copy assembly, QA gates, send, and content mining. Each phase maps to an open-source repo or production toolchain.",
   "loop_type": "compounding",
   "phases": [
     {
       "phase": 1,
       "label": "Capture Signal",
-      "icon": "signal",
-      "description": "Ingest LinkedIn engagers, funding alerts, hiring posts, tech stack changes",
+      "description": "LinkedIn engagers, funding alerts, hiring posts, tech changes, content drafts",
       "tools": ["PhantomBuster", "HeyReach", "Trigify", "Crunchbase"],
       "repo": "gtm-founder-led-loop",
       "script": "loop/01_signal_capture.py",
@@ -17,8 +16,7 @@
     {
       "phase": 2,
       "label": "Enrich",
-      "icon": "enrich",
-      "description": "Apollo + Clay waterfall: firmographics, technographics, contact data",
+      "description": "Firmographics, technographics, contact data, published corpus for content gate",
       "tools": ["Apollo", "Clay", "Prospeo", "Firecrawl", "Deepline"],
       "repo": null,
       "script": null,
@@ -26,9 +24,8 @@
     },
     {
       "phase": 3,
-      "label": "Score & Route",
-      "icon": "score",
-      "description": "Composite 0-100 ICP score → Hot / Warm / Nurture routing",
+      "label": "Score and Route",
+      "description": "Composite 0-100 ICP score to Hot / Warm / Nurture routing",
       "tools": ["gtm-ai-lead-scorer", "Clay formulas"],
       "repo": "gtm-ai-lead-scorer",
       "script": "loop/02_score_and_route.py",
@@ -36,33 +33,39 @@
     },
     {
       "phase": 4,
-      "label": "Personalize",
-      "icon": "personalize",
-      "description": "MiniMax generates signal-specific hooks; Clay formulas assemble full copy",
-      "tools": ["MiniMax Text-01", "gtm-cold-email-personalizer", "Clay IIFE"],
-      "repo": "gtm-email-cadences",
-      "script": "cadence_runner.py",
+      "label": "Assemble Copy",
+      "description": "Signal-led openers, hash-seeded variants, cadence hooks, citation proof",
+      "tools": ["MiniMax Text-01", "gtm-email-cadences", "gtm-omnibound-clay-workflow"],
+      "repo": "gtm-omnibound-clay-workflow",
+      "script": "cols 52-59",
       "output": "personalized_sequences"
     },
     {
       "phase": 5,
+      "label": "Gate Before Send",
+      "description": "List grade B+, col 60 PASS, content gate PASS/FLAG for outbound and CMS",
+      "tools": ["gtm-list-quality-scorecard", "gtm-neevcloud-content-gate"],
+      "repo": "gtm-list-quality-scorecard",
+      "script": "scorecard.py / run_gate.py",
+      "output": "PASS or blocked with reasons"
+    },
+    {
+      "phase": 6,
       "label": "Send",
-      "icon": "send",
-      "description": "23 cadences → Smartlead / Instantly / HeyReach. Warm tier gets founder DM.",
-      "tools": ["Smartlead", "Instantly", "HeyReach"],
+      "description": "Email sequences and LinkedIn DMs by tier via n8n",
+      "tools": ["Smartlead", "HeyReach", "HubSpot"],
       "repo": "gtm-founder-led-loop",
       "script": "loop/03_outbound.py",
       "output": "live_campaigns"
     },
     {
-      "phase": 6,
-      "label": "Mine & Loop",
-      "icon": "loop",
-      "description": "Extract objections, wins, questions from calls → next content post → restart",
-      "tools": ["MiniMax Text-01", "reply-intent-classifier"],
+      "phase": 7,
+      "label": "Mine and Loop",
+      "description": "Calls to content angles to next signal cycle; weekly deliverability audit",
+      "tools": ["gtm-founder-led-loop", "gtm-deliverability-audit"],
       "repo": "gtm-founder-led-loop",
       "script": "loop/04_content_miner.py",
-      "output": "content_angles → Phase 1"
+      "output": "content_angles to Phase 1"
     }
   ],
   "copy_map": [
@@ -71,42 +74,35 @@
       "count": "23 sequences",
       "location": "github.com/rasulshaikh/gtm-email-cadences/cadences/",
       "format": "YAML",
-      "ai_model": "MiniMax-Text-01 (hook only)"
+      "ai_model": "MiniMax-Text-01"
+    },
+    {
+      "type": "Omnibound production copy",
+      "count": "144 E1 variants",
+      "location": "github.com/rasulshaikh/gtm-omnibound-clay-workflow/",
+      "format": "Clay + Clayscript",
+      "ai_model": "Claygent + hash-seeded IIFE"
     },
     {
       "type": "Clay copy formulas",
       "count": "6 IIFEs",
       "location": "github.com/rasulshaikh/gtm-clay-formula-library/formulas/",
       "format": "JavaScript",
-      "ai_model": "Claygent (in-table)"
+      "ai_model": "Claygent in-table"
     },
     {
-      "type": "Warm outbound (engager)",
-      "count": "Dynamic per lead",
+      "type": "Warm outbound",
+      "count": "Per lead",
       "location": "github.com/rasulshaikh/gtm-founder-led-loop/loop/03_outbound.py",
-      "format": "Python → CSV",
+      "format": "Python",
       "ai_model": "MiniMax-Text-01"
     },
     {
-      "type": "Single-lead email",
-      "count": "1 email per URL",
-      "location": "github.com/rasulshaikh/gtm-cold-email-personalizer/",
-      "format": "Python CLI",
-      "ai_model": "Claude API"
-    },
-    {
-      "type": "Lead scoring rubric",
-      "count": "0-100 composite",
-      "location": "github.com/rasulshaikh/gtm-ai-lead-scorer/",
-      "format": "Python CSV",
-      "ai_model": "Claude Haiku"
-    },
-    {
-      "type": "Production Omnibound",
-      "count": "60-col Clay workflow",
-      "location": "github.com/rasulshaikh/gtm-omnibound-clay-workflow/",
-      "format": "Clay table + Clayscript",
-      "ai_model": "Claygent Neon + purple-safety"
+      "type": "Content gate QA",
+      "count": "6 checks",
+      "location": "github.com/rasulshaikh/gtm-neevcloud-content-gate/",
+      "format": "Python",
+      "ai_model": "Rule-based + TF-IDF"
     },
     {
       "type": "Pre-send list QA",
@@ -119,8 +115,10 @@
       "type": "Deliverability audit",
       "count": "Per-domain + campaign",
       "location": "github.com/rasulshaikh/gtm-deliverability-audit/",
-      "format": "Python → CSV + report",
+      "format": "Python report",
       "ai_model": "DNS + Smartlead API"
     }
-  ]
+  ],
+  "okrs": "profile/okrs-q2-2026.json",
+  "copy_framework": "profile/copy-framework.json"
 }

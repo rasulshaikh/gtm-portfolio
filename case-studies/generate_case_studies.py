@@ -154,7 +154,7 @@ def generate_omnibound(out_path):
     draw_section_label(c, "The Problem", y)
     y -= 22
     y = draw_body_text(c,
-        "Omnibound needed to go from zero to a running outbound system — fast. No CRM data, no sequences, no enrichment pipeline. "
+        "Omnibound needed to go from zero to a running outbound system - fast. No CRM data, no sequences, no enrichment pipeline. "
         "Manual research was taking 6+ hours per batch of 50 leads. Qualification required a senior rep to spend 48 hours per account. "
         "The team had no repeatable motion and no tooling to scale beyond 2 people.",
         y, leading=16)
@@ -164,9 +164,9 @@ def generate_omnibound(out_path):
     y -= 22
 
     bullets_arch = [
-        "Signal layer: 6 data sources unified — LinkedIn job postings, funding data, tech stack signals, news events, web traffic spikes, and intent scores — merged into a single enriched record per account.",
-        "AI scoring: Claude API rubric scoring each account 0–100 on firmographic fit, technographic alignment, and behavioral signals. Accounts below 60 are automatically skipped.",
-        "Clay pipeline: 7-stage LLM waterfall for hyper-personalization — company summary, pain hypothesis, relevant case study match, personalized subject line, email body v1, email body v2 variant, and objection pre-emption.",
+        "Signal layer: 6 data sources unified - LinkedIn job postings, funding data, tech stack signals, news events, web traffic spikes, and intent scores - merged into a single enriched record per account.",
+        "AI scoring: Claude API rubric scoring each account 0-100 on firmographic fit, technographic alignment, and behavioral signals. Accounts below 60 are automatically skipped.",
+        "Clay pipeline: 7-stage LLM waterfall for hyper-personalization - company summary, pain hypothesis, relevant case study match, personalized subject line, email body v1, email body v2 variant, and objection pre-emption.",
         "Enrichment agent: Python script (Playwright + asyncio) scraping 100+ domains headlessly, scoring accounts via the Claude API rubric, and auto-pushing qualified accounts to HubSpot with full routing context.",
         "Sending infrastructure: Smartlead across 250+ sending domains with inbox rotation, warmup schedules, and reply detection feeding back into the CRM sequence stage.",
         "Qualification layer: n8n workflow parsing replies using Claude, routing positive replies to a Calendly link and flagging referrals for manual follow-up within 4 hours.",
@@ -192,7 +192,7 @@ def generate_omnibound(out_path):
     y -= 22
 
     bullets_results = [
-        "Reply rate: 1.5%+ sustained across 3 months and 12,000+ contacts — 3x the industry average for cold email.",
+        "Reply rate: 1.5%+ sustained across 3 months and 12,000+ contacts - 3x the industry average for cold email.",
         "Deploy time: Full system (enrichment → scoring → Clay pipeline → Smartlead → CRM routing) from kick-off to first send in 3 weeks. Subsequent campaigns deploy in 3 days.",
         "Qualification speed: AI reply parsing + n8n routing cut manual qualification from 48 hours to 4 hours per positive reply.",
         "Research efficiency: Python enrichment agent replaced 6+ hours/batch of manual research with a sub-30-minute automated pass, running unattended.",
@@ -208,7 +208,7 @@ def generate_omnibound(out_path):
 
     bullets_learn = [
         "Signal quality beats volume. A list of 500 accounts scored above 70 outperforms 5,000 unsegmented contacts every time.",
-        "The personalization hook is the leverage point — not the email body. Getting the first line right (via Clay LLM + Playwright-scraped context) is what drives reply rates above 1%.",
+        "The personalization hook is the leverage point - not the email body. Getting the first line right (via Clay LLM + Playwright-scraped context) is what drives reply rates above 1%.",
         "Reply parsing is the bottleneck nobody talks about. Automating intent classification was what unlocked 4-hour qualification cycles.",
         "Infrastructure is GTM strategy. A rep working this system outperforms 3 reps without it.",
     ]
@@ -294,11 +294,11 @@ def generate_remotestate(out_path):
     y -= 22
 
     results = [
-        "$180K+ ARR generated from outbound in 6 months — on a $0 outbound budget at the start of the engagement.",
+        "$180K+ ARR generated from outbound in 6 months - on a $0 outbound budget at the start of the engagement.",
         "40% improvement in pipeline efficiency: the same number of leads produced more qualified opportunities after the scoring rubric filtered the list.",
         "80% reduction in qualification time: from 2 days to 4 hours per account, driven by AI reply parsing and automated routing.",
         "SDR team scaled 1 → 4 in 8 weeks using documented playbooks. New reps were productive in week 1 because the system did the heavy lifting.",
-        "Inbound-to-outbound ratio shifted from 90/10 to 65/35 within 6 months — the outbound channel was generating nearly a third of all new pipeline.",
+        "Inbound-to-outbound ratio shifted from 90/10 to 65/35 within 6 months - the outbound channel was generating nearly a third of all new pipeline.",
     ]
     for b in results:
         y = draw_bullet(c, b, y)
@@ -359,7 +359,7 @@ def generate_falconwise(out_path):
     draw_section_label(c, "The Problem", y)
     y -= 22
     y = draw_body_text(c,
-        "FalconWise Tech was selling enterprise cybersecurity solutions in the MENA market — UAE, Saudi Arabia, Egypt — "
+        "FalconWise Tech was selling enterprise cybersecurity solutions in the MENA market - UAE, Saudi Arabia, Egypt - "
         "with no outbound motion and no brand awareness outside of a few warm referrals. The enterprise sales cycle "
         "was 90+ days and required multi-stakeholder buy-in (CISO, IT Director, CFO). There was no ABM program, "
         "no content targeting enterprise buyers, and no partner channel. Starting from zero in a high-trust, "
@@ -372,9 +372,9 @@ def generate_falconwise(out_path):
 
     bullets = [
         "Account selection: Built a target account list of 180 enterprise organizations across UAE, KSA, and Egypt using Apollo + LinkedIn Sales Nav, filtered by employee count (500+), industry (BFSI, government, healthcare, telecom), and known cybersecurity spend signals.",
-        "Multi-source enrichment: Clay pipeline pulling from LinkedIn, company websites, news sources, and procurement portals to identify buying signals — budget cycles, regulatory compliance deadlines, recent breaches, and executive changes.",
-        "Persona mapping: Identified and enriched 3 buyer personas per account — CISO (economic buyer), IT Director (technical champion), and CFO (budget approver) — with personalized messaging for each.",
-        "Co-marketing: Partnered with 3 regional cybersecurity vendors (non-competing) for joint webinars, co-authored whitepapers, and shared event sponsorships — pipeline from partners reached 25% of total within 4 months.",
+        "Multi-source enrichment: Clay pipeline pulling from LinkedIn, company websites, news sources, and procurement portals to identify buying signals - budget cycles, regulatory compliance deadlines, recent breaches, and executive changes.",
+        "Persona mapping: Identified and enriched 3 buyer personas per account - CISO (economic buyer), IT Director (technical champion), and CFO (budget approver) - with personalized messaging for each.",
+        "Co-marketing: Partnered with 3 regional cybersecurity vendors (non-competing) for joint webinars, co-authored whitepapers, and shared event sponsorships - pipeline from partners reached 25% of total within 4 months.",
         "LinkedIn Ads ABM: Targeted the account list + personas with LinkedIn matched audiences. Used engagement retargeting to serve case study content to accounts that had visited the website.",
         "Outbound sequences: Multi-touch sequences per persona: cold email (Clay-personalized) → LinkedIn connection → LinkedIn voice note → email follow-up with content asset. Sequences ran in Arabic and English.",
     ]
@@ -397,8 +397,8 @@ def generate_falconwise(out_path):
     y -= 22
 
     results = [
-        "10+ SQLs per month within 5 months of building the program from scratch — pipeline previously averaged 1-2 inbound SQLs per month.",
-        "30% average engagement rate across ABM content sequences — driven by Arabic-language personalization and region-specific regulatory framing (UAE NESA, Saudi Arabia NCA compliance).",
+        "10+ SQLs per month within 5 months of building the program from scratch - pipeline previously averaged 1-2 inbound SQLs per month.",
+        "30% average engagement rate across ABM content sequences - driven by Arabic-language personalization and region-specific regulatory framing (UAE NESA, Saudi Arabia NCA compliance).",
         "25% of pipeline sourced from the partner co-marketing channel within 4 months of launching the first joint webinar.",
         "3 strategic co-marketing partnerships closed with regional cybersecurity vendors, generating shared pipeline and joint content assets.",
         "Enterprise sales cycle reduced from 90+ days average to 60 days through earlier stakeholder mapping and multi-threaded outreach.",
@@ -412,10 +412,10 @@ def generate_falconwise(out_path):
     y -= 22
 
     learns = [
-        "Language matters more than expected. Arabic-language email openings — even when the full email is English — increased reply rates by 40% with Arabic-speaking decision-makers.",
+        "Language matters more than expected. Arabic-language email openings - even when the full email is English - increased reply rates by 40% with Arabic-speaking decision-makers.",
         "Regulatory triggers are the strongest signal in MENA. Framing outreach around UAE NESA, NCA, or SAMA compliance deadlines created urgency that standard pain-point messaging didn't.",
         "Relationship before pitch. MENA enterprise buyers expect 2-3 touchpoints of value delivery before a product conversation. The co-marketing model front-loaded this.",
-        "LinkedIn penetration in MENA enterprise is higher than expected — especially in UAE. LinkedIn outreach worked better than cold email as the first touch in this market.",
+        "LinkedIn penetration in MENA enterprise is higher than expected - especially in UAE. LinkedIn outreach worked better than cold email as the first touch in this market.",
     ]
     for b in learns:
         y = draw_bullet(c, b, y)

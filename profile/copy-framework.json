@@ -1,0 +1,62 @@
+{
+  "framework": "campaign-copywriting",
+  "version": "4-step",
+  "steps": [
+    "Confirm campaign direction (audience, pain, proof)",
+    "Confirm subject line + first line strategy",
+    "Confirm body structure (value prop, case study, CTA)",
+    "Output final copy with variants and follow-ups"
+  ],
+  "first_line_strategies": [
+    {
+      "name": "Problem Sniffing",
+      "when": "Strong audit data, rankings, or observable gaps",
+      "example": "I asked ChatGPT [keyword] and you ranked 15th behind [competitors]..."
+    },
+    {
+      "name": "Billboard",
+      "when": "Limited data but clear, compelling offer",
+      "example": "We help customers reach their entire TAM every two months."
+    },
+    {
+      "name": "Signal-Led",
+      "when": "Recent news, hiring, funding, or product launch",
+      "example": "Post-raise, pipeline velocity matters. Part of that now starts with AI search."
+    }
+  ],
+  "production_case_studies": [
+    {
+      "client": "Omnibound AI",
+      "angle": "Signal-Led + Problem Sniffing",
+      "strategy": "News type maps to buyer-behavior opener, not 'Saw the headline'",
+      "variants": "144 E1 variants via hash-seeded Clayscript",
+      "proof": "Live AI citation check in col 14-26",
+      "metrics": {
+        "reply_rate": "1.5%+",
+        "deploy_time": "2 wks to 3 days"
+      }
+    },
+    {
+      "client": "RemoteState",
+      "angle": "Billboard + Persona",
+      "strategy": "Whole-offer subject lines for VP Engineering and CTO personas",
+      "variants": "23 cadence library, signal + persona routing",
+      "proof": "$180K ARR in 6 months on greenfield stack",
+      "metrics": {
+        "pipeline_efficiency": "+40%",
+        "qualification_cut": "80%"
+      }
+    },
+    {
+      "client": "NeevCloud",
+      "angle": "Content Gate + SEO Depth",
+      "strategy": "80 posts/week with 6-check gate before CMS (not after)",
+      "variants": "Near-duplicate, cannibalisation, claims, confidentiality",
+      "proof": "0.96 similarity caught pre-publish on sample corpus",
+      "metrics": {
+        "checks": 6,
+        "verdicts": "PASS / FLAG / FAIL"
+      }
+    }
+  ]
+}

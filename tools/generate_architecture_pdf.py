@@ -22,16 +22,16 @@ PAGES = [
         "subtitle": "End-to-End Architecture · 8 Repos · 5 n8n Workflows",
         "sections": [
             ("Overview", "Two signal paths converge into one send pipeline. QA gates before and after outbound. Content loop compounds at the end. Signal in → enrich → score → personalize → list gate (B+) → n8n → Smartlead/HeyReach/HubSpot → weekly audit → mine calls → loop restarts."),
-            ("8 phases", "1. Capture Signal — LinkedIn engagers, funding, hiring (PhantomBuster, HeyReach, Trigify)\n2. Enrich — Apollo, Clay, Prospeo, Deepline\n3. Score & Route — gtm-ai-lead-scorer + founder-led-loop/02 → Hot/Warm/Nurture\n4. Personalize — MiniMax hooks, 23 cadences, 60-col Omnibound Clay\n5. Pre-Send Gate — list scorecard grade B+ required\n6. Send — Smartlead + HeyReach + HubSpot via n8n\n7. Post-Send Health — deliverability audit, 1% reply rule\n8. Mine & Loop — content_miner.py → next post"),
+            ("8 phases", "1. Capture Signal - LinkedIn engagers, funding, hiring (PhantomBuster, HeyReach, Trigify)\n2. Enrich - Apollo, Clay, Prospeo, Deepline\n3. Score & Route - gtm-ai-lead-scorer + founder-led-loop/02 → Hot/Warm/Nurture\n4. Personalize - MiniMax hooks, 23 cadences, 60-col Omnibound Clay\n5. Pre-Send Gate - list scorecard grade B+ required\n6. Send - Smartlead + HeyReach + HubSpot via n8n\n7. Post-Send Health - deliverability audit, 1% reply rule\n8. Mine & Loop - content_miner.py → next post"),
         ],
     },
     {
-        "title": "Motion A — Omnibound Clay",
+        "title": "Motion A - Omnibound Clay",
         "subtitle": "60 Columns · Purple-Safe · 144 Email Variants",
         "sections": [
             ("Clay flow", "Inputs (6) → Intel (7-13) → Citation (14-26) → News (27-33) → Email waterfall (34-40) → Context+PS (41-47) → Persona (51) → Copy (52-59) → Validator (60 PASS only) → n8n push."),
             ("Purple safety", "Layer 1: extraction filters strip purple sentinel. Layer 2: copy guards return empty if fields missing. Layer 3: validator 12-check gate. Export filter: validator = PASS."),
-            ("n8n", "clay-push-pipeline.json — HMAC webhook, HubSpot upsert, tier routing to Smartlead/HeyReach.\nretry-failed-pushes.json — cron 30min, retries from Google Sheet."),
+            ("n8n", "clay-push-pipeline.json - HMAC webhook, HubSpot upsert, tier routing to Smartlead/HeyReach.\nretry-failed-pushes.json - cron 30min, retries from Google Sheet."),
             ("Repo", "github.com/rasulshaikh/gtm-omnibound-clay-workflow"),
         ],
     },
@@ -41,7 +41,7 @@ PAGES = [
         "sections": [
             ("Founder-led loop", "Publish post → 01_signal_capture → enrich → 02_score_route (Hot 80+/Warm 50-79/Nurture <50) → 03_outbound MiniMax warm copy → calls → 04_content_miner → next post. Repo: gtm-founder-led-loop"),
             ("Cold cadences", "23 YAML sequences: 8 signal, 7 persona, 4 vertical, 4 stage. cadence_runner.py + MiniMax-Text-01 hooks. Repo: gtm-email-cadences"),
-            ("n8n orchestration", "1. pre-send-list-gate.json — blocks below grade B\n2. clay-push-pipeline.json — tier routing\n3. retry-failed-pushes.json — 30min cron\n4. weekly-deliverability-audit.json — Monday SPF/DMARC + 1% rule\n5. gtm-full-pipeline.json — master orchestrator"),
+            ("n8n orchestration", "1. pre-send-list-gate.json - blocks below grade B\n2. clay-push-pipeline.json - tier routing\n3. retry-failed-pushes.json - 30min cron\n4. weekly-deliverability-audit.json - Monday SPF/DMARC + 1% rule\n5. gtm-full-pipeline.json - master orchestrator"),
             ("All 8 repos", "gtm-portfolio · gtm-omnibound-clay-workflow · gtm-email-cadences · gtm-founder-led-loop · gtm-ai-lead-scorer · gtm-clay-formula-library · gtm-list-quality-scorecard · gtm-deliverability-audit"),
         ],
     },
@@ -50,8 +50,8 @@ PAGES = [
         "subtitle": "Where Copy Lives · Pre/Post-Send Checks",
         "sections": [
             ("Copy locations", "Production sequences: Omnibound cols 52-59 (Claygent)\n23 cadences: gtm-email-cadences/cadences/ (MiniMax hooks)\nWarm outbound: founder-led-loop/03_outbound.py (MiniMax)\nSingle-lead: gtm-cold-email-personalizer (Claude+Playwright)\nScoring: gtm-ai-lead-scorer (Claude Haiku)\nFormulas: gtm-clay-formula-library (6 IIFEs)"),
-            ("Pre-send gate", "gtm-list-quality-scorecard — 8 dimensions. Verification, duplicates, titles, catch-all, ICP fit, names. Grade B+ required. n8n pre-send-list-gate.json blocks bad lists."),
-            ("Post-send health", "gtm-deliverability-audit — SPF/DKIM/DMARC per domain. 1% reply rule after 200 sends. Bounce >3% flag. Weekly n8n cron → Slack."),
+            ("Pre-send gate", "gtm-list-quality-scorecard - 8 dimensions. Verification, duplicates, titles, catch-all, ICP fit, names. Grade B+ required. n8n pre-send-list-gate.json blocks bad lists."),
+            ("Post-send health", "gtm-deliverability-audit - SPF/DKIM/DMARC per domain. 1% reply rule after 200 sends. Bounce >3% flag. Weekly n8n cron → Slack."),
             ("Downloads", "docs/architecture.pdf · docs/gtm-pipeline-overview.pdf · profile/gtm-profile.pdf · profile/gtm-profile.json · profile/workflow.json · n8n/gtm-full-pipeline.json"),
         ],
     },
