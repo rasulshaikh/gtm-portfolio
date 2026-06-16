@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rasul Shaikh - AI GTM Engineer</title>
+  <title>GTM Workflows - Rasul Shaikh</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,641 +14,187 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <nav aria-label="Primary">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">Rasul Shaikh</a>
+    <div class="nav-inner nav-wide">
+      <a href="#" class="nav-logo">GTM Workflows</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" type="button">
         <span class="sr-only">Menu</span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
       <div class="nav-links" id="nav-menu">
-        <a href="#plays">Plays</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#copy-framework">Copy</a>
-        <a href="#okrs">OKRs</a>
-        <a href="#projects">Case Studies</a>
-        <a href="#stack">Stack</a>
-        <a href="#n8n">n8n</a>
+        <a href="#workflows">Workflows</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
         <a href="#downloads">Downloads</a>
-        <a href="#contact">Contact</a>
+        <a href="https://github.com/rasulshaikh" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
   </nav>
 
   <main id="main">
 
-  <section class="hero">
-    <div class="container">
-      <p class="eyebrow">AI GTM Engineer</p>
-      <h1>Signal to pipeline, with gates at every handoff.</h1>
-      <p class="hero-sub">I build outbound systems end to end: signal capture, Clay intel, copy assembly, list QA, n8n routing, and post-send health. Python and agents run the parts humans should not repeat.</p>
-      <dl class="metrics-bar">
-        <div><dt>Revenue</dt><dd>$550K+</dd></div>
-        <div><dt>Pipeline</dt><dd>$3.5M+</dd></div>
-        <div><dt>Deploy</dt><dd>2 wks to 3 days</dd></div>
+  <header class="page-hero">
+    <div class="container container-wide">
+      <p class="eyebrow">Rasul Shaikh · AI GTM Engineer</p>
+      <h1>GTM playbooks using AI</h1>
+      <p class="hero-sub">Production workflows, ColdIQ skills, and workflows.io playbooks in one filterable library. Fork the repos, import the n8n JSON, run the gates.</p>
+      <dl class="metrics-bar metrics-inline">
+        <div><dt>Workflows</dt><dd>32</dd></div>
+        <div><dt>Production repos</dt><dd>9</dd></div>
         <div><dt>Reply rate</dt><dd>1.5%+</dd></div>
-        <div><dt>Qualification</dt><dd>48h to 4h</dd></div>
+        <div><dt>Deploy</dt><dd>3 days</dd></div>
       </dl>
-      <div class="hero-cta">
-        <a href="https://github.com/rasulshaikh" class="btn-primary" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/rasulshaikh" class="btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="featured-section" aria-label="Featured tools">
+    <div class="container container-wide">
+      <div class="featured-header">
+        <svg class="wf-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Featured tools</span>
+      </div>
+      <div class="featured-tools" id="featured-tools"></div>
+    </div>
+  </section>
+
+  <section class="wf-section" id="workflows">
+    <div class="wf-layout container-wide">
+
+      <aside class="wf-sidebar" aria-label="Filters">
+        <div class="sidebar-block">
+          <h2 class="sidebar-title">Workflows</h2>
+          <input type="search" id="wf-search" class="wf-search" placeholder="Search playbooks..." aria-label="Search workflows" />
+          <div class="filter-tabs">
+            <button type="button" class="filter-tab active" data-filter-type="all">All</button>
+            <button type="button" class="filter-tab" data-filter-type="production">Production</button>
+            <button type="button" class="filter-tab" data-filter-type="playbook">Playbooks</button>
+            <button type="button" class="filter-tab" data-filter-type="skill">Skills</button>
+            <button type="button" class="filter-tab" data-filter-type="template">Templates</button>
+          </div>
+        </div>
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-label">Categories</h3>
+          <div class="filter-list">
+            <button type="button" class="filter-pill active" data-filter-cat="all">All</button>
+            <button type="button" class="filter-pill" data-filter-cat="Outbound">Outbound</button>
+            <button type="button" class="filter-pill" data-filter-cat="Content">Content</button>
+            <button type="button" class="filter-pill" data-filter-cat="ABM">ABM</button>
+            <button type="button" class="filter-pill" data-filter-cat="RevOps">RevOps</button>
+          </div>
+        </div>
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-label">Source</h3>
+          <div class="filter-list">
+            <button type="button" class="filter-pill active" data-filter-source="all">All sources</button>
+            <button type="button" class="filter-pill" data-filter-source="rasul">Production (Rasul)</button>
+            <button type="button" class="filter-pill" data-filter-source="coldiq">ColdIQ Skills</button>
+            <button type="button" class="filter-pill" data-filter-source="workflows-io">workflows.io</button>
+          </div>
+        </div>
+
+        <div class="sidebar-block sidebar-tools">
+          <h3 class="sidebar-label">Tools <span class="sidebar-hint">click to filter</span></h3>
+          <div class="tool-chips" id="wf-tools"></div>
+        </div>
+
+        <div class="sidebar-credits">
+          <p>Playbooks from <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills" target="_blank" rel="noopener">ColdIQ GTM Skills</a> (137 triggers, 34 templates, 11 plays).</p>
+          <p>Curated from <a href="https://www.workflows.io/workflows" target="_blank" rel="noopener">workflows.io</a>.</p>
+        </div>
+      </aside>
+
+      <div class="wf-main">
+        <div class="wf-toolbar">
+          <h2 id="wf-count">32 workflows</h2>
+        </div>
+        <div class="wf-grid" id="wf-grid" aria-live="polite"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-alt" id="skills">
+    <div class="container container-wide">
+      <p class="section-label">ColdIQ Master Skills</p>
+      <h2>7 orchestrators, 52 sub-skills</h2>
+      <p class="section-sub">From <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills" target="_blank" rel="noopener">ColdIQ-s-GTM-Skills</a>. Each routes your request to the right sub-skill automatically.</p>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Clay</h3>
+          <p>9 sub-skills: Claygent, email waterfall, scoring, people enrich, debugging.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/clay" target="_blank" rel="noopener">View skill</a>
+        </article>
+        <article class="skill-card">
+          <h3>Cold Email</h3>
+          <p>7 sub-skills: ATL/BTL, first touch, follow-up, personalization, subject lines.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/cold-email" target="_blank" rel="noopener">View skill</a>
+        </article>
+        <article class="skill-card">
+          <h3>Signal Sourcer</h3>
+          <p>9 sub-skills: job changes, funding, hiring, visitors, tech changes. 35-40% reply rates.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/signal-sourcer" target="_blank" rel="noopener">View skill</a>
+        </article>
+        <article class="skill-card">
+          <h3>List Building</h3>
+          <p>6 sub-skills: ICP, source companies, find contacts, qualify, clean, dedupe.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/list-building" target="_blank" rel="noopener">View skill</a>
+        </article>
+        <article class="skill-card">
+          <h3>n8n</h3>
+          <p>6 sub-skills: workflow design, webhooks, Clay integration, CRM automation.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/n8n" target="_blank" rel="noopener">View skill</a>
+        </article>
+        <article class="skill-card">
+          <h3>LinkedIn Content</h3>
+          <p>7 sub-skills: hooks, storytelling, formats, scheduling, engagement, CTA.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/linkedin-content" target="_blank" rel="noopener">View skill</a>
+        </article>
+        <article class="skill-card">
+          <h3>LinkedIn Ads</h3>
+          <p>8 sub-skills: audiences, bidding, campaign setup, ads-outbound sync.</p>
+          <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/linkedin-ads" target="_blank" rel="noopener">View skill</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="section" id="plays">
-    <div class="container">
-      <p class="section-label">Open Source</p>
-      <h2>Nine production plays</h2>
-      <p class="section-sub">Fork-ready tools from live outbound and content systems. Each repo ships a play guide PDF and, where relevant, an n8n workflow.</p>
-      <div class="grid-3">
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">01</span>
-          <h3>AI Lead Scorer</h3>
-          <p>Score lead lists 0-100 with Claude. Firmographic, technographic, and behavioral signals in one composite grade.</p>
-          <div class="tags"><span>Python</span><span>Claude</span><span>CSV</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-ai-lead-scorer" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">02</span>
-          <h3>Cold Email Personalizer</h3>
-          <p>Playwright scrape plus Claude. One hyper-personalized email per company URL in under 30 seconds.</p>
-          <div class="tags"><span>Python</span><span>Playwright</span><span>Claude</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-cold-email-personalizer" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">03</span>
-          <h3>Clay Formula Library</h3>
-          <p>Six production IIFEs: scoring, ICP fit, email quality, categorization, personalization hooks, reply intent.</p>
-          <div class="tags"><span>JavaScript</span><span>Clay</span><span>IIFE</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-clay-formula-library" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">04</span>
-          <h3>Email Cadence Library</h3>
-          <p>23 signal-led cadences across trigger, persona, vertical, and stage. MiniMax generates the hook per lead.</p>
-          <div class="tags"><span>Python</span><span>MiniMax</span><span>YAML</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-email-cadences" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">05</span>
-          <h3>Founder-Led Loop</h3>
-          <p>Four phases: capture engagers, score tiers, warm outbound referencing their interaction, mine calls for the next post.</p>
-          <div class="tags"><span>Python</span><span>MiniMax</span><span>Signal-led</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-founder-led-loop" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">06</span>
-          <h3>Deliverability Audit</h3>
-          <p>SPF, DKIM, DMARC, Smartlead inbox health, and the 1% reply rule. Markdown report plus CSV action items.</p>
-          <div class="tags"><span>Python</span><span>Smartlead</span><span>DNS</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-deliverability-audit" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">07</span>
-          <h3>List Quality Scorecard</h3>
-          <p>Grade lists A+ to F across 8 dimensions before send. Catches bad lists before they burn inboxes.</p>
-          <div class="tags"><span>Python</span><span>Pre-send QA</span><span>n8n</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-list-quality-scorecard" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card">
-          <span class="card-index" aria-hidden="true">08</span>
-          <h3>Omnibound Clay Workflow</h3>
-          <p>60-column export: intel, citation proof, persona copy, purple-safety validator, 144 E1 variants, Smartlead/HeyReach push.</p>
-          <div class="tags"><span>Clay</span><span>60 cols</span><span>Purple-safe</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-        <article class="card card-featured">
-          <span class="card-index" aria-hidden="true">09</span>
-          <h3>NeevCloud Content Gate</h3>
-          <p>Six-check quality gate for high-volume content: near-duplicate, cannibalisation, structure, readability, claims, confidentiality. PASS, FLAG, or FAIL before CMS.</p>
-          <div class="tags"><span>Python</span><span>SEO gate</span><span>n8n</span></div>
-          <a href="https://github.com/rasulshaikh/gtm-neevcloud-content-gate" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="architecture">
-    <div class="container">
-      <p class="section-label">System Design</p>
-      <h2>End-to-end architecture</h2>
-      <p class="section-sub">Three outbound motions, one content motion, two QA gates (list + copy), one send layer, weekly health audit, compounding loop.</p>
-
-      <div class="arch-flow">
-        <div class="arch-lane">
-          <div class="arch-lane-label">Signals in</div>
-          <div class="arch-items">LinkedIn engagers, funding/hiring alerts, founder posts, generated content drafts</div>
-        </div>
-        <div class="arch-arrow-down" aria-hidden="true">|</div>
-        <div class="arch-lane arch-lane-split">
-          <div class="arch-path">
-            <div class="arch-path-label">Motion A - Omnibound</div>
-            <div class="arch-items">Clay 60-col, persona, col 60 PASS, n8n push</div>
-          </div>
-          <div class="arch-path">
-            <div class="arch-path-label">Motion B - Founder loop</div>
-            <div class="arch-items">Capture engagers, score tiers, MiniMax warm outbound</div>
-          </div>
-          <div class="arch-path">
-            <div class="arch-path-label">Motion C - Cadences</div>
-            <div class="arch-items">23 YAML sequences, MiniMax hooks, Smartlead</div>
-          </div>
-          <div class="arch-path arch-path-accent">
-            <div class="arch-path-label">Motion D - NeevCloud</div>
-            <div class="arch-items">80 posts/wk, content gate, CMS or human review</div>
-          </div>
-        </div>
-        <div class="arch-arrow-down" aria-hidden="true">|</div>
-        <div class="arch-lane arch-lane-gate">
-          <div class="arch-lane-label">Pre-send gates</div>
-          <div class="arch-items">List scorecard (grade B+), col 60 validator PASS, content gate PASS/FLAG</div>
-        </div>
-        <div class="arch-arrow-down" aria-hidden="true">|</div>
-        <div class="arch-lane">
-          <div class="arch-lane-label">Send via n8n</div>
-          <div class="arch-items">HubSpot upsert, Smartlead (email), HeyReach (LinkedIn), tier routing A/B/C</div>
-        </div>
-        <div class="arch-arrow-down" aria-hidden="true">|</div>
-        <div class="arch-lane arch-lane-split">
-          <div class="arch-path">
-            <div class="arch-path-label">Post-send health</div>
-            <div class="arch-items">Weekly SPF/DMARC audit, 1% reply rule, Slack alerts</div>
-          </div>
-          <div class="arch-path">
-            <div class="arch-path-label">Mine and loop</div>
-            <div class="arch-items">Call notes to content angles to next post to restart</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="arch-downloads">
-        <a href="docs/architecture.md" class="btn-arch">Architecture (Markdown)</a>
+  <section class="section" id="about">
+    <div class="container container-wide">
+      <p class="section-label">Architecture</p>
+      <h2>Seven phases, four motions, three gates</h2>
+      <p class="section-sub">Signal in, enrich in Clay, assemble copy, gate (list B+, col 60 PASS, content gate), n8n send, weekly audit, mine and loop.</p>
+      <div class="about-links">
+        <a href="docs/architecture.md" class="btn-arch">Architecture doc</a>
         <a href="docs/architecture.pdf" class="btn-arch btn-arch-primary">Architecture PDF</a>
-        <a href="docs/gtm-pipeline-overview.pdf" class="btn-arch">Pipeline overview PDF</a>
+        <a href="profile/workflow.json" class="btn-arch">workflow.json</a>
+        <a href="profile/okrs-q2-2026.json" class="btn-arch">OKRs Q2 2026</a>
+        <a href="profile/copy-framework.json" class="btn-arch">Copy framework</a>
       </div>
-    </div>
-  </section>
-
-  <section class="section section-dark" id="workflow">
-    <div class="container">
-      <p class="section-label">Workflow</p>
-      <h2>Seven phases, one loop</h2>
-      <p class="section-sub">Each phase maps to a repo or production tool. Gates sit between generation and send so bad data never reaches a prospect.</p>
-
-      <ol class="workflow-steps">
-        <li class="wf-step">
-          <span class="wf-num">01</span>
-          <div class="wf-body">
-            <h3>Capture signal</h3>
-            <p>LinkedIn engagers, funding, hiring, tech changes, content drafts</p>
-            <span class="wf-tools">PhantomBuster, HeyReach, Trigify, founder-led-loop</span>
-          </div>
-        </li>
-        <li class="wf-step">
-          <span class="wf-num">02</span>
-          <div class="wf-body">
-            <h3>Enrich</h3>
-            <p>Firmographics, technographics, contact data, corpus for content gate</p>
-            <span class="wf-tools">Apollo, Clay, Prospeo, Deepline</span>
-          </div>
-        </li>
-        <li class="wf-step">
-          <span class="wf-num">03</span>
-          <div class="wf-body">
-            <h3>Score and route</h3>
-            <p>0-100 ICP score to Hot / Warm / Nurture tiers</p>
-            <span class="wf-tools">gtm-ai-lead-scorer, Clay formulas</span>
-          </div>
-        </li>
-        <li class="wf-step">
-          <span class="wf-num">04</span>
-          <div class="wf-body">
-            <h3>Assemble copy</h3>
-            <p>Signal-led openers, hash-seeded variants, cadence hooks, citation proof</p>
-            <span class="wf-tools">Omnibound cols 52-59, cadences, Clay IIFE</span>
-          </div>
-        </li>
-        <li class="wf-step wf-step-gate">
-          <span class="wf-num">05</span>
-          <div class="wf-body">
-            <h3>Gate before send</h3>
-            <p>List grade B+, col 60 PASS, content gate PASS/FLAG (outbound and CMS)</p>
-            <span class="wf-tools">list-quality-scorecard, neevcloud-content-gate</span>
-          </div>
-        </li>
-        <li class="wf-step">
-          <span class="wf-num">06</span>
-          <div class="wf-body">
-            <h3>Send</h3>
-            <p>Email sequences and LinkedIn DMs by tier via n8n</p>
-            <span class="wf-tools">Smartlead, HeyReach, HubSpot</span>
-          </div>
-        </li>
-        <li class="wf-step">
-          <span class="wf-num">07</span>
-          <div class="wf-body">
-            <h3>Mine and loop</h3>
-            <p>Calls to content angles to next signal cycle</p>
-            <span class="wf-tools">founder-led-loop, deliverability audit</span>
-          </div>
-        </li>
-      </ol>
-
-      <aside class="workflow-note">
-        <strong>Why seven phases:</strong> Copy and list QA used to happen in Slack threads. Now they are code: col 60 for outbound, content gate for CMS, list scorecard for uploads. Failures route back with reasons attached.
-      </aside>
-    </div>
-  </section>
-
-  <section class="section" id="copy-framework">
-    <div class="container">
-      <p class="section-label">Copy Framework</p>
-      <h2>Campaign copy, confirmed in four steps</h2>
-      <p class="section-sub">From the campaign-copywriting workflow: direction, opener strategy, body structure, then final variants. No batch copy without sign-off at each step.</p>
-
-      <div class="framework-grid">
-        <div class="framework-step">
-          <span class="framework-num">1</span>
-          <h3>Direction</h3>
-          <p>Audience, pain, value prop, proof point, AI variables available</p>
-        </div>
-        <div class="framework-step">
-          <span class="framework-num">2</span>
-          <h3>Opener strategy</h3>
-          <p>Pick Problem Sniffing, Billboard, or Signal-Led for subject + first line</p>
-        </div>
-        <div class="framework-step">
-          <span class="framework-num">3</span>
-          <h3>Body structure</h3>
-          <p>Value prop placement, case study reference, CTA style, follow-up arc</p>
-        </div>
-        <div class="framework-step">
-          <span class="framework-num">4</span>
-          <h3>Final copy</h3>
-          <p>All variants, follow-ups, Clay/Smartlead field mapping</p>
-        </div>
+      <div class="n8n-strip">
+        <h3>six n8n workflows (import-ready)</h3>
+        <ul>
+          <li><a href="n8n/gtm-full-pipeline.json">Full pipeline orchestrator</a></li>
+          <li><a href="https://github.com/rasulshaikh/gtm-list-quality-scorecard/blob/main/n8n/pre-send-list-gate.json">Pre-send list gate</a></li>
+          <li><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json">Clay push pipeline</a></li>
+          <li><a href="https://github.com/rasulshaikh/gtm-deliverability-audit/blob/main/n8n/weekly-deliverability-audit.json">Weekly deliverability</a></li>
+          <li><a href="https://github.com/rasulshaikh/gtm-neevcloud-content-gate/blob/main/n8n/content-gate.json">Content gate</a></li>
+        </ul>
       </div>
-
-      <h3 class="subsection-title">First-line strategies in production</h3>
-      <div class="strategy-grid">
-        <article class="strategy-card">
-          <h4>Problem Sniffing</h4>
-          <p class="strategy-when">When audit data or rankings exist</p>
-          <blockquote>I asked ChatGPT which [category] vendors to use. You ranked 15th behind [competitor].</blockquote>
-          <p class="strategy-used">Used in: Omnibound citation columns (14-26)</p>
-        </article>
-        <article class="strategy-card">
-          <h4>Billboard</h4>
-          <p class="strategy-when">When offer is clear, data is thin</p>
-          <blockquote>We help customers reach their entire TAM every two months.</blockquote>
-          <p class="strategy-used">Used in: RemoteState VP/CTO cadences</p>
-        </article>
-        <article class="strategy-card">
-          <h4>Signal-Led</h4>
-          <p class="strategy-when">When recent news, hire, or funding exists</p>
-          <blockquote>Post-raise, pipeline velocity matters. Part of that now starts with AI search.</blockquote>
-          <p class="strategy-used">Used in: Omnibound v14 (replaced "Saw the headline")</p>
-        </article>
-      </div>
-
-      <div class="copy-table-wrap">
-        <table class="copy-table">
-          <thead>
-            <tr>
-              <th>Copy type</th>
-              <th>Count</th>
-              <th>Location</th>
-              <th>Engine</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Cold email cadences</strong></td>
-              <td>23</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-email-cadences/tree/main/cadences" target="_blank" rel="noopener">gtm-email-cadences/cadences/</a></td>
-              <td>MiniMax-Text-01</td>
-            </tr>
-            <tr>
-              <td><strong>Omnibound production copy</strong></td>
-              <td>144 E1 variants</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow" target="_blank" rel="noopener">gtm-omnibound-clay-workflow/</a></td>
-              <td>Claygent + hash-seeded IIFE</td>
-            </tr>
-            <tr>
-              <td><strong>Clay copy formulas</strong></td>
-              <td>6 IIFEs</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-clay-formula-library/tree/main/formulas" target="_blank" rel="noopener">gtm-clay-formula-library/</a></td>
-              <td>Claygent in-table</td>
-            </tr>
-            <tr>
-              <td><strong>Warm engager outbound</strong></td>
-              <td>Per lead</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-founder-led-loop/blob/main/loop/03_outbound.py" target="_blank" rel="noopener">founder-led-loop/03_outbound.py</a></td>
-              <td>MiniMax-Text-01</td>
-            </tr>
-            <tr>
-              <td><strong>Content gate copy QA</strong></td>
-              <td>6 checks</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-neevcloud-content-gate" target="_blank" rel="noopener">gtm-neevcloud-content-gate/</a></td>
-              <td>Rule-based + TF-IDF</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="meta-link"><a href="profile/copy-framework.json">copy-framework.json</a> for machine-readable schema</p>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="okrs">
-    <div class="container">
-      <p class="section-label">OKRs</p>
-      <h2>Q2 2026 GTM Engineering targets</h2>
-      <p class="section-sub">Three credible OKR sets. North star: positive reply rate on signal-led outbound. Pick one set per quarter, track KRs weekly.</p>
-
-      <div class="okr-grid">
-        <article class="okr-card">
-          <span class="okr-tag">Set A - Quality Gates</span>
-          <h3>Nothing ships without passing a gate</h3>
-          <ul>
-            <li>100% of lists grade B+ before Smartlead upload</li>
-            <li>Col 60 validator PASS rate >= 95%</li>
-            <li>Content gate blocks near-duplicates (similarity >= 0.55)</li>
-          </ul>
-        </article>
-        <article class="okr-card okr-card-primary">
-          <span class="okr-tag">Set B - Deploy Velocity</span>
-          <h3>Campaign live in 3 days, not 2 weeks</h3>
-          <ul>
-            <li>ICP sign-off to live campaign in <= 3 business days</li>
-            <li>144-variant copy in Clay, zero manual paste</li>
-            <li>n8n push failure rate &lt; 2%</li>
-          </ul>
-        </article>
-        <article class="okr-card">
-          <span class="okr-tag">Set C - Compounding Loop</span>
-          <h3>Replies and calls feed the next signal</h3>
-          <ul>
-            <li>80% of Hot-tier engagers contacted within 24h</li>
-            <li>4 founder posts/month from call mining</li>
-            <li>Positive reply rate >= 2% on signal-led campaigns</li>
-          </ul>
-        </article>
-      </div>
-      <p class="meta-link"><a href="profile/okrs-q2-2026.json">okrs-q2-2026.json</a> for integrations</p>
-    </div>
-  </section>
-
-  <section class="section section-dark" id="projects">
-    <div class="container">
-      <p class="section-label">Case Studies</p>
-      <h2>Infrastructure and copy outcomes</h2>
-      <p class="section-sub">Two views per engagement: what was built (architecture) and what was written (copy angle, variants, results).</p>
-
-      <h3 class="subsection-title subsection-light">Copy outcomes</h3>
-      <div class="grid-3 copy-cs-grid">
-
-        <article class="card card-dark">
-          <div class="cs-company">Omnibound AI</div>
-          <h3>Signal-Led v14</h3>
-          <dl class="copy-meta">
-            <div><dt>Angle</dt><dd>Signal-led openers tied to news type, not headline paraphrase</dd></div>
-            <div><dt>Variants</dt><dd>144 E1 via hash-seeded Clayscript</dd></div>
-            <div><dt>Proof</dt><dd>Live AI citation in cols 14-26</dd></div>
-          </dl>
-          <div class="cs-metrics">
-            <div class="metric"><span class="metric-val">1.5%+</span><span class="metric-label">Reply rate</span></div>
-            <div class="metric"><span class="metric-val">3 days</span><span class="metric-label">Deploy</span></div>
-          </div>
-        </article>
-
-        <article class="card card-dark">
-          <div class="cs-company">RemoteState</div>
-          <h3>Billboard + Persona</h3>
-          <dl class="copy-meta">
-            <div><dt>Angle</dt><dd>Whole-offer subject lines for VP Eng and CTO</dd></div>
-            <div><dt>Variants</dt><dd>23 cadences, signal + persona routing</dd></div>
-            <div><dt>Proof</dt><dd>$180K ARR in 6 months</dd></div>
-          </dl>
-          <div class="cs-metrics">
-            <div class="metric"><span class="metric-val">+40%</span><span class="metric-label">Pipeline eff.</span></div>
-            <div class="metric"><span class="metric-val">80%</span><span class="metric-label">Qual cut</span></div>
-          </div>
-        </article>
-
-        <article class="card card-dark">
-          <div class="cs-company">NeevCloud</div>
-          <h3>Content Gate</h3>
-          <dl class="copy-meta">
-            <div><dt>Angle</dt><dd>QA before CMS, not after publish</dd></div>
-            <div><dt>Checks</dt><dd>6: duplicate, cannibalisation, claims, leaks</dd></div>
-            <div><dt>Proof</dt><dd>0.96 similarity caught on sample corpus</dd></div>
-          </dl>
-          <div class="cs-metrics">
-            <div class="metric"><span class="metric-val">80/wk</span><span class="metric-label">Post target</span></div>
-            <div class="metric"><span class="metric-val">PASS/FLAG/FAIL</span><span class="metric-label">Verdicts</span></div>
-          </div>
-          <a href="https://github.com/rasulshaikh/gtm-neevcloud-content-gate" class="card-link" target="_blank" rel="noopener">View repo</a>
-        </article>
-
-      </div>
-
-      <h3 class="subsection-title subsection-light">System builds</h3>
-      <div class="grid-3">
-
-        <article class="card card-dark">
-          <div class="cs-company">Omnibound AI</div>
-          <h3>Signal-to-Pipeline Engine</h3>
-          <p>6 data sources, 7-stage Clay LLM pipeline, deepline agent replacing 6+ hrs/batch manual research.</p>
-          <div class="cs-metrics">
-            <div class="metric"><span class="metric-val">2 wks to 3 days</span><span class="metric-label">Deploy</span></div>
-            <div class="metric"><span class="metric-val">48h to 4h</span><span class="metric-label">Qualification</span></div>
-          </div>
-          <a href="case-studies/omnibound-signal-to-pipeline.pdf" class="card-link" target="_blank" rel="noopener">Read PDF</a>
-        </article>
-
-        <article class="card card-dark">
-          <div class="cs-company">RemoteState</div>
-          <h3>Greenfield GTM Engine</h3>
-          <p>Clay + Smartlead + n8n across 250+ domains. OpenAI scoring rubric. SDR team 1 to 4 with automation playbooks.</p>
-          <div class="cs-metrics">
-            <div class="metric"><span class="metric-val">$180K+</span><span class="metric-label">ARR 6mo</span></div>
-            <div class="metric"><span class="metric-val">250+</span><span class="metric-label">Domains</span></div>
-          </div>
-          <a href="case-studies/remotestate-gtm-engine.pdf" class="card-link" target="_blank" rel="noopener">Read PDF</a>
-        </article>
-
-        <article class="card card-dark">
-          <div class="cs-company">FalconWise Tech</div>
-          <h3>Zero-to-One MENA ABM</h3>
-          <p>Multi-source enrichment, enterprise CISO targeting, co-marketing with 3 regional vendors.</p>
-          <div class="cs-metrics">
-            <div class="metric"><span class="metric-val">10+ SQLs/mo</span><span class="metric-label">From zero</span></div>
-            <div class="metric"><span class="metric-val">30%</span><span class="metric-label">Engagement</span></div>
-          </div>
-          <a href="case-studies/falconwise-mena-abm.pdf" class="card-link" target="_blank" rel="noopener">Read PDF</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="stack">
-    <div class="container">
-      <p class="section-label">Toolchain</p>
-      <h2>Stack</h2>
-      <div class="stack-grid">
-        <div class="stack-group">
-          <div class="stack-label">AI / LLM</div>
-          <div class="stack-items">Claude Code, Anthropic API, OpenAI, MiniMax Text-01, MCPs, Modal, Python</div>
-        </div>
-        <div class="stack-group">
-          <div class="stack-label">Outbound</div>
-          <div class="stack-items">Clay, Smartlead, Instantly, Apollo, HeyReach, Trigify, Zapmail</div>
-        </div>
-        <div class="stack-group">
-          <div class="stack-label">CRM / RevOps</div>
-          <div class="stack-items">HubSpot, Salesforce, Attio, Supabase, PostgreSQL</div>
-        </div>
-        <div class="stack-group">
-          <div class="stack-label">Content / SEO</div>
-          <div class="stack-items">NeevCloud content gate, TF-IDF corpus, pgvector (prod), GA4, Ahrefs</div>
-        </div>
-        <div class="stack-group">
-          <div class="stack-label">Enrichment</div>
-          <div class="stack-items">Playwright, Firecrawl, PhantomBuster, Prospeo, Deepline, BuiltWith</div>
-        </div>
-        <div class="stack-group">
-          <div class="stack-label">Automation</div>
-          <div class="stack-items">n8n, Webhooks, REST APIs, Redis, GitHub Actions</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-dark" id="n8n">
-    <div class="container">
-      <p class="section-label">Automation</p>
-      <h2>six n8n workflows</h2>
-      <p class="section-sub">Import-ready JSON. Wire Clay to list gate to push to health audit to content gate.</p>
-
-      <div class="copy-table-wrap">
-        <table class="copy-table n8n-table">
-          <thead>
-            <tr>
-              <th>Workflow</th>
-              <th>Trigger</th>
-              <th>Repo</th>
-              <th>Role</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Full Pipeline</strong></td>
-              <td>Webhook</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-portfolio/blob/main/n8n/gtm-full-pipeline.json" target="_blank" rel="noopener">gtm-portfolio</a></td>
-              <td>Clay export to list gate to push to Slack</td>
-            </tr>
-            <tr>
-              <td><strong>Pre-Send List Gate</strong></td>
-              <td>Webhook</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-list-quality-scorecard/blob/main/n8n/pre-send-list-gate.json" target="_blank" rel="noopener">list-quality-scorecard</a></td>
-              <td>Grade A-F. Block below B.</td>
-            </tr>
-            <tr>
-              <td><strong>Clay Push Pipeline</strong></td>
-              <td>Webhook + HMAC</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json" target="_blank" rel="noopener">omnibound-clay</a></td>
-              <td>HubSpot, Smartlead, HeyReach by tier</td>
-            </tr>
-            <tr>
-              <td><strong>Retry Failed Pushes</strong></td>
-              <td>Cron 30min</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/retry-failed-pushes.json" target="_blank" rel="noopener">omnibound-clay</a></td>
-              <td>Retry from Google Sheet log</td>
-            </tr>
-            <tr>
-              <td><strong>Weekly Deliverability</strong></td>
-              <td>Cron Monday</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-deliverability-audit/blob/main/n8n/weekly-deliverability-audit.json" target="_blank" rel="noopener">deliverability-audit</a></td>
-              <td>SPF/DMARC + 1% reply rule</td>
-            </tr>
-            <tr>
-              <td><strong>Content Gate</strong></td>
-              <td>Webhook</td>
-              <td><a href="https://github.com/rasulshaikh/gtm-neevcloud-content-gate/blob/main/n8n/content-gate.json" target="_blank" rel="noopener">neevcloud-content-gate</a></td>
-              <td>PASS to CMS, FLAG to Slack, FAIL to regen</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <aside class="workflow-note">
-        <strong>Import order:</strong> List gate, Clay push, Retry, Weekly audit, Content gate, Full orchestrator.
-        Env: <code>SMARTLEAD_API_KEY</code>, <code>HEYREACH_API_KEY</code>, <code>N8N_WEBHOOK_SECRET</code>, <code>SLACK_GTM_CHANNEL</code>, <code>CMS_PUBLISH_WEBHOOK_URL</code>.
-      </aside>
     </div>
   </section>
 
   <section class="section section-downloads" id="downloads">
-    <div class="container center">
+    <div class="container center container-wide">
       <p class="section-label">Exports</p>
       <h2>PDFs and JSON</h2>
-      <p class="section-sub center-sub">Play guides, profile exports, workflow schemas, OKRs, copy framework.</p>
       <div class="download-grid">
-        <a href="profile/gtm-profile.pdf" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">PDF</span>
-          <span class="download-title">GTM Profile</span>
-          <span class="download-desc">Metrics, stack, 9 repos, workflow</span>
-        </a>
-        <a href="docs/architecture.pdf" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">PDF</span>
-          <span class="download-title">Architecture</span>
-          <span class="download-desc">4 motions, gates, n8n layer</span>
-        </a>
-        <a href="docs/architecture.md" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">MD</span>
-          <span class="download-title">Architecture doc</span>
-          <span class="download-desc">Mermaid diagrams, full spec</span>
-        </a>
-        <a href="profile/gtm-profile.json" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">JSON</span>
-          <span class="download-title">GTM Profile</span>
-          <span class="download-desc">Machine-readable profile</span>
-        </a>
-        <a href="profile/workflow.json" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">JSON</span>
-          <span class="download-title">Workflow</span>
-          <span class="download-desc">7-phase pipeline + copy map</span>
-        </a>
-        <a href="profile/okrs-q2-2026.json" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">JSON</span>
-          <span class="download-title">OKRs Q2 2026</span>
-          <span class="download-desc">Three OKR sets for GTM eng</span>
-        </a>
-        <a href="profile/copy-framework.json" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">JSON</span>
-          <span class="download-title">Copy framework</span>
-          <span class="download-desc">4-step + production case studies</span>
-        </a>
-        <a href="n8n/gtm-full-pipeline.json" class="download-card" target="_blank" rel="noopener">
-          <span class="download-type">n8n</span>
-          <span class="download-title">Full pipeline</span>
-          <span class="download-desc">Master orchestrator JSON</span>
-        </a>
+        <a href="data/workflows.json" class="download-card"><span class="download-type">JSON</span><span class="download-title">Workflows catalog</span><span class="download-desc">32 playbooks, filterable schema</span></a>
+        <a href="profile/gtm-profile.pdf" class="download-card"><span class="download-type">PDF</span><span class="download-title">GTM Profile</span><span class="download-desc">Metrics, stack, 9 repos</span></a>
+        <a href="docs/architecture.pdf" class="download-card"><span class="download-type">PDF</span><span class="download-title">Architecture</span><span class="download-desc">4 motions, gates, n8n</span></a>
+        <a href="n8n/gtm-full-pipeline.json" class="download-card"><span class="download-type">n8n</span><span class="download-title">Full pipeline</span><span class="download-desc">Master orchestrator</span></a>
       </div>
-      <p class="download-sub">Per-play PDFs: <code>docs/play-guide.pdf</code> in each repo</p>
     </div>
   </section>
 
@@ -658,18 +204,24 @@
       <p>GTM Engineering roles, fractional engagements, technical co-founder conversations.</p>
       <div class="contact-links">
         <a href="mailto:shaikhrasul02@gmail.com" class="btn-primary">shaikhrasul02@gmail.com</a>
-        <a href="https://linkedin.com/in/rasulshaikh" class="btn-secondary" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/rasulshaikh" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/rasulshaikh" class="btn-secondary-dark" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </section>
 
   </main>
 
+  <div class="wf-modal-overlay" id="wf-modal" hidden role="dialog" aria-modal="true" aria-labelledby="wf-modal-title">
+    <div class="wf-modal-panel">
+      <button type="button" class="wf-modal-close" id="wf-modal-close" aria-label="Close">&times;</button>
+      <div id="wf-modal-body"></div>
+    </div>
+  </div>
+
   <footer>
-    <div class="container">
+    <div class="container container-wide footer-inner">
       <span>2026 Rasul Shaikh</span>
-      <span>Pune, MH - Remote worldwide</span>
+      <span>Playbooks: <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills">ColdIQ</a> · <a href="https://www.workflows.io/workflows">workflows.io</a></span>
     </div>
   </footer>
 
@@ -682,5 +234,6 @@
       menu.classList.toggle('nav-open', !open);
     });
   </script>
+  <script src="app.js"></script>
 </body>
 </html>
