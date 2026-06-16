@@ -1,0 +1,193 @@
+{
+  "name": "GTM - Signal Activation Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Signal Activation Pipeline\n\nFused from workflows.io Signal Activation + Rasul production repos.\n\n**Flow:** Clay signal webhook -> AI score -> List gate -> Tier route -> HubSpot sync -> Smartlead/HeyReach\n\n**Repos:**\n- gtm-ai-lead-scorer (qualify)\n- gtm-list-quality-scorecard (B+ gate)\n- gtm-omnibound-clay-workflow (copy + push)\n\n**Env:** SMARTLEAD_API_KEY, HEYREACH_API_KEY, HUBSPOT_TOKEN, SLACK_GTM_CHANNEL, N8N_LIST_GATE_WEBHOOK_URL",
+        "height": 320,
+        "width": 500
+      },
+      "id": "note-signal",
+      "name": "Signal Activation Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [0, 60]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "gtm-signal-activation",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "signal-webhook",
+      "name": "Signal Webhook (Clay)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 420],
+      "webhookId": "gtm-signal-activation"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body || $input.first().json;\nconst signals = (body.signals || body.signal_type || '').split(',').filter(Boolean);\nconst points = { 'job-change': 75, 'funding': 45, 'hiring': 40, 'pricing-visit': 80, 'trial-signup': 65, 'demo-request': 100, 'website-visitor': 50, 'content-engagement': 30 };\nlet score = signals.reduce((s, sig) => s + (points[sig.trim()] || 10), 0);\nif (signals.length >= 2) score += 15;\nlet tier = 'cold';\nif (score >= 150) tier = 'red-hot';\nelse if (score >= 100) tier = 'hot';\nelse if (score >= 50) tier = 'warm';\nelse if (score >= 20) tier = 'cool';\nreturn [{ json: { ...body, signals, score, tier, motion: 'signal-activation' } }];"
+      },
+      "id": "score-tier",
+      "name": "ColdIQ Tier Score",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 420]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.N8N_LIST_GATE_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "list-gate",
+      "name": "List Quality Gate",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 420]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [{
+            "value1": "={{ $json.status }}",
+            "operation": "equals",
+            "value2": "approved"
+          }]
+        }
+      },
+      "id": "gate-check",
+      "name": "B+ Approved?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [720, 420]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [{
+            "value1": "={{ $json.tier }}",
+            "operation": "equals",
+            "value2": "hot"
+          }]
+        }
+      },
+      "id": "tier-hot",
+      "name": "Hot tier?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [960, 320]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [{
+            "value1": "={{ $json.tier }}",
+            "operation": "equals",
+            "value2": "red-hot"
+          }]
+        }
+      },
+      "id": "tier-redhot",
+      "name": "Red Hot?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [960, 520]
+    },
+    {
+      "parameters": {
+        "channel": "={{ $env.SLACK_GTM_CHANNEL }}",
+        "text": "=Red Hot signal: {{ $json.email || $json.contact_email }} score {{ $json.score }} - AE action < 1h",
+        "otherOptions": {}
+      },
+      "id": "slack-redhot",
+      "name": "Slack AE Alert",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [1200, 600]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.HEYREACH_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "heyreach-push",
+      "name": "HeyReach (Hot)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1200, 240]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SMARTLEAD_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "smartlead-push",
+      "name": "Smartlead (Warm+)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1200, 400]
+    },
+    {
+      "parameters": {
+        "channel": "={{ $env.SLACK_GTM_CHANNEL }}",
+        "text": "=List gate BLOCKED: {{ $json.grade || 'below B+' }} - {{ $json.email || 'batch' }}",
+        "otherOptions": {}
+      },
+      "id": "slack-blocked",
+      "name": "Slack Gate Block",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [960, 680]
+    }
+  ],
+  "connections": {
+    "Signal Webhook (Clay)": {
+      "main": [[{"node": "ColdIQ Tier Score", "type": "main", "index": 0}]]
+    },
+    "ColdIQ Tier Score": {
+      "main": [[{"node": "List Quality Gate", "type": "main", "index": 0}]]
+    },
+    "List Quality Gate": {
+      "main": [[{"node": "B+ Approved?", "type": "main", "index": 0}]]
+    },
+    "B+ Approved?": {
+      "main": [
+        [{"node": "Hot tier?", "type": "main", "index": 0}],
+        [{"node": "Slack Gate Block", "type": "main", "index": 0}]
+      ]
+    },
+    "Hot tier?": {
+      "main": [
+        [{"node": "HeyReach (Hot)", "type": "main", "index": 0}],
+        [{"node": "Red Hot?", "type": "main", "index": 0}]
+      ]
+    },
+    "Red Hot?": {
+      "main": [
+        [{"node": "Slack AE Alert", "type": "main", "index": 0}],
+        [{"node": "Smartlead (Warm+)", "type": "main", "index": 0}]
+      ]
+    }
+  },
+  "settings": {"executionOrder": "v1"},
+  "meta": {
+    "source": "gtm-portfolio/context-engine",
+    "motion": "signal-activation",
+    "attribution": "workflows.io + ColdIQ + rasulshaikh"
+  }
+}

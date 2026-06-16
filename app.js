@@ -124,7 +124,10 @@
     const metrics = wf.metrics ? Object.entries(wf.metrics).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('') : '';
     const links = [];
     if (wf.repo) links.push(`<a href="${wf.repo}" class="btn-primary" target="_blank" rel="noopener">View repo</a>`);
-    if (wf.external) links.push(`<a href="${wf.external}" class="btn-secondary" target="_blank" rel="noopener">Open on workflows.io</a>`);
+    if (wf.engine_path) links.push(`<a href="${wf.engine_path}" class="btn-primary">Context Engine motion</a>`);
+    if (wf.engine_id) links.push(`<a href="#engine" class="btn-secondary" onclick="document.getElementById('engine-motion').value='${wf.engine_id}';document.getElementById('engine-route-btn')?.click();">Route in engine</a>`);
+    if (wf.n8n) links.push(`<a href="${wf.n8n}" class="btn-secondary" target="_blank" rel="noopener">Import n8n</a>`);
+    if (wf.external) links.push(`<a href="${wf.external}" class="btn-secondary" target="_blank" rel="noopener">Original on workflows.io</a>`);
     if (wf.source_url) links.push(`<a href="${wf.source_url}" class="btn-secondary" target="_blank" rel="noopener">ColdIQ skill</a>`);
     if (wf.pdf) links.push(`<a href="${wf.pdf}" class="btn-secondary" target="_blank" rel="noopener">Case study PDF</a>`);
 

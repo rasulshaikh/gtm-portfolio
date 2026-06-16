@@ -22,6 +22,7 @@
         <span class="nav-toggle-bar"></span>
       </button>
       <div class="nav-links" id="nav-menu">
+        <a href="#engine">Context Engine</a>
         <a href="#workflows">Workflows</a>
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
@@ -37,15 +38,67 @@
     <div class="container container-wide">
       <p class="eyebrow">Rasul Shaikh · AI GTM Engineer</p>
       <h1>GTM playbooks using AI</h1>
-      <p class="hero-sub">Production workflows, ColdIQ skills, and workflows.io playbooks in one filterable library. Fork the repos, import the n8n JSON, run the gates.</p>
+      <p class="hero-sub">GTM Context Engine fuses workflows.io playbooks with ColdIQ skills and 9 production repos. Route motions, run gates, import n8n.</p>
       <dl class="metrics-bar metrics-inline">
         <div><dt>Workflows</dt><dd>32</dd></div>
+        <div><dt>Engine motions</dt><dd>3</dd></div>
         <div><dt>Production repos</dt><dd>9</dd></div>
         <div><dt>Reply rate</dt><dd>1.5%+</dd></div>
         <div><dt>Deploy</dt><dd>3 days</dd></div>
       </dl>
     </div>
   </header>
+
+  <section class="section engine-section" id="engine">
+    <div class="container container-wide">
+      <p class="section-label">GTM Context Engine</p>
+      <h2>Three workflows.io playbooks, built in</h2>
+      <p class="section-sub">Not links. Fused motions from <a href="https://www.workflows.io/workflows" target="_blank" rel="noopener">workflows.io</a>, <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills" target="_blank" rel="noopener">ColdIQ skills</a>, and 9 production repos. Route a motion + signal to get steps, tier, repo, and copy hook.</p>
+
+      <div class="engine-motion-cards" id="engine-motion-cards"></div>
+
+      <div class="engine-panel">
+        <div class="engine-controls">
+          <label>
+            Motion
+            <select id="engine-motion">
+              <option value="signal-activation">Signal Activation (11 steps)</option>
+              <option value="gtm-flywheel">GTM Flywheel 2026 (6 layers)</option>
+              <option value="product-signup">Product Sign-Up (7 steps)</option>
+            </select>
+          </label>
+          <label>
+            Signal 1
+            <select id="engine-signal"></select>
+          </label>
+          <label>
+            Signal 2 (stack)
+            <select id="engine-signal-2"></select>
+          </label>
+          <button type="button" class="btn-primary" id="engine-route-btn">Route context</button>
+        </div>
+
+        <div class="engine-output" id="engine-output"></div>
+
+        <div class="engine-steps-wrap">
+          <h3>Implementation steps</h3>
+          <ol class="engine-steps" id="engine-steps"></ol>
+        </div>
+
+        <div class="engine-diagram-wrap">
+          <h3>Routing diagram</h3>
+          <div id="engine-diagram"></div>
+        </div>
+
+        <div class="engine-links">
+          <a href="context-engine/ENGINE.md" class="btn-arch">ENGINE.md</a>
+          <a href="context-engine/data/gtm-context-engine.json" class="btn-arch">gtm-context-engine.json</a>
+          <a href="context-engine/n8n/signal-activation-pipeline.json" class="btn-arch">Signal activation n8n</a>
+          <a href="context-engine/README.md" class="btn-arch btn-arch-primary">Engine README</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="featured-section" aria-label="Featured tools">
     <div class="container container-wide">
@@ -68,6 +121,7 @@
             <button type="button" class="filter-tab active" data-filter-type="all">All</button>
             <button type="button" class="filter-tab" data-filter-type="production">Production</button>
             <button type="button" class="filter-tab" data-filter-type="playbook">Playbooks</button>
+            <button type="button" class="filter-tab" data-filter-type="engine">Engine</button>
             <button type="button" class="filter-tab" data-filter-type="skill">Skills</button>
             <button type="button" class="filter-tab" data-filter-type="template">Templates</button>
           </div>
@@ -180,6 +234,7 @@
           <li><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json">Clay push pipeline</a></li>
           <li><a href="https://github.com/rasulshaikh/gtm-deliverability-audit/blob/main/n8n/weekly-deliverability-audit.json">Weekly deliverability</a></li>
           <li><a href="https://github.com/rasulshaikh/gtm-neevcloud-content-gate/blob/main/n8n/content-gate.json">Content gate</a></li>
+          <li><a href="context-engine/n8n/signal-activation-pipeline.json">Signal activation (Context Engine)</a></li>
         </ul>
       </div>
     </div>
@@ -190,6 +245,7 @@
       <p class="section-label">Exports</p>
       <h2>PDFs and JSON</h2>
       <div class="download-grid">
+        <a href="context-engine/data/gtm-context-engine.json" class="download-card"><span class="download-type">JSON</span><span class="download-title">Context Engine</span><span class="download-desc">3 fused motions, routing schema</span></a>
         <a href="data/workflows.json" class="download-card"><span class="download-type">JSON</span><span class="download-title">Workflows catalog</span><span class="download-desc">32 playbooks, filterable schema</span></a>
         <a href="profile/gtm-profile.pdf" class="download-card"><span class="download-type">PDF</span><span class="download-title">GTM Profile</span><span class="download-desc">Metrics, stack, 9 repos</span></a>
         <a href="docs/architecture.pdf" class="download-card"><span class="download-type">PDF</span><span class="download-title">Architecture</span><span class="download-desc">4 motions, gates, n8n</span></a>
@@ -235,5 +291,6 @@
     });
   </script>
   <script src="app.js"></script>
+  <script src="engine.js"></script>
 </body>
 </html>

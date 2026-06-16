@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "version": "1.0",
+    "name": "GTM Context Engine",
+    "updated": "2026-06-16",
+    "attribution": {
+      "workflows_io": "https://www.workflows.io/workflows",
+      "coldiq": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills",
+      "rasul": "https://github.com/rasulshaikh"
+    }
+  },
+  "heat_tiers": [
+    {"id": "red-hot", "min_score": 150, "sla_hours": 1, "owner": "AE", "channels": ["phone", "manual-email", "heyreach"]},
+    {"id": "hot", "min_score": 100, "sla_hours": 24, "owner": "SDR", "channels": ["heyreach", "smartlead-personalized"]},
+    {"id": "warm", "min_score": 50, "sla_hours": 72, "owner": "SDR", "channels": ["smartlead-sequence", "slack-alert"]},
+    {"id": "cool", "min_score": 20, "sla_hours": 168, "owner": "Marketing", "channels": ["nurture", "content"]},
+    {"id": "cold", "min_score": 0, "sla_hours": null, "owner": "System", "channels": ["monitor"]}
+  ],
+  "gates": [
+    {"id": "list-gate", "repo": "gtm-list-quality-scorecard", "threshold": "B+", "n8n": "pre-send-list-gate.json"},
+    {"id": "copy-gate", "repo": "gtm-omnibound-clay-workflow", "threshold": "col-60-PASS", "n8n": "clay-push-pipeline.json"},
+    {"id": "content-gate", "repo": "gtm-neevcloud-content-gate", "threshold": "PASS", "n8n": "content-gate.json"}
+  ],
+  "copy_hooks": {
+    "signal-led": {"framework_step": 2, "when": "recent news, hiring, funding"},
+    "problem-sniffing": {"framework_step": 2, "when": "observable gap or audit data"},
+    "billboard": {"framework_step": 2, "when": "clear offer, limited personalization data"}
+  },
+  "motions": [
+    {
+      "id": "signal-activation",
+      "title": "Signal Activation",
+      "source": "workflows.io",
+      "source_url": "https://www.workflows.io/workflows/signal-activation-playbook",
+      "description": "Capture buying signals from CRM, intent, content, and hiring. Aggregate in Clay, score, tier, route to reps, sync CRM, activate via Instantly/HeyReach/Slack.",
+      "motion_file": "motions/signal-activation.md",
+      "primary_repo": "gtm-omnibound-clay-workflow",
+      "n8n": "context-engine/n8n/signal-activation-pipeline.json",
+      "coldiq_skills": ["multi-signal", "clay-enrichment-9step", "gtm-plays-11"],
+      "tools": ["Clay", "HubSpot", "Smartlead", "HeyReach", "n8n", "Slack", "Trigify", "PhantomBuster"],
+      "steps": [
+        {"order": 1, "name": "Capture signals", "workflows_io": "Map CRM, intent, content, hiring sources", "implementation": "gtm-founder-led-loop/01_signal_capture.py", "coldiq": "signal-sourcer sub-skills"},
+        {"order": 2, "name": "Aggregate in Clay", "workflows_io": "Single table, dedupe by domain+email", "implementation": "Clay webhook + gtm-clay-formula-library", "coldiq": "clay-enrichment-9step"},
+        {"order": 3, "name": "Normalize fields", "workflows_io": "Standardize signal type, date, source", "implementation": "gtm-clay-formula-library IIFEs", "coldiq": null},
+        {"order": 4, "name": "Enrich contact + company", "workflows_io": "Email waterfall, firmographics", "implementation": "Clay cols 7-13 (Omnibound pattern)", "coldiq": "clay-enrichment-9step"},
+        {"order": 5, "name": "CRM lookup", "workflows_io": "Existing opp? Customer? DNC?", "implementation": "HubSpot API via n8n", "coldiq": null},
+        {"order": 6, "name": "AI qualify", "workflows_io": "ICP fit yes/no + reason", "implementation": "gtm-ai-lead-scorer/score_lead.py", "coldiq": "list-building qualify"},
+        {"order": 7, "name": "Tier score", "workflows_io": "Hot/Warm/Cool from compound signals", "implementation": "ColdIQ multi-signal + Clay formula", "coldiq": "multi-signal"},
+        {"order": 8, "name": "Segment", "workflows_io": "Persona, industry, signal combo", "implementation": "gtm-email-cadences YAML routing", "coldiq": "gtm-plays-11"},
+        {"order": 9, "name": "Route to reps", "workflows_io": "Slack alert + CRM owner assign", "implementation": "n8n Slack node", "coldiq": null},
+        {"order": 10, "name": "CRM sync", "workflows_io": "Update lead score, signal log", "implementation": "HubSpot via n8n clay-push", "coldiq": null},
+        {"order": 11, "name": "Activate outreach", "workflows_io": "Instantly Tier 2/3, HeyReach Tier 1", "implementation": "gtm-list-quality-scorecard gate then Smartlead/HeyReach", "coldiq": "cold-email first-touch"}
+      ]
+    },
+    {
+      "id": "gtm-flywheel",
+      "title": "GTM Flywheel 2026",
+      "source": "workflows.io",
+      "source_url": "https://www.workflows.io/workflows/gtm-flywheel-playbook",
+      "description": "Six-layer flywheel: Traffic, Capture, Nurture, Conversion, Qualification, Retention. Maps founder content, cadences, and content gate.",
+      "motion_file": "motions/gtm-flywheel.md",
+      "primary_repo": "gtm-founder-led-loop",
+      "n8n": "n8n/gtm-full-pipeline.json",
+      "coldiq_skills": ["linkedin-content", "cold-email", "multi-signal"],
+      "tools": ["LinkedIn", "Clay", "Smartlead", "HeyReach", "Beehiiv", "HubSpot"],
+      "layers": [
+        {"order": 1, "name": "Traffic", "workflows_io": "Founder content, ads, SEO", "implementation": "gtm-founder-led-loop/04_content_miner.py", "coldiq": "linkedin-content"},
+        {"order": 2, "name": "Capture", "workflows_io": "Engagers, visitors, sign-ups", "implementation": "gtm-founder-led-loop/01_signal_capture.py", "coldiq": "content-engagement"},
+        {"order": 3, "name": "Nurture", "workflows_io": "Sequences, newsletter, retargeting", "implementation": "gtm-email-cadences/", "coldiq": "cold-email follow-up"},
+        {"order": 4, "name": "Conversion", "workflows_io": "Demo, trial, meeting booked", "implementation": "gtm-cold-email-personalizer", "coldiq": "cold-email first-touch"},
+        {"order": 5, "name": "Qualification", "workflows_io": "Score, tier, route AE/SDR", "implementation": "gtm-ai-lead-scorer", "coldiq": "multi-signal"},
+        {"order": 6, "name": "Retention", "workflows_io": "CS signals, expansion, referrals", "implementation": "gtm-deliverability-audit + founder loop", "coldiq": null}
+      ]
+    },
+    {
+      "id": "product-signup",
+      "title": "Product Sign-Up Outreach",
+      "source": "workflows.io",
+      "source_url": "https://www.workflows.io/workflows/product-sign-up-outreach-playbook",
+      "description": "Clay webhook on sign-up, enrich, classify email type, score tiers, HubSpot sync, tiered HeyReach/Instantly outreach.",
+      "motion_file": "motions/product-signup.md",
+      "primary_repo": "gtm-ai-lead-scorer",
+      "n8n": "context-engine/n8n/signal-activation-pipeline.json",
+      "coldiq_skills": ["multi-signal", "clay-enrichment-9step"],
+      "tools": ["Clay", "HubSpot", "Findymail", "HeyReach", "Instantly", "Slack"],
+      "steps": [
+        {"order": 1, "name": "Clay webhook on signup", "workflows_io": "Product form to Clay table", "implementation": "Clay webhook trigger", "coldiq": null},
+        {"order": 2, "name": "Enrich contact", "workflows_io": "Findymail, LinkedIn URL", "implementation": "Clay enrichment cols", "coldiq": "clay-enrichment-9step step 3-4"},
+        {"order": 3, "name": "Classify email type", "workflows_io": "Work vs personal vs role", "implementation": "gtm-clay-formula-library email classifier", "coldiq": null},
+        {"order": 4, "name": "Enrich company", "workflows_io": "Firmographics, employee count", "implementation": "Clay company enrich", "coldiq": "clay-enrichment-9step step 5"},
+        {"order": 5, "name": "Lead scoring tiers", "workflows_io": "Tier 1/2/3 from ICP fit", "implementation": "gtm-ai-lead-scorer/score_lead.py", "coldiq": "multi-signal"},
+        {"order": 6, "name": "HubSpot sync", "workflows_io": "Create/update contact + deal", "implementation": "n8n HubSpot node", "coldiq": null},
+        {"order": 7, "name": "Tiered outreach", "workflows_io": "HeyReach Tier 1, Instantly Tier 2/3", "implementation": "gtm-list-quality-scorecard then clay-push", "coldiq": "cold-email personalization"}
+      ],
+      "tier_routing": {
+        "tier_1": {"channel": "HeyReach", "copy_hook": "problem-sniffing", "sla_hours": 24},
+        "tier_2": {"channel": "Instantly", "copy_hook": "billboard", "sla_hours": 72},
+        "tier_3": {"channel": "Instantly-nurture", "copy_hook": "billboard", "sla_hours": 168}
+      }
+    }
+  ]
+}

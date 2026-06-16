@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "source": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/signal-sourcer",
+  "signals": {
+    "job-change": {
+      "skill": "job-changes",
+      "path": "master-skills/signal-sourcer/.claude/skills/job-changes/SKILL.md",
+      "points": 75,
+      "tier": "hot",
+      "play": 6,
+      "timing": "14-45 days after start",
+      "copy_hook": "signal-led"
+    },
+    "champion-move": {
+      "skill": "job-changes",
+      "path": "master-skills/signal-sourcer/.claude/skills/job-changes/SKILL.md",
+      "points": 75,
+      "tier": "hot",
+      "play": 6,
+      "timing": "14-45 days after start",
+      "copy_hook": "signal-led"
+    },
+    "funding": {
+      "skill": "funding",
+      "path": "master-skills/signal-sourcer/.claude/skills/funding/SKILL.md",
+      "points": 45,
+      "tier": "warm",
+      "play": null,
+      "timing": "2-4 weeks post-announcement",
+      "copy_hook": "signal-led"
+    },
+    "hiring": {
+      "skill": "hiring",
+      "path": "master-skills/signal-sourcer/.claude/skills/hiring/SKILL.md",
+      "points": 40,
+      "tier": "warm",
+      "play": 1,
+      "timing": "2-4 weeks after posting",
+      "copy_hook": "signal-led"
+    },
+    "new-hire": {
+      "skill": "hiring",
+      "path": "master-skills/signal-sourcer/.claude/skills/hiring/SKILL.md",
+      "points": 30,
+      "tier": "warm",
+      "play": 1,
+      "timing": "2-4 weeks after hire",
+      "copy_hook": "signal-led"
+    },
+    "website-visitor": {
+      "skill": "website-visitors",
+      "path": "master-skills/signal-sourcer/.claude/skills/website-visitors/SKILL.md",
+      "points": 50,
+      "tier": "warm",
+      "play": 10,
+      "timing": "real-time to 24h",
+      "copy_hook": "problem-sniffing"
+    },
+    "pricing-visit": {
+      "skill": "website-visitors",
+      "path": "master-skills/signal-sourcer/.claude/skills/website-visitors/SKILL.md",
+      "points": 80,
+      "tier": "hot",
+      "play": 10,
+      "timing": "< 2 hours",
+      "copy_hook": "problem-sniffing"
+    },
+    "trial-signup": {
+      "skill": "multi-signal",
+      "path": "master-skills/signal-sourcer/.claude/skills/multi-signal/SKILL.md",
+      "points": 65,
+      "tier": "hot",
+      "play": null,
+      "timing": "< 24 hours",
+      "copy_hook": "problem-sniffing"
+    },
+    "demo-request": {
+      "skill": "multi-signal",
+      "path": "master-skills/signal-sourcer/.claude/skills/multi-signal/SKILL.md",
+      "points": 100,
+      "tier": "red-hot",
+      "play": null,
+      "timing": "< 1 hour",
+      "copy_hook": "problem-sniffing"
+    },
+    "tech-change": {
+      "skill": "tech-changes",
+      "path": "master-skills/signal-sourcer/.claude/skills/tech-changes/SKILL.md",
+      "points": 35,
+      "tier": "warm",
+      "play": null,
+      "timing": "1-2 weeks after detection",
+      "copy_hook": "signal-led"
+    },
+    "content-engagement": {
+      "skill": "content-engagement",
+      "path": "master-skills/signal-sourcer/.claude/skills/content-engagement/SKILL.md",
+      "points": 30,
+      "tier": "warm",
+      "play": 11,
+      "timing": "24-48 hours",
+      "copy_hook": "signal-led"
+    },
+    "competitor-review": {
+      "skill": "competitor-signals",
+      "path": "master-skills/signal-sourcer/.claude/skills/competitor-signals/SKILL.md",
+      "points": 60,
+      "tier": "hot",
+      "play": 8,
+      "timing": "within days of review",
+      "copy_hook": "problem-sniffing"
+    },
+    "company-event": {
+      "skill": "company-events",
+      "path": "master-skills/signal-sourcer/.claude/skills/company-events/SKILL.md",
+      "points": 15,
+      "tier": "cool",
+      "play": null,
+      "timing": "1-2 weeks",
+      "copy_hook": "signal-led"
+    },
+    "linkedin-follower": {
+      "skill": "content-engagement",
+      "path": "master-skills/signal-sourcer/.claude/skills/content-engagement/SKILL.md",
+      "points": 5,
+      "tier": "cool",
+      "play": 11,
+      "timing": "24-48 hours",
+      "copy_hook": "billboard"
+    }
+  },
+  "compound_rules": {
+    "min_signals_for_stack": 2,
+    "stack_bonus_points": 15,
+    "three_plus_target_reply_rate": "35-40%",
+    "fallback_skill": "multi-signal",
+    "fallback_path": "master-skills/signal-sourcer/.claude/skills/multi-signal/SKILL.md"
+  }
+}

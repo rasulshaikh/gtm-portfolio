@@ -1,7 +1,8 @@
 {
   "meta": {
-    "version": "1.0",
+    "version": "1.1",
     "count": 32,
+    "engine_motions": 3,
     "sources": [
       {"id": "rasul", "name": "Rasul Shaikh", "url": "https://github.com/rasulshaikh"},
       {"id": "coldiq", "name": "ColdIQ GTM Skills", "url": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills"},
@@ -286,39 +287,51 @@
     },
     {
       "id": "wio-gtm-flywheel",
-      "title": "The 2026 GTM Flywheel Playbook",
-      "description": "Modular playbook replacing linear funnels with momentum across Traffic, Capture, Nurture, Qualification, Conversion, Retention. Clay, RB2B, HeyReach, Instantly stack.",
+      "title": "GTM Flywheel 2026 (Context Engine)",
+      "description": "Fused workflows.io flywheel: 6 layers mapped to gtm-founder-led-loop, gtm-email-cadences, gtm-ai-lead-scorer, gtm-neevcloud-content-gate. Traffic to retention loop.",
       "categories": ["Outbound", "Content", "ABM"],
-      "type": "playbook",
+      "type": "engine",
       "source": "workflows-io",
-      "author": "Fivos Aresti",
-      "tools": ["Clay", "HeyReach", "Instantly", "RB2B", "HubSpot", "Freckle"],
+      "author": "Fivos Aresti + Rasul Shaikh",
+      "tools": ["Clay", "HeyReach", "Instantly", "LinkedIn", "HubSpot", "n8n"],
       "external": "https://www.workflows.io/workflows/gtm-flywheel-playbook",
-      "steps": ["Traffic layer", "Capture signals", "Nurture sequences", "Qualification scoring", "Conversion routing", "Retention loop"]
+      "engine_id": "gtm-flywheel",
+      "engine_path": "context-engine/motions/gtm-flywheel.md",
+      "repo": "https://github.com/rasulshaikh/gtm-founder-led-loop",
+      "n8n": "n8n/gtm-full-pipeline.json",
+      "steps": ["Traffic: founder content miner", "Capture: signal capture script", "Nurture: 23 YAML cadences", "Conversion: cold-email-personalizer", "Qualification: AI lead scorer", "Retention: deliverability audit loop"]
     },
     {
       "id": "wio-signal-activation",
-      "title": "Signal Activation Playbook",
-      "description": "Activate buying signals across Salesforce, HubSpot, outreach tools, intent data, and content engagement into unified outbound motions.",
+      "title": "Signal Activation (Context Engine)",
+      "description": "Fused workflows.io 11-step playbook: capture to Clay, ColdIQ multi-signal tier, list B+ gate, HubSpot sync, HeyReach/Smartlead activate. Not a link - runnable.",
       "categories": ["Outbound", "RevOps", "ABM"],
-      "type": "playbook",
+      "type": "engine",
       "source": "workflows-io",
-      "author": "workflows.io",
-      "tools": ["Salesforce", "HubSpot", "Outreach", "Amplitude", "Warmly", "Clay"],
+      "author": "workflows.io + Rasul Shaikh",
+      "tools": ["Clay", "HubSpot", "Smartlead", "HeyReach", "n8n", "Slack", "Trigify"],
       "external": "https://www.workflows.io/workflows/signal-activation-playbook",
-      "steps": ["Map signal sources", "CRM custom objects", "Intent routing rules", "Outbound sync", "Slack alerts"]
+      "engine_id": "signal-activation",
+      "engine_path": "context-engine/motions/signal-activation.md",
+      "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
+      "n8n": "context-engine/n8n/signal-activation-pipeline.json",
+      "steps": ["Capture signals", "Aggregate Clay", "Normalize", "Enrich", "CRM lookup", "AI qualify", "Tier score", "Segment", "Route reps", "CRM sync", "Activate outreach"]
     },
     {
       "id": "wio-product-signup",
-      "title": "Product Sign-Up Outreach Playbook",
-      "description": "Clay webhook captures sign-ups, enriches contact and company, classifies work vs personal email, scores fit tiers, syncs HubSpot, routes to LinkedIn or email.",
+      "title": "Product Sign-Up (Context Engine)",
+      "description": "Fused workflows.io PLG playbook: Clay webhook, enrich, email classify, gtm-ai-lead-scorer tiers, HubSpot sync, HeyReach T1 / Instantly T2-T3.",
       "categories": ["Outbound"],
-      "type": "playbook",
+      "type": "engine",
       "source": "workflows-io",
-      "author": "Fivos Aresti",
+      "author": "Fivos Aresti + Rasul Shaikh",
       "tools": ["Clay", "HubSpot", "Findymail", "HeyReach", "Instantly", "Slack"],
       "external": "https://www.workflows.io/workflows/product-sign-up-outreach-playbook",
-      "steps": ["Clay webhook on signup", "Enrich company", "Email type classify", "ICP tier score", "HubSpot sync", "Tier-based outreach"]
+      "engine_id": "product-signup",
+      "engine_path": "context-engine/motions/product-signup.md",
+      "repo": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
+      "n8n": "context-engine/n8n/signal-activation-pipeline.json",
+      "steps": ["Clay webhook signup", "Enrich contact", "Classify email type", "Enrich company", "Lead scoring tiers", "HubSpot sync", "Tiered outreach"]
     },
     {
       "id": "wio-hubspot-tiering",

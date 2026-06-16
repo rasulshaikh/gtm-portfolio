@@ -1,10 +1,28 @@
 # GTM Workflows - Rasul Shaikh
 
-Workflows.io-style playbook library: 32 filterable workflows (9 production repos, ColdIQ skills, workflows.io playbooks). Deployed via GitHub Pages.
+Workflows.io-style playbook library plus **GTM Context Engine**: 3 fused motions (Signal Activation, GTM Flywheel, Product Sign-Up) routing workflows.io steps to ColdIQ skills and 9 production repos.
 
 Live: https://rasulshaikh.github.io/gtm-portfolio
 
 Built with plain HTML/CSS - no frameworks, no build step, instant load.
+
+## GTM Context Engine
+
+Fuses [workflows.io](https://www.workflows.io/workflows) playbooks with [ColdIQ GTM Skills](https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills) and Rasul production repos.
+
+```bash
+python3 context-engine/engine/route.py --motion signal-activation --signal job-change
+python3 context-engine/engine/route.py --motion product-signup --signals trial-signup,funding --json
+```
+
+| File | Purpose |
+|------|---------|
+| `context-engine/ENGINE.md` | Master agent context (read at session start) |
+| `context-engine/data/gtm-context-engine.json` | Routing schema |
+| `context-engine/motions/*.md` | Step-to-repo mapping per motion |
+| `context-engine/n8n/signal-activation-pipeline.json` | Import-ready n8n |
+
+Live UI: scroll to **Context Engine** on the portfolio site.
 
 ## Architecture
 
