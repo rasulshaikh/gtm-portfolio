@@ -21,6 +21,7 @@
         <a href="#copy">Copy Library</a>
         <a href="#projects">Case Studies</a>
         <a href="#stack">Stack</a>
+        <a href="#n8n">n8n</a>
         <a href="#downloads">Downloads</a>
         <a href="#contact">Contact</a>
       </div>
@@ -371,29 +372,100 @@
     </div>
   </section>
 
+  <!-- N8N WORKFLOWS -->
+  <section class="section section-dark" id="n8n">
+    <div class="container">
+      <div class="section-label">Automation</div>
+      <h2>n8n Workflows</h2>
+      <p class="section-sub">Import-ready JSON workflows. Wire Clay → list gate → Smartlead/HeyReach → weekly health audit.</p>
+
+      <div class="copy-table-wrap">
+        <table class="copy-table n8n-table">
+          <thead>
+            <tr>
+              <th>Workflow</th>
+              <th>Trigger</th>
+              <th>Repo</th>
+              <th>What it does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Full Pipeline</strong></td>
+              <td>Webhook</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-portfolio/blob/main/n8n/gtm-full-pipeline.json" target="_blank">gtm-portfolio/n8n/</a></td>
+              <td>Clay export → list gate → Omnibound push → Slack confirm</td>
+            </tr>
+            <tr>
+              <td><strong>Pre-Send List Gate</strong></td>
+              <td>Webhook</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-list-quality-scorecard/blob/main/n8n/pre-send-list-gate.json" target="_blank">gtm-list-quality-scorecard/n8n/</a></td>
+              <td>Scores list A–F. Blocks below grade B. Forwards pass to push pipeline.</td>
+            </tr>
+            <tr>
+              <td><strong>Clay Push Pipeline</strong></td>
+              <td>Webhook + HMAC</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json" target="_blank">gtm-omnibound-clay-workflow/n8n/</a></td>
+              <td>HubSpot upsert → tier routing → Smartlead + HeyReach batch push</td>
+            </tr>
+            <tr>
+              <td><strong>Retry Failed Pushes</strong></td>
+              <td>Cron 30min</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/retry-failed-pushes.json" target="_blank">gtm-omnibound-clay-workflow/n8n/</a></td>
+              <td>Retries Smartlead/HeyReach failures from Google Sheet</td>
+            </tr>
+            <tr>
+              <td><strong>Weekly Deliverability Audit</strong></td>
+              <td>Cron Monday</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-deliverability-audit/blob/main/n8n/weekly-deliverability-audit.json" target="_blank">gtm-deliverability-audit/n8n/</a></td>
+              <td>SPF/DMARC via DNS API + 1% reply rule → Slack report</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="workflow-note">
+        <strong>Import order:</strong> List gate → Clay push → Retry loop → Weekly audit → Full pipeline orchestrator.
+        Set env vars: <code>SMARTLEAD_API_KEY</code>, <code>HEYREACH_API_KEY</code>, <code>N8N_WEBHOOK_SECRET</code>, <code>SLACK_GTM_CHANNEL</code>.
+      </div>
+    </div>
+  </section>
+
   <!-- DOWNLOADS -->
   <section class="section section-downloads" id="downloads">
     <div class="container center">
       <div class="section-label">Exports</div>
-      <h2>Profile & Workflow Files</h2>
-      <p class="section-sub center-sub">Machine-readable JSON for integrations, PDF for sharing with hiring managers or clients.</p>
+      <h2>PDFs, JSON & Workflow Files</h2>
+      <p class="section-sub center-sub">Play guides, profile exports, and machine-readable workflow schemas.</p>
       <div class="download-grid">
         <a href="profile/gtm-profile.pdf" class="download-card" target="_blank">
           <div class="download-icon">📄</div>
           <div class="download-title">GTM Profile PDF</div>
-          <div class="download-desc">2-page summary: metrics, stack, workflow, copy map, repos</div>
+          <div class="download-desc">Metrics, stack, workflow, copy map, all 8 repos</div>
+        </a>
+        <a href="docs/gtm-pipeline-overview.pdf" class="download-card" target="_blank">
+          <div class="download-icon">📄</div>
+          <div class="download-title">Pipeline Overview PDF</div>
+          <div class="download-desc">Full signal-to-pipeline motion + n8n orchestration</div>
         </a>
         <a href="profile/gtm-profile.json" class="download-card" target="_blank">
           <div class="download-icon">{ }</div>
           <div class="download-title">GTM Profile JSON</div>
-          <div class="download-desc">Full profile schema — stack, repos, case studies, copy library</div>
+          <div class="download-desc">Full profile schema for integrations</div>
         </a>
         <a href="profile/workflow.json" class="download-card" target="_blank">
           <div class="download-icon">⚙️</div>
           <div class="download-title">Workflow JSON</div>
-          <div class="download-desc">6-phase pipeline + copy map with repo/script references</div>
+          <div class="download-desc">6-phase pipeline + copy map</div>
+        </a>
+        <a href="n8n/gtm-full-pipeline.json" class="download-card" target="_blank">
+          <div class="download-icon">⚡</div>
+          <div class="download-title">n8n Full Pipeline</div>
+          <div class="download-desc">Master orchestrator — import into n8n</div>
         </a>
       </div>
+
+      <p class="download-sub">Per-play PDFs in each repo: <code>docs/play-guide.pdf</code></p>
     </div>
   </section>
 

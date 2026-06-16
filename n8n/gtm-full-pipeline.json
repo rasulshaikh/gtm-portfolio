@@ -1,0 +1,145 @@
+{
+  "name": "GTM - Full Signal-to-Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## GTM Full Pipeline\n\n**Flow:** Clay export → List quality gate → Omnibound push → Weekly deliverability audit\n\n**Import order:**\n1. gtm-list-quality-scorecard/n8n/pre-send-list-gate.json\n2. gtm-omnibound-clay-workflow/n8n/clay-push-pipeline.json\n3. gtm-omnibound-clay-workflow/n8n/retry-failed-pushes.json\n4. gtm-deliverability-audit/n8n/weekly-deliverability-audit.json\n\n**Env vars:** SMARTLEAD_API_KEY, HEYREACH_API_KEY, N8N_WEBHOOK_SECRET, SLACK_GTM_CHANNEL",
+        "height": 340,
+        "width": 480
+      },
+      "id": "note-pipeline",
+      "name": "Pipeline Overview",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [0, 80]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "gtm-pipeline-entry",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "entry-webhook",
+      "name": "Pipeline Entry (Clay)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 400],
+      "webhookId": "gtm-pipeline-entry"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.N8N_LIST_GATE_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.body || $json) }}",
+        "options": {}
+      },
+      "id": "list-gate",
+      "name": "1. List Quality Gate",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [240, 400]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [{
+            "value1": "={{ $json.status }}",
+            "operation": "equals",
+            "value2": "approved"
+          }]
+        }
+      },
+      "id": "gate-check",
+      "name": "Approved?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [480, 400]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.N8N_OMNIBOUND_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($('Pipeline Entry (Clay)').item.json.body || $('Pipeline Entry (Clay)').item.json) }}",
+        "options": {
+          "response": { "response": { "fullResponse": true } }
+        }
+      },
+      "id": "omnibound-push",
+      "name": "2. Omnibound Clay Push",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [720, 300]
+    },
+    {
+      "parameters": {
+        "channel": "={{ $env.SLACK_GTM_CHANNEL || '#gtm-alerts' }}",
+        "text": "=:white_check_mark: *Pipeline complete*\nGrade: {{ $('1. List Quality Gate').item.json.grade }}\nPushed: {{ $json.body?.pushed || $json.pushed || 'see logs' }}",
+        "otherOptions": {}
+      },
+      "id": "slack-success",
+      "name": "Slack - Success",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [960, 300],
+      "credentials": {
+        "slackApi": { "id": "SLACK_CREDENTIALS_ID", "name": "Slack API" }
+      }
+    },
+    {
+      "parameters": {
+        "channel": "={{ $env.SLACK_GTM_CHANNEL || '#gtm-alerts' }}",
+        "text": "=:no_entry: *Pipeline blocked at list gate*\nGrade: {{ $json.grade }} ({{ $json.score }}/100)\nIssues: {{ ($json.issues || []).join(', ') }}",
+        "otherOptions": {}
+      },
+      "id": "slack-blocked",
+      "name": "Slack - Blocked",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [720, 520],
+      "credentials": {
+        "slackApi": { "id": "SLACK_CREDENTIALS_ID", "name": "Slack API" }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}"
+      },
+      "id": "respond",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1200, 400]
+    }
+  ],
+  "connections": {
+    "Pipeline Entry (Clay)": {
+      "main": [[{ "node": "1. List Quality Gate", "type": "main", "index": 0 }]]
+    },
+    "1. List Quality Gate": {
+      "main": [[{ "node": "Approved?", "type": "main", "index": 0 }]]
+    },
+    "Approved?": {
+      "main": [
+        [{ "node": "2. Omnibound Clay Push", "type": "main", "index": 0 }],
+        [{ "node": "Slack - Blocked", "type": "main", "index": 0 }]
+      ]
+    },
+    "2. Omnibound Clay Push": {
+      "main": [[{ "node": "Slack - Success", "type": "main", "index": 0 }]]
+    },
+    "Slack - Success": {
+      "main": [[{ "node": "Respond", "type": "main", "index": 0 }]]
+    },
+    "Slack - Blocked": {
+      "main": [[{ "node": "Respond", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": { "executionOrder": "v1" },
+  "tags": [{ "name": "gtm" }, { "name": "pipeline" }, { "name": "orchestration" }]
+}
