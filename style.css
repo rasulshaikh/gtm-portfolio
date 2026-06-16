@@ -255,6 +255,83 @@ h2 {
 .metric-val { font-size: 15px; font-weight: 700; color: var(--white); }
 .metric-label { font-size: 11px; color: rgba(255,255,255,0.45); }
 
+/* ARCHITECTURE FLOW */
+.arch-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+.arch-lane {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+}
+.arch-lane-gate {
+  background: #eff6ff;
+  border-color: var(--blue);
+}
+.arch-lane-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.arch-path {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+}
+.arch-lane-label, .arch-path-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+.arch-items {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.arch-arrow-down {
+  font-size: 18px;
+  color: var(--accent);
+  padding: 2px 0;
+}
+.arch-downloads {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-arch {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  color: var(--navy);
+  background: var(--white);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-arch:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.btn-arch-primary {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+.btn-arch-primary:hover { background: var(--blue-light); }
+
 /* WORKFLOW DIAGRAM */
 .workflow-diagram {
   display: flex;

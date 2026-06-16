@@ -17,6 +17,7 @@
       <span class="nav-logo">RS</span>
       <div class="nav-links">
         <a href="#plays">Open Source</a>
+        <a href="#architecture">Architecture</a>
         <a href="#workflow">Workflow</a>
         <a href="#copy">Copy Library</a>
         <a href="#projects">Case Studies</a>
@@ -140,6 +141,64 @@
           <a href="https://github.com/rasulshaikh/gtm-omnibound-clay-workflow" class="card-link" target="_blank">View on GitHub →</a>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section class="section" id="architecture">
+    <div class="container">
+      <div class="section-label">System Design</div>
+      <h2>End-to-End Architecture</h2>
+      <p class="section-sub">Two signal paths, one send pipeline, QA gates before and after outbound, compounding content loop.</p>
+
+      <div class="arch-flow">
+        <div class="arch-lane">
+          <div class="arch-lane-label">Signals In</div>
+          <div class="arch-items">LinkedIn engagers · Funding/hiring alerts · Founder content posts</div>
+        </div>
+        <div class="arch-arrow-down">↓</div>
+        <div class="arch-lane arch-lane-split">
+          <div class="arch-path">
+            <div class="arch-path-label">Motion A — Omnibound</div>
+            <div class="arch-items">Clay 60-col → persona → validator PASS → n8n push</div>
+          </div>
+          <div class="arch-path">
+            <div class="arch-path-label">Motion B — Founder Loop</div>
+            <div class="arch-items">Capture engagers → score tiers → MiniMax warm outbound</div>
+          </div>
+          <div class="arch-path">
+            <div class="arch-path-label">Motion C — Cadences</div>
+            <div class="arch-items">23 YAML sequences → MiniMax hooks → Smartlead</div>
+          </div>
+        </div>
+        <div class="arch-arrow-down">↓</div>
+        <div class="arch-lane arch-lane-gate">
+          <div class="arch-lane-label">Pre-Send Gate</div>
+          <div class="arch-items">List scorecard (grade B+) · n8n pre-send-list-gate · blocks bad lists</div>
+        </div>
+        <div class="arch-arrow-down">↓</div>
+        <div class="arch-lane">
+          <div class="arch-lane-label">Send via n8n</div>
+          <div class="arch-items">HubSpot upsert → Smartlead (email) · HeyReach (LinkedIn) · tier routing A/B/C</div>
+        </div>
+        <div class="arch-arrow-down">↓</div>
+        <div class="arch-lane arch-lane-split">
+          <div class="arch-path">
+            <div class="arch-path-label">Post-Send Health</div>
+            <div class="arch-items">Weekly SPF/DMARC audit · 1% reply rule · Slack alerts</div>
+          </div>
+          <div class="arch-path">
+            <div class="arch-path-label">Mine & Loop</div>
+            <div class="arch-items">Call notes → content angles → next post → restart</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-downloads">
+        <a href="docs/architecture.md" class="btn-arch" target="_blank">Read full architecture (Markdown)</a>
+        <a href="docs/architecture.pdf" class="btn-arch btn-arch-primary" target="_blank">Download architecture PDF</a>
+        <a href="docs/gtm-pipeline-overview.pdf" class="btn-arch" target="_blank">Pipeline overview PDF</a>
       </div>
     </div>
   </section>
@@ -443,10 +502,20 @@
           <div class="download-title">GTM Profile PDF</div>
           <div class="download-desc">Metrics, stack, workflow, copy map, all 8 repos</div>
         </a>
+        <a href="docs/architecture.pdf" class="download-card" target="_blank">
+          <div class="download-icon">📄</div>
+          <div class="download-title">Architecture PDF</div>
+          <div class="download-desc">4-page end-to-end system design: motions, repos, gates, n8n</div>
+        </a>
+        <a href="docs/architecture.md" class="download-card" target="_blank">
+          <div class="download-icon">📋</div>
+          <div class="download-title">Architecture Markdown</div>
+          <div class="download-desc">Full doc with mermaid diagrams — GitHub-rendered</div>
+        </a>
         <a href="docs/gtm-pipeline-overview.pdf" class="download-card" target="_blank">
           <div class="download-icon">📄</div>
           <div class="download-title">Pipeline Overview PDF</div>
-          <div class="download-desc">Full signal-to-pipeline motion + n8n orchestration</div>
+          <div class="download-desc">Condensed signal-to-pipeline + n8n orchestration</div>
         </a>
         <a href="profile/gtm-profile.json" class="download-card" target="_blank">
           <div class="download-icon">{ }</div>
