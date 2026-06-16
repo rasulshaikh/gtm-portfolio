@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "source": "https://github.com/rasulshaikh",
+  "skill_path": "skills/gtm-plays-11/SKILL.md",
+  "plays": [
+    {
+      "id": 1,
+      "name": "New Team Members",
+      "signal": "company added team members",
+      "timing": "2-4 weeks after hire",
+      "rasul_repo": "gtm-founder-led-loop"
+    },
+    {
+      "id": 2,
+      "name": "Skills-Targeting",
+      "signal": "LinkedIn skills match product",
+      "timing": "ongoing",
+      "rasul_repo": "gtm-clay-formula-library"
+    },
+    {
+      "id": 3,
+      "name": "Role-Targeting",
+      "signal": "uncommon job title exists",
+      "timing": "ongoing",
+      "rasul_repo": "gtm-ai-lead-scorer"
+    },
+    {
+      "id": 4,
+      "name": "Industry Research",
+      "signal": "survey-based value-first",
+      "timing": "value-first",
+      "rasul_repo": "gtm-email-cadences"
+    },
+    {
+      "id": 5,
+      "name": "Resources for ICs",
+      "signal": "new SDRs starting roles",
+      "timing": "evergreen",
+      "rasul_repo": "gtm-email-cadences"
+    },
+    {
+      "id": 6,
+      "name": "Leaving Employees",
+      "signal": "team member departed",
+      "timing": "1-2 weeks after",
+      "rasul_repo": "gtm-founder-led-loop"
+    },
+    {
+      "id": 7,
+      "name": "No Dedicated Role",
+      "signal": "missing key title",
+      "timing": "ongoing",
+      "rasul_repo": "gtm-ai-lead-scorer"
+    },
+    {
+      "id": 8,
+      "name": "Bad Reviews",
+      "signal": "negative G2/Capterra review",
+      "timing": "within days",
+      "rasul_repo": "gtm-omnibound-clay-workflow"
+    },
+    {
+      "id": 9,
+      "name": "AI-Generated Ideas",
+      "signal": "personalized value via AI",
+      "timing": "ongoing",
+      "rasul_repo": "gtm-cold-email-personalizer"
+    },
+    {
+      "id": 10,
+      "name": "ServiceBell Allbound",
+      "signal": "website visitor on pricing",
+      "timing": "real-time",
+      "rasul_repo": "gtm-founder-led-loop"
+    },
+    {
+      "id": 11,
+      "name": "Inbound Followers",
+      "signal": "new LinkedIn follower",
+      "timing": "24-48 hours",
+      "rasul_repo": "gtm-founder-led-loop"
+    }
+  ]
+}

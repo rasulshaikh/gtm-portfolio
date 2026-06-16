@@ -1,8 +1,8 @@
 # Motion: GTM Flywheel 2026
 
-**Source:** [workflows.io GTM Flywheel Playbook](https://www.workflows.io/workflows/gtm-flywheel-playbook)  
+**Source:** [ GTM Flywheel Playbook](https://www./workflows/gtm-flywheel-playbook)  
 **Production anchor:** `gtm-founder-led-loop`  
-**ColdIQ:** `linkedin-content`, `cold-email`, `multi-signal`
+**Rasul:** `linkedin-content`, `cold-email`, `multi-signal`
 
 ## When to use
 
@@ -10,7 +10,7 @@ You need a full-funnel system: content drives traffic, traffic generates signals
 
 ## 6 layers (implemented)
 
-| Layer | workflows.io | Rasul implementation | Output |
+| Layer |  | Rasul implementation | Output |
 |-------|--------------|----------------------|--------|
 | 1 Traffic | Founder posts, ads, SEO | gtm-founder-led-loop/04_content_miner.py | Next post topic |
 | 2 Capture | Engagers, visitors, sign-ups | gtm-founder-led-loop/01_signal_capture.py | Hot/Warm/Nurture CSV |

@@ -1,14 +1,14 @@
 # GTM Context Engine
 
-**Owner:** Rasul Shaikh. All implementations run on production repos at github.com/rasulshaikh. workflows.io and ColdIQ provide structural inspiration; schemas, n8n, and generators live here.
+**Owner:** Rasul Shaikh. All implementations run on production repos at github.com/rasulshaikh.  and Rasul provide structural inspiration; schemas, n8n, and generators live here.
 
-Read this file at the start of any GTM session. It routes you to the right motion, ColdIQ skill, Rasul repo, and copy framework.
+Read this file at the start of any GTM session. It routes you to the right motion, Signal skill, Rasul repo, and copy framework.
 
 ## How routing works
 
 ```
 Input:  motion + optional signal type
-Output: steps + coldiq_skill + rasul_repo + tier_action + copy_hook + n8n_webhook
+Output: steps + signal_skill + rasul_repo + tier_action + copy_hook + n8n_webhook
 ```
 
 1. Pick a **motion** (signal-activation | gtm-flywheel | product-signup)
@@ -21,15 +21,15 @@ CLI: `python3 context-engine/engine/route.py --motion signal-activation --signal
 
 | Motion | Source playbook | Rasul anchor repo | When to use |
 |--------|-----------------|-------------------|-------------|
-| signal-activation | workflows.io Signal Activation | gtm-omnibound-clay-workflow | Buying signals from CRM, intent, content, hiring |
-| gtm-flywheel | workflows.io GTM Flywheel 2026 | gtm-founder-led-loop | Full-funnel: traffic to retention |
-| product-signup | workflows.io Product Sign-Up | gtm-ai-lead-scorer | PLG sign-ups, trial starts, demo requests |
-| outbound-attribution | workflows.io Outbound Attribution | gtm-omnibound-clay-workflow | CRM attribution, silent conversions, channel reporting |
-| cold-outreach-message | Rasul (inspired by workflows.io) | gtm-cold-email-personalizer | E1 copy: first line, body, CTA, P.S., 80-word gate |
+| signal-activation | Signal Activation | gtm-omnibound-clay-workflow | Buying signals from CRM, intent, content, hiring |
+| gtm-flywheel | GTM Flywheel 2026 | gtm-founder-led-loop | Full-funnel: traffic to retention |
+| product-signup | Product Sign-Up | gtm-ai-lead-scorer | PLG sign-ups, trial starts, demo requests |
+| outbound-attribution | Outbound Attribution | gtm-omnibound-clay-workflow | CRM attribution, silent conversions, channel reporting |
+| cold-outreach-message | Rasul (inspired by ) | gtm-cold-email-personalizer | E1 copy: first line, body, CTA, P.S., 80-word gate |
 
 Read the motion file in `motions/` before executing.
 
-## Heat tiers (ColdIQ multi-signal)
+## Heat tiers (Multi-signal)
 
 | Score | Heat | SLA | Channel | Owner |
 |-------|------|-----|---------|-------|
@@ -71,9 +71,9 @@ Signal motions default to **Signal-Led**. Product signup uses **Problem Sniffing
 | Content QA | gtm-neevcloud-content-gate | `gate.py` |
 | Health | gtm-deliverability-audit | weekly cron |
 
-## ColdIQ skill routing
+## Signal skill routing
 
-When a signal is present, invoke the matching sub-skill from `coldiq/skill-router.json`:
+When a signal is present, invoke the matching sub-skill from `signal/skill-router.json`:
 
 - job-change -> job-changes
 - funding -> funding
@@ -84,7 +84,7 @@ When a signal is present, invoke the matching sub-skill from `coldiq/skill-route
 - competitor -> competitor-signals
 - multi (2+ signals) -> multi-signal
 
-For play selection, see `coldiq/plays-index.json` (11 GTM plays).
+For play selection, see `signal/plays-index.json` (11 GTM plays).
 
 ## n8n entrypoints
 
@@ -98,7 +98,7 @@ For play selection, see `coldiq/plays-index.json` (11 GTM plays).
 1. Read `ENGINE.md` (this file)
 2. Run `route.py` for your motion + signal
 3. Read the motion markdown in `motions/`
-4. Invoke the returned ColdIQ skill if signal-specific copy is needed
+4. Invoke the returned Signal skill if signal-specific copy is needed
 5. Run gates before any send
 6. Log tier and SLA in CRM
 

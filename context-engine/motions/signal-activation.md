@@ -1,8 +1,8 @@
 # Motion: Signal Activation
 
-**Source:** [workflows.io Signal Activation Playbook](https://www.workflows.io/workflows/signal-activation-playbook)  
+**Source:** [ Signal Activation Playbook](https://www./workflows/signal-activation-playbook)  
 **Production anchor:** `gtm-omnibound-clay-workflow`  
-**ColdIQ:** `multi-signal`, `clay-enrichment-9step`, `gtm-plays-11`
+**Rasul:** `multi-signal`, `clay-enrichment-9step`, `gtm-plays-11`
 
 ## When to use
 
@@ -18,7 +18,7 @@ You have buying signals from multiple sources (CRM, intent, LinkedIn, hiring, we
 | 4 | Enrich contact + company | Clay + Findymail | gtm-omnibound-clay-workflow cols 7-13 | - |
 | 5 | CRM lookup | HubSpot API | n8n clay-push | DNC check |
 | 6 | AI qualify | Claude | gtm-ai-lead-scorer | ICP fit |
-| 7 | Tier score | Clay + ColdIQ weights | multi-signal skill | - |
+| 7 | Tier score | Clay + Rasul weights | multi-signal skill | - |
 | 8 | Segment | Persona routing | gtm-email-cadences | - |
 | 9 | Route to reps | Slack | n8n signal-activation | - |
 | 10 | CRM sync | HubSpot | n8n clay-push | - |
@@ -26,7 +26,7 @@ You have buying signals from multiple sources (CRM, intent, LinkedIn, hiring, we
 
 ## Signal to play mapping
 
-| Signal | ColdIQ play | Points | Default hook |
+| Signal | Rasul play | Points | Default hook |
 |--------|-------------|--------|--------------|
 | job-change | Play 6 Leaving Employees | 75 | signal-led |
 | new-hire | Play 1 New Team Members | 30 | signal-led |

@@ -1,6 +1,6 @@
 # GTM Workflows - Rasul Shaikh
 
-Workflows.io-style playbook library plus **GTM Context Engine**: 5 Rasul-owned fused motions routing workflows.io structure to ColdIQ skills and 9 production repos. Copy framework lives in `profile/cold-outreach-message.json`.
+**GTM Context Engine**: 5 Rasul-owned fused motions, signal routing, and 9 production repos. Copy framework lives in `profile/cold-outreach-message.json`.
 
 Live: https://rasulshaikh.github.io/gtm-portfolio
 
@@ -8,7 +8,7 @@ Built with plain HTML/CSS - no frameworks, no build step, instant load.
 
 ## GTM Context Engine
 
-Fuses [workflows.io](https://www.workflows.io/workflows) playbooks with [ColdIQ GTM Skills](https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills) and Rasul production repos.
+Fuses [](https://www./workflows) playbooks with [Rasul GTM Skills](https://github.com/sachasignal/Rasul-s-GTM-Skills) and Rasul production repos.
 
 ```bash
 python3 context-engine/engine/route.py --motion signal-activation --signal job-change

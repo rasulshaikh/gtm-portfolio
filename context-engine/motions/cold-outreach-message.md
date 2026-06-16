@@ -1,7 +1,7 @@
 # Motion: Cold Outreach Message Framework
 
 **Owner:** Rasul Shaikh  
-**Inspired by:** [workflows.io Cold Outreach Messaging Framework](https://www.workflows.io/workflows/the-cold-outreach-message-playbook) (Dan Rosenthal)  
+**Inspired by:** [ Cold Outreach Messaging Framework](https://www./workflows/the-cold-outreach-message-playbook) (Dan Rosenthal)  
 **Schema:** `profile/cold-outreach-message.json`  
 **Production anchor:** `gtm-cold-email-personalizer`
 
@@ -19,11 +19,11 @@ Writing E1 copy for Smartlead or HeyReach. You have enrichment data and need a r
 | Variant scale | gtm-omnibound-clay-workflow | Cols 52-59, 144 hash-seeded variants |
 | Word gate | gtm-omnibound-clay-workflow | Col 60 PASS + spam-word-checker |
 
-workflows.io provides the **structure**. Rasul repos provide the **generators, validators, and send pipeline**.
+ provides the **structure**. Rasul repos provide the **generators, validators, and send pipeline**.
 
 ## 5 steps
 
-| # | workflows.io | Rasul implementation |
+| # |  | Rasul implementation |
 |---|--------------|----------------------|
 | 1 | Strong first line (relevancy / observation / recency) | copy-framework.json hooks -> personalizer |
 | 2 | Body: 1-4 components | email-cadences YAML + Omnibound cols 52-59 |
@@ -33,7 +33,7 @@ workflows.io provides the **structure**. Rasul repos provide the **generators, v
 
 ## First line mapping
 
-| workflows.io type | Rasul strategy | Example |
+|  type | Rasul strategy | Example |
 |-------------------|----------------|---------|
 | Relevancy | Billboard | Whole-offer, clear ICP fit |
 | Observation | Problem Sniffing | "I asked ChatGPT [keyword] and you ranked 15th..." |

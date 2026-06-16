@@ -1,8 +1,8 @@
 # Motion: Product Sign-Up Outreach
 
-**Source:** [workflows.io Product Sign-Up Playbook](https://www.workflows.io/workflows/product-sign-up-outreach-playbook)  
+**Source:** [ Product Sign-Up Playbook](https://www./workflows/product-sign-up-outreach-playbook)  
 **Production anchor:** `gtm-ai-lead-scorer`  
-**ColdIQ:** `multi-signal`, `clay-enrichment-9step`
+**Rasul:** `multi-signal`, `clay-enrichment-9step`
 
 ## When to use
 

@@ -368,7 +368,6 @@
         "HeyReach",
         "Playwright"
       ],
-      "inspired_by": "https://www.workflows.io/workflows/the-cold-outreach-message-playbook",
       "engine_id": "cold-outreach-message",
       "engine_path": "context-engine/motions/cold-outreach-message.md",
       "schema": "profile/cold-outreach-message.json",
@@ -726,7 +725,7 @@
     {
       "id": "wio-gtm-flywheel",
       "title": "GTM Flywheel 2026 (Context Engine)",
-      "description": "Fused workflows.io flywheel: 6 layers mapped to gtm-founder-led-loop, gtm-email-cadences, gtm-ai-lead-scorer, gtm-neevcloud-content-gate. Traffic to retention loop.",
+      "description": "Production flywheel: 6 layers mapped to gtm-founder-led-loop, gtm-email-cadences, gtm-ai-lead-scorer, gtm-neevcloud-content-gate. Traffic to retention loop.",
       "categories": [
         "Outbound",
         "Content",
@@ -759,7 +758,7 @@
     {
       "id": "wio-signal-activation",
       "title": "Signal Activation (Context Engine)",
-      "description": "Fused workflows.io 11-step playbook: capture to Clay, multi-signal tier scoring, list B+ gate, HubSpot sync, HeyReach/Smartlead activate. Not a link - runnable.",
+      "description": "Production 11-step playbook: capture to Clay, multi-signal tier scoring, list B+ gate, HubSpot sync, HeyReach/Smartlead activate. Not a link - runnable.",
       "categories": [
         "Outbound",
         "RevOps",
@@ -798,7 +797,7 @@
     {
       "id": "wio-product-signup",
       "title": "Product Sign-Up (Context Engine)",
-      "description": "Fused workflows.io PLG playbook: Clay webhook, enrich, email classify, gtm-ai-lead-scorer tiers, HubSpot sync, HeyReach T1 / Instantly T2-T3.",
+      "description": "Production PLG playbook: Clay webhook, enrich, email classify, gtm-ai-lead-scorer tiers, HubSpot sync, HeyReach T1 / Instantly T2-T3.",
       "categories": [
         "Outbound"
       ],
@@ -830,7 +829,7 @@
     {
       "id": "wio-outbound-attribution",
       "title": "Outbound Attribution 2026 (Context Engine)",
-      "description": "Fused workflows.io attribution playbook: log every Smartlead/HeyReach touch in HubSpot, tag outbound-influenced signups, capture silent conversions, report Outbound to Signup to Revenue by channel.",
+      "description": "Production attribution playbook: log every Smartlead/HeyReach touch in HubSpot, tag outbound-influenced signups, capture silent conversions, report Outbound to Signup to Revenue by channel.",
       "categories": [
         "RevOps",
         "Outbound"

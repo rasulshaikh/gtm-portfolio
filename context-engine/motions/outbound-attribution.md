@@ -1,8 +1,8 @@
 # Motion: Outbound Attribution 2026
 
-**Source:** [workflows.io Outbound Attribution Playbook](https://www.workflows.io/workflows/outbound-attribution-playbook)  
+**Source:** [ Outbound Attribution Playbook](https://www./workflows/outbound-attribution-playbook)  
 **Production anchor:** `gtm-omnibound-clay-workflow` (HubSpot sync + send logging)  
-**ColdIQ:** `multi-signal` (north-star: positive reply rate, not reply rate alone)
+**Rasul:** `multi-signal` (north-star: positive reply rate, not reply rate alone)
 
 ## When to use
 
@@ -10,11 +10,11 @@ Outbound touches Smartlead/HeyReach but CRM shows "Direct" or "Organic" signups.
 
 ## Rasul stack note
 
-workflows.io uses **OutboundSync + Instantly**. This implementation maps to **n8n clay-push + Smartlead/HeyReach** with the same HubSpot property model.
+ uses **OutboundSync + Instantly**. This implementation maps to **n8n clay-push + Smartlead/HeyReach** with the same HubSpot property model.
 
 ## 7 steps (implemented)
 
-| # | Step | workflows.io | Rasul implementation |
+| # | Step |  | Rasul implementation |
 |---|------|--------------|----------------------|
 | 1 | Connect outreach to CRM | OutboundSync + Instantly/HeyReach | n8n clay-push-pipeline.json |
 | 2 | Core HubSpot properties | Outbound Campaign + Sign Up checkboxes | HubSpot custom props via n8n |

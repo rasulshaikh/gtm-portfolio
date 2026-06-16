@@ -160,7 +160,7 @@
 
   Promise.all([
     fetch('context-engine/data/gtm-context-engine.json').then(r => r.json()),
-    fetch('context-engine/coldiq/skill-router.json').then(r => r.json()),
+    fetch('context-engine/signals/skill-router.json').then(r => r.json()),
   ])
     .then(([eng, router]) => {
       engine = eng;

@@ -1,0 +1,5 @@
+
+# Internal tooling
+.claude/
+.omc/
+*.log
