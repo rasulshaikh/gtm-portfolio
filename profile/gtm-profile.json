@@ -161,9 +161,25 @@
       "format": "Python CSV batch"
     },
     "production_omnibound": {
-      "repo": "local notes",
-      "path": "notes/sources/gtm/ + docs/superpowers/specs/",
+      "repo": "gtm-omnibound-clay-workflow",
+      "url": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
+      "path": "WORKFLOW.md + formulas/ + prompts/",
+      "count": 60,
       "description": "60-column Clay workflow: intel → citation → copy → purple-safety validation → Smartlead/HeyReach export"
+    },
+    "list_quality_scorecard": {
+      "repo": "gtm-list-quality-scorecard",
+      "url": "https://github.com/rasulshaikh/gtm-list-quality-scorecard",
+      "path": "scorecard.py",
+      "dimensions": 8,
+      "format": "Python CSV → markdown grade"
+    },
+    "deliverability_audit": {
+      "repo": "gtm-deliverability-audit",
+      "url": "https://github.com/rasulshaikh/gtm-deliverability-audit",
+      "path": "audit.py",
+      "checks": ["SPF", "DKIM", "DMARC", "inbox health", "1% reply rule"],
+      "format": "Python → CSV + markdown report"
     }
   },
   "open_source_repos": [
@@ -196,6 +212,21 @@
       "name": "gtm-founder-led-loop",
       "url": "https://github.com/rasulshaikh/gtm-founder-led-loop",
       "description": "Content → signal → score → warm outbound → mine loop"
+    },
+    {
+      "name": "gtm-deliverability-audit",
+      "url": "https://github.com/rasulshaikh/gtm-deliverability-audit",
+      "description": "SPF/DKIM/DMARC + Smartlead inbox health + 1% reply rule"
+    },
+    {
+      "name": "gtm-list-quality-scorecard",
+      "url": "https://github.com/rasulshaikh/gtm-list-quality-scorecard",
+      "description": "Pre-send list grading across 8 dimensions"
+    },
+    {
+      "name": "gtm-omnibound-clay-workflow",
+      "url": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
+      "description": "60-column Clay workflow with purple-safety validation"
     }
   ],
   "case_studies": [

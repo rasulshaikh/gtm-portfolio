@@ -104,9 +104,23 @@
     {
       "type": "Production Omnibound",
       "count": "60-col Clay workflow",
-      "location": "notes/sources/gtm/ (local)",
+      "location": "github.com/rasulshaikh/gtm-omnibound-clay-workflow/",
       "format": "Clay table + Clayscript",
       "ai_model": "Claygent Neon + purple-safety"
+    },
+    {
+      "type": "Pre-send list QA",
+      "count": "8 dimensions",
+      "location": "github.com/rasulshaikh/gtm-list-quality-scorecard/",
+      "format": "Python CSV",
+      "ai_model": "Rule-based"
+    },
+    {
+      "type": "Deliverability audit",
+      "count": "Per-domain + campaign",
+      "location": "github.com/rasulshaikh/gtm-deliverability-audit/",
+      "format": "Python → CSV + report",
+      "ai_model": "DNS + Smartlead API"
     }
   ]
 }
