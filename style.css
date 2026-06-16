@@ -542,6 +542,16 @@ footer a:hover { color: var(--accent); }
 .about-arch { border-top: var(--bw) solid var(--border); padding-top: 40px; }
 .about-arch-label { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
 .about-arch-sub { font-size: 14px; color: var(--gray); line-height: 1.6; margin-bottom: 24px; max-width: 600px; }
+.built-at { margin-bottom: 48px; }
+.built-at-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: var(--bw) solid var(--border); margin-top: 16px; }
+.built-at-card { padding: 24px; border-right: var(--bw) solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+.built-at-card:last-child { border-right: none; }
+.built-at-co { font-size: 15px; font-weight: 900; letter-spacing: -0.02em; color: var(--fg); }
+.built-at-role { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
+.built-at-period { font-size: 11px; color: var(--gray); margin-bottom: 8px; }
+.built-at-facts { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.built-at-facts li { font-size: 12px; line-height: 1.5; color: var(--fg); padding-left: 14px; position: relative; }
+.built-at-facts li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 2px; }
 
 /* ── ABOUT / ARCH LINKS ── */
 .about-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
@@ -569,6 +579,7 @@ footer a:hover { color: var(--accent); }
   .engine-motion-cards { grid-template-columns: 1fr 1fr; }
   .engine-controls select { min-width: 100%; }
   .about-bio-grid { grid-template-columns: 1fr; }
+  .built-at-grid { grid-template-columns: 1fr 1fr; }
   .about-bio-stats { min-width: auto; }
   .page-hero { padding: 56px 0 48px; }
 }
@@ -576,6 +587,7 @@ footer a:hover { color: var(--accent); }
   .hero-cta, .contact-links { flex-direction: column; align-items: stretch; }
   .btn-primary, .btn-secondary, .btn-secondary-dark { justify-content: center; width: 100%; }
   .engine-motion-cards { grid-template-columns: 1fr; }
+  .built-at-grid { grid-template-columns: 1fr; }
   .page-hero h1 { font-size: clamp(40px, 12vw, 80px); }
 }
 @media (max-width: 960px) {

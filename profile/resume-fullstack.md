@@ -3,7 +3,7 @@
 AI GTM Engineer | Full-Stack from Signal to Pipeline
 
 +91 7387244006 | shaikhrasul02@gmail.com | linkedin.com/in/rasulshaikh
-Pune, MH | Remote (worldwide) | Bengaluru / Indore / Singapore hybrid
+Pune, India · Remote worldwide
 Portfolio: rasulshaikh.github.io/gtm-portfolio | GitHub: github.com/rasulshaikh
 
 ---
@@ -37,7 +37,7 @@ $550K+ Revenue | $3.5M+ Pipeline | 2 Wks to 3 Days Deploy | 1.5%+ Reply Rates | 
 ## WORK HISTORY
 
 ### Omnibound AI | AI GTM Engineer (Founder's Office / GTM Strategy)
-October 2025 - Present | Remote (EOR: Native Teams)
+October 2025 - Present | Full-time, Remote
 
 AI Search Marketing Platform - signal-led GTM infrastructure for B2B scale-ups.
 
@@ -106,4 +106,3 @@ BCA, Computer Science | Sabarmati University, Ahmedabad | 2020
 Certified Sales Professional (CSP) | Relevel | 2021
 Product Marketing and GTM Strategy | Dekker Fraser, Udemy | 2022
 
-**Active Community:** CC Strategic AI, The GTM School, AI Automation (A-Z) - 152k members
