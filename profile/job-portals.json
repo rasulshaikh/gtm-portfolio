@@ -1,0 +1,43 @@
+{
+  "owner": "Rasul Shaikh",
+  "updated": "2026-06-16",
+  "master_resume": "rasul-shaikh-gtm-engineer-2026.md",
+  "portals": {
+    "linkedin": {
+      "title": "AI GTM Engineer | Clay, Smartlead, n8n | Outbound Systems",
+      "headline": "AI GTM Engineer | Built 9 GTM repos | $550K+ revenue | Clay + Smartlead + n8n | Signal to pipeline with QA gates",
+      "about": "I build outbound systems end to end: capture buying signals, enrich in Clay, write and test copy, gate lists before send, route through n8n to Smartlead and HeyReach, and audit deliverability weekly.\n\nRecent work:\n- 9 open-source repos on GitHub (list scoring, Clay formulas, cadences, personalizer)\n- Live portfolio: rasulshaikh.github.io/gtm-portfolio\n- RemoteState: 250+ domains, $180K ARR in 6 months, deploy time 2 weeks to 3 days\n- Omnibound: 60-column Clay workflow, 1.5%+ reply rate\n\nStack: Clay, Smartlead, HeyReach, HubSpot, Apollo, n8n, Python, Claude API, Playwright.\n\nOpen to GTM Engineer, RevOps, and Founder's Office roles. Remote worldwide.",
+      "top_skills": ["Clay", "Smartlead", "n8n", "HubSpot", "Cold Email", "Lead Generation", "Sales Automation", "Python"]
+    },
+    "indeed": {
+      "job_title": "GTM Engineer",
+      "summary": "AI GTM Engineer with 3+ years building outbound systems for B2B SaaS. Expert in Clay, Smartlead, n8n, and HubSpot. Generated $550K+ revenue and $3.5M+ pipeline. Built 9 production GTM tools on GitHub. 250+ domain deliverability at 95%+. Available remote immediately.",
+      "skills_csv": "Clay, Smartlead, HeyReach, HubSpot, Apollo, n8n, Python, Cold Email, Lead Scoring, ABM, SPF DKIM DMARC, OpenAI, Claude, Playwright, Prospeo, Instantly, Zapier, Sales Automation, RevOps, GTM Engineering"
+    },
+    "naukri": {
+      "profile_title": "AI GTM Engineer - Clay, Smartlead, n8n Automation",
+      "key_skills": "Clay, Smartlead, HubSpot, n8n, Python, Cold Email, Lead Generation, Apollo, HeyReach, Sales Automation, B2B SaaS, ABM, Deliverability",
+      "summary": "GTM Engineer with hands-on Clay and outbound automation experience. Built revenue systems at RemoteState (250+ domains, $180K ARR growth). Strong in list building, enrichment, email sequences, CRM sync, and deliverability. Pune based, open to remote global roles.",
+      "preferred_locations": "Pune, Bangalore, Remote"
+    },
+    "wellfound": {
+      "one_liner": "Built 9 GTM repos and outbound stacks that cut deploy time from 2 weeks to 3 days.",
+      "bio": "AI GTM Engineer. I ship signal-to-pipeline systems: Clay tables, n8n orchestration, Smartlead/HeyReach sends, and gates so bad lists never go out. $550K+ revenue, $3.5M+ pipeline, 9 GitHub repos, live portfolio with case studies. Looking for GTM Engineer or technical growth roles at B2B startups.",
+      "looking_for": "GTM Engineer, Growth Engineer, RevOps"
+    },
+    "cutshort": {
+      "headline": "AI GTM Engineer | Clay + n8n + Smartlead | 9 OSS repos",
+      "skills": ["Clay", "n8n", "Python", "HubSpot", "Smartlead", "Cold Email", "Playwright", "API Automation"],
+      "experience_summary": "3+ years GTM/outbound. RemoteState Founder's Office. Built full outbound engine, 250+ domains, published open-source GTM toolkit."
+    },
+    "glassdoor": {
+      "desired_job_title": "GTM Engineer",
+      "summary": "Outbound systems builder: Clay, Smartlead, n8n, HubSpot. $550K+ revenue, 9 GitHub repos, portfolio with live case studies. Remote."
+    }
+  },
+  "ats_tips": {
+    "file_format": "Upload PDF or DOCX named rasul-shaikh-gtm-engineer-2026.pdf. Avoid tables, columns, and graphics.",
+    "keywords": ["GTM Engineer", "RevOps", "Clay", "Smartlead", "n8n", "HubSpot", "cold email", "lead generation", "ABM", "deliverability", "Python", "sales automation"],
+    "avoid": ["AI-first", "synergy", "rockstar", "ninja", "passionate", "thought leader", "leverage", "utilize"]
+  }
+}
