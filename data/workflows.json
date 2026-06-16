@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.3",
-    "count": 37,
+    "count": 41,
     "engine_motions": 5,
     "sources": [
       {
@@ -95,7 +95,219 @@
         "Subject variants": "14",
         "Signal types": "6"
       },
-      "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow"
+      "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
+      "copy_preview": [
+        {
+          "label": "E1 \u2014 No Signal",
+          "subject": "your seo pipeline moved to ai search",
+          "body": "Hey Aybike,\n\nWhen operations teams evaluate last mile delivery software in AI search engines, Locus shows up. DispatchTrack doesn't. That's pipeline going to Locus instead of DispatchTrack.\n\nWhen buyers evaluate last mile delivery software vendors, they're typing very specific questions into AI search engines. Are you building content around those exact prompts, or around keywords from generic AI visibility tools?\n\nThe difference shows up in pipeline. Brands showing up in the right AI answers aren't guessing what buyers search \u2014 they're working from real buyer conversations and market context.\n\nThat's exactly what Omnibound surfaces and builds content from.\n\nWorth 30 minutes to see what that looks like for your last mile delivery software?"
+        },
+        {
+          "label": "E1 \u2014 Funding Signal",
+          "subject": "saw the raise. pipeline velocity matters now.",
+          "body": "Hey Aybike,\n\nSaw the DispatchTrack DT WMS launch. That's exactly the kind of proof point that captures pipeline when last mile delivery software buyers compare vendors in AI search.\n\nPost-raise, pipeline targets just got bigger. Most teams respond by scaling content. The ones building pipeline through AI search aren't just publishing more \u2014 they're building from the exact prompts buyers type when evaluating last mile delivery software vendors.\n\nThat's the difference between content that earns weak mentions and content that drives inbound consistently.\n\nOmnibound builds from that intelligence. Worth a 30-minute conversation?"
+        },
+        {
+          "label": "E2 \u2014 Buyer Intelligence",
+          "subject": "locus shows up. dispatchtrack doesn't.",
+          "body": "Hey Aybike,\n\nDispatchTrack's deal conversations hold the exact questions operations teams ask when evaluating last mile delivery software vendors \u2014 the objections, the outcomes, the proof points. Locus figured out how to turn that into pipeline. DispatchTrack hasn't yet.\n\nOmnibound extracts those prompts from sales calls, CRM notes, and market signals, and builds content that puts DispatchTrack where Locus is \u2014 so operations teams find DispatchTrack when they're building their shortlist.\n\nCan I show you how this works in 30 minutes?"
+        },
+        {
+          "label": "E3 \u2014 Decision Influence",
+          "subject": "while your content sits on the sidelines",
+          "body": "Hey Aybike,\n\nGetting cited in AI search is one thing. Influencing a decision is another. Locus is already shaping how operations teams think about last mile delivery software \u2014 the questions they ask, the criteria they set, the names they trust.\n\nCitations built from real buyer conversations and market context answer the specific questions operations teams ask when evaluation criteria are forming. That's what moves pipeline.\n\nMost content earns weak mentions because it was built from guessed prompts, not the language buyers use mid-evaluation.\n\nOmnibound closes that gap. If this is on your radar, happy to connect."
+        }
+      ]
+    },
+    {
+      "id": "volume-based-outbound",
+      "title": "Volume-Based Outbound Campaign",
+      "description": "High-volume ICP-list campaign engine: Apollo pull, email waterfall (Findymail + Prospeo + ZeroBounce), deliverability-gated upload, A/B tested sequences across 250+ sending domains. Used at RemoteState to hit 95%+ deliverability and 12-20 SQLs per campaign run.",
+      "categories": [
+        "Outbound"
+      ],
+      "type": "production",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": [
+        "Clay",
+        "Apollo",
+        "Findymail",
+        "Smartlead",
+        "HubSpot",
+        "n8n",
+        "ZeroBounce"
+      ],
+      "steps": [
+        "Pull ICP list from Apollo \u2014 filters: title, headcount, industry, tech stack, geo",
+        "Email waterfall in Clay: Findymail \u2192 Prospeo \u2192 BetterContact \u2192 ZeroBounce verify",
+        "Run pre-send list gate (col 60 PASS) \u2014 blocks low-quality contacts before upload",
+        "A/B split sequences: subject line variants, opening line variants, CTA variants",
+        "Upload to Smartlead across 250+ sending domains \u2014 50-domain rotation per campaign",
+        "Weekly deliverability audit \u2014 bounce rate, spam rate, domain health dashboard",
+        "Positive replies auto-routed to HubSpot via n8n webhook \u2014 lead score + Slack alert"
+      ],
+      "metrics": {
+        "Deliverability": "95%+",
+        "Reply rate": "1.5%+",
+        "SQLs per campaign": "12-20",
+        "Sending domains": "250+"
+      },
+      "copy_preview": [
+        {
+          "label": "E1 \u2014 Hiring Signal",
+          "subject": "scaling eng at {{company}}",
+          "body": "Hey {{first_name}},\n\nSaw {{company}} has {{open_roles}}+ engineering roles open. Most companies at that pace hit a bottleneck \u2014 not enough qualified bench, too slow to vet.\n\nRemoteState deploys pre-vetted engineers in 14 days. Same timezone, flexible contracts, 95%+ 6-month retention across 40+ deployments in {{industry}}.\n\n15 minutes to see if the model fits your hiring pipeline?"
+        },
+        {
+          "label": "E2 \u2014 Follow-up",
+          "subject": "re: scaling eng at {{company}}",
+          "body": "Hey {{first_name}},\n\nFollowing up on the note about engineering deployment.\n\nMost IT services pitches lead with CVs. We lead with deployment speed \u2014 the median time from brief to engineer on your codebase is 11 days.\n\nWould a quick call make sense this week?"
+        }
+      ]
+    },
+    {
+      "id": "niche-subniche-outbound",
+      "title": "Niche / Sub-Niche Campaign",
+      "description": "Vertical-specific outbound targeting deep sub-niches with industry-native messaging. Built for FalconWise (MENA enterprise cybersecurity: CISOs, CTOs, Heads of Security) and RemoteState (US/EU enterprise IT services). 5-source enrichment for sub-niche ICP accuracy, 45% improvement in targeting precision.",
+      "categories": [
+        "Outbound",
+        "ABM"
+      ],
+      "type": "production",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": [
+        "Clay",
+        "Apollo",
+        "Claude",
+        "Smartlead",
+        "HubSpot",
+        "PhantomBuster"
+      ],
+      "steps": [
+        "Define niche ICP: vertical \u2192 sub-vertical \u2192 pain cluster (e.g. cybersecurity \u2192 OT/ICS security \u2192 compliance gaps)",
+        "5-source enrichment: Apollo + Persana + Clearbit + GPT + internal CRM for sub-niche fit score",
+        "Segment by sub-niche pain \u2014 build separate sequences per pain cluster, not per persona",
+        "Write industry-native copy: use the language the niche actually uses, not generic GTM speak",
+        "Co-marketing layer: identify niche-adjacent partners for warm intro campaigns",
+        "Run sequences on Smartlead \u2014 dedicated domain pool per vertical to protect domain reputation",
+        "Tag niche in HubSpot \u2014 track SQL conversion rate per sub-vertical to double down on winners"
+      ],
+      "metrics": {
+        "Targeting accuracy": "+45%",
+        "Engagement rate": "30%",
+        "SQLs per month": "10+",
+        "Partner pipeline": "25% of total"
+      },
+      "copy_preview": [
+        {
+          "label": "MENA Cybersecurity \u2014 CISO",
+          "subject": "AI search is changing how CISOs evaluate vendors in {{industry}}",
+          "body": "Hey {{first_name}},\n\n{{industry}} buyers in the Gulf are running AI searches before booking demos \u2014 the same way they used to Google vendors.\n\n{{competitor}} is showing up in those answers. {{company}} isn't yet.\n\nFalconWise maps the exact prompts your buyers type \u2014 from compliance questions to vendor comparisons \u2014 and builds content that puts {{company}} in those answers before the shortlist forms.\n\n25 of the 30 enterprise security teams we worked with saw AI-referred inbound within 60 days.\n\nWorth 20 minutes?"
+        },
+        {
+          "label": "IT Services \u2014 Head of Engineering",
+          "subject": "{{company}}'s hiring pace vs. deployment speed",
+          "body": "Hey {{first_name}},\n\nIT services outbound in {{industry}} is mostly noise \u2014 generic staffing pitches that ignore how your engineering org actually works.\n\nRemoteState approaches it differently: we map your stack, your sprint cycles, and your bottleneck \u2014 then match engineers who've shipped in that exact environment.\n\n40+ deployments across US/EU {{industry}} companies. Median time to productive: 11 days.\n\n15 minutes to see the match rate for {{company}}'s current roles?"
+        }
+      ]
+    },
+    {
+      "id": "relevance-based-outbound",
+      "title": "Relevance-Based Campaign",
+      "description": "Content and intent-triggered outreach based on topic relevance signals: GA4 content engagement, GSC search query data, Trigify job change signals, and AI search gap analysis. Fires when a buyer's content behaviour indicates active evaluation. Used at Omnibound AI to shorten qualification from 48h to 4h.",
+      "categories": [
+        "Outbound",
+        "Content"
+      ],
+      "type": "production",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": [
+        "Trigify",
+        "Clay",
+        "HubSpot",
+        "n8n",
+        "Claude",
+        "Smartlead",
+        "GA4"
+      ],
+      "steps": [
+        "Capture relevance signals: GA4 content engagement + GSC query data + Trigify job change + RB2B anonymous visit",
+        "Score relevance composite in Clay: topic match \u00d7 recency \u00d7 engagement depth \u00d7 ICP fit",
+        "Route by relevance tier: T1 (direct outreach same day) / T2 (sequence D1+D3+D7) / T3 (nurture only)",
+        "Generate relevance-specific copy hook in Claude: reference the exact content or topic that triggered the signal",
+        "Gate on col 60 PASS before send \u2014 blocks low-relevance contacts that slipped through scoring",
+        "Push triggered contact + relevance context to HubSpot \u2014 deal stage auto-updated on reply",
+        "Mine weekly: which relevance triggers converted to SQL \u2014 feed back into signal scoring weights"
+      ],
+      "metrics": {
+        "Qualification time": "48h \u2192 4h",
+        "Signal sources": "6 unified",
+        "Routing channels": "4 Slack channels by signal type",
+        "Score range": "0-100 composite"
+      },
+      "copy_preview": [
+        {
+          "label": "Content Engagement Trigger",
+          "subject": "{{company}} is missing pipeline from {{category}} searches",
+          "body": "Hey {{first_name}},\n\n{{company}}'s content is getting traction. It's not converting into pipeline.\n\nThe gap: buyers searching AI for {{category}} vendors aren't finding {{company}} in the answers \u2014 they're finding {{competitor}}.\n\nOmnibound identifies which buyer prompts your content almost answers, then closes the gap so {{company}} shows up when purchase intent is highest.\n\n3 clients saw qualified pipeline from AI-referred contacts within 45 days of deployment.\n\nOpen to a 20-minute walkthrough?"
+        },
+        {
+          "label": "Job Change Signal (New Buyer)",
+          "subject": "{{first_name}} \u2014 congrats on the new role at {{company}}",
+          "body": "Hey {{first_name}},\n\nCongratulations on the move to {{company}}.\n\nNew {{title}} roles in {{industry}} usually inherit a pipeline problem \u2014 especially in the first 90 days when you're mapping what's working and what isn't.\n\nOmnibound helps {{category}} teams capture pipeline from AI search that traditional SEO misses. Usually takes one session to show where {{company}}'s content is leaving buyers on the table.\n\nWorth 20 minutes this week?"
+        }
+      ]
+    },
+    {
+      "id": "hyper-personalised-outbound",
+      "title": "Hyper-Personalised Campaign",
+      "description": "Account-level research pipeline: 7-stage LLM workflow in Clay (role map \u2192 SEO intel \u2192 gap analysis \u2192 AI search gap \u2192 strategic positioning \u2192 email hook \u2192 col 60 gate). Per-contact custom first lines generated from firmographic + technographic + behavioral composite. Replaces 6+ hrs/batch manual research with sub-30-min automated pass at Omnibound AI.",
+      "categories": [
+        "Outbound",
+        "ABM"
+      ],
+      "type": "production",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": [
+        "Clay",
+        "Claude",
+        "SEMrush",
+        "Ahrefs",
+        "PhantomBuster",
+        "Smartlead",
+        "HubSpot"
+      ],
+      "steps": [
+        "Role map: pull title, seniority, team size, reporting line \u2014 build ICP fit score per contact",
+        "SEO intel pull via SEMrush/Ahrefs API in Clay: organic traffic, top pages, competitor gap",
+        "Gap analysis: identify where prospect ranks below competitor on buyer-intent keywords",
+        "AI search gap: test which prompts buyer types in GPT/Perplexity return competitor but not prospect",
+        "Strategic positioning: Claude generates account-specific positioning angle based on gap + ICP role",
+        "Email hook generation: per-contact custom first line referencing the specific gap found",
+        "Col 60 gate: blocks contacts where personalisation score is below threshold \u2014 no generic sends"
+      ],
+      "metrics": {
+        "Research time": "6+ hrs \u2192 30 min per batch",
+        "Personalisation": "Per-contact custom first line",
+        "Pipeline stages": "7 LLM stages",
+        "Reply rate": "1.5%+"
+      },
+      "copy_preview": [
+        {
+          "label": "SEMrush Stack Displacement",
+          "subject": "{{company}}'s SEO vs {{competitor}}'s AI visibility gap",
+          "body": "Hey {{first_name}},\n\nRan {{company}}'s content through our AI search diagnostic against {{competitor}}.\n\n{{competitor}} shows up in 14 of the 20 prompts your {{buyer_role}} buyers type when evaluating {{category}} vendors. {{company}} shows up in 3.\n\nThe gap isn't domain authority \u2014 it's that {{competitor}}'s content is built from buyer conversations. {{company}}'s is built from keyword tools.\n\nOmnibound pulls those conversations from your CRM and builds content that closes that gap.\n\n15 minutes to show you the specific prompts you're missing?"
+        },
+        {
+          "label": "AI Search Gap (No Competitor Named)",
+          "subject": "how {{category}} buyers find vendors before booking demos",
+          "body": "Hey {{first_name}},\n\nBuyers evaluating {{category}} vendors are asking AI search engines for recommendations before they talk to sales.\n\nI mapped the top 20 prompts your buyers use. {{company}} shows up in fewer than 4 of them.\n\nThe companies that own those answers are already shaping how your buyers think about the category \u2014 before your team gets in the room.\n\nOmnibound builds content from the exact language your buyers use when they're in evaluation mode.\n\nWorth 30 minutes to see what that looks like for {{company}}?"
+        }
+      ]
     },
     {
       "id": "clay-semrush-stack-displacement",

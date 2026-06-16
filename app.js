@@ -140,6 +140,20 @@
         <p class="wf-modal-desc">${wf.description}</p>
         ${metrics ? `<dl class="wf-modal-metrics">${metrics}</dl>` : ''}
         ${steps ? `<h3>Steps</h3><ol class="wf-steps">${steps}</ol>` : ''}
+        ${(wf.copy_preview || []).length ? `
+        <div class="wf-copy-preview">
+          <h3>Copy preview</h3>
+          <div class="wf-copy-examples">
+            ${(wf.copy_preview).map(e => `
+            <div class="wf-copy-example">
+              <div class="wf-copy-meta">
+                <span class="wf-copy-label">${e.label}</span>
+                ${e.subject ? `<span class="wf-copy-subject">Subject: "${e.subject}"</span>` : ''}
+              </div>
+              <pre class="wf-copy-body">${e.body.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>
+            </div>`).join('')}
+          </div>
+        </div>` : ''}
         <h3>Tools</h3>
         <div class="wf-modal-tools">${wf.tools.map(t => `<span><img src="${favicon(toolDomain(t))}" alt="" width="16" height="16" />${t}</span>`).join('')}</div>
         <div class="wf-modal-actions">${links.join('')}</div>
