@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.3",
-    "count": 34,
+    "count": 36,
     "engine_motions": 5,
     "sources": [
       {
@@ -62,6 +62,71 @@
     }
   ],
   "workflows": [
+    {
+      "id": "clay-semrush-stack-displacement",
+      "title": "Clay SEMrush/Ahrefs Stack Displacement",
+      "description": "7-stage LLM pipeline in Clay: role mapping, SEO intel pull, gap analysis, AI search gap analysis, strategic positioning, email hook generation. Per-contact personalized copy at scale. Replaces 6+ hrs/batch manual research with sub-30-min automated pass.",
+      "categories": [
+        "Outbound",
+        "ABM"
+      ],
+      "type": "production",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": [
+        "Clay",
+        "Claude",
+        "SEMrush",
+        "Ahrefs",
+        "Smartlead"
+      ],
+      "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
+      "steps": [
+        "Role mapping: title + seniority classification",
+        "SEO intel: SEMrush/Ahrefs API pull per domain",
+        "Gap analysis: keyword + traffic opportunity delta",
+        "AI search gap: LLM identifies content blind spots",
+        "Strategic positioning: angle selection per persona",
+        "Email hook: personalized first line + body",
+        "Col 60 PASS gate before export"
+      ],
+      "metrics": {
+        "research_time": "6hrs \u2192 30min",
+        "variants": "144 E1"
+      }
+    },
+    {
+      "id": "clay-webhook-hubspot-enrichment",
+      "title": "Clay Webhook-to-HubSpot Enrichment",
+      "description": "Product sign-up webhook fires into Clay, enriches contact and company in real-time, classifies email type (personal/work/role), scores via AI rubric (0-100), syncs tiered result to HubSpot with routing context. Qualification: 48h to under 4 hours.",
+      "categories": [
+        "RevOps",
+        "Outbound"
+      ],
+      "type": "production",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": [
+        "Clay",
+        "HubSpot",
+        "Claude",
+        "Findymail",
+        "n8n"
+      ],
+      "repo": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
+      "steps": [
+        "Webhook trigger on signup event",
+        "Clay: contact enrich (name, title, LinkedIn)",
+        "Email type classify: personal / work / role-based",
+        "Company enrich: firmographic + technographic",
+        "AI lead score 0-100 composite",
+        "HubSpot sync with tier + routing context",
+        "Tiered outreach: T1 HeyReach, T2-T3 Instantly"
+      ],
+      "metrics": {
+        "qualification_time": "48h \u2192 4h"
+      }
+    },
     {
       "id": "omnibound-signal-pipeline",
       "title": "Omnibound Signal-to-Pipeline",
