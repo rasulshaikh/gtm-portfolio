@@ -513,7 +513,7 @@ footer a:hover { color: var(--accent); }
 .engine-steps li:hover { background: var(--muted); }
 .engine-steps li span { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--accent); min-width: 20px; }
 .engine-step-impl { display: block; font-family: var(--mono); font-size: 10px; color: var(--gray); margin-top: 3px; }
-.engine-step-coldiq { display: block; font-size: 11px; color: var(--accent); margin-top: 3px; font-weight: 600; }
+.engine-step-ref { display: block; font-size: 11px; color: var(--accent); margin-top: 3px; font-weight: 600; }
 .engine-mermaid { font-family: var(--mono); font-size: 12px; padding: 18px; background: var(--fg); color: #fff; overflow-x: auto; line-height: 1.65; border: var(--bw) solid var(--border); }
 .engine-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; padding-top: 24px; border-top: var(--bw) solid rgba(0,0,0,0.1); }
 

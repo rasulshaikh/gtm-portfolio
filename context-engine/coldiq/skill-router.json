@@ -1,10 +1,9 @@
 {
   "version": "1.0",
-  "source": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills/tree/main/master-skills/signal-sourcer",
+  "source": "https://github.com/rasulshaikh",
   "signals": {
     "job-change": {
       "skill": "job-changes",
-      "path": "master-skills/signal-sourcer/.claude/skills/job-changes/SKILL.md",
       "points": 75,
       "tier": "hot",
       "play": 6,
@@ -13,7 +12,6 @@
     },
     "champion-move": {
       "skill": "job-changes",
-      "path": "master-skills/signal-sourcer/.claude/skills/job-changes/SKILL.md",
       "points": 75,
       "tier": "hot",
       "play": 6,
@@ -22,7 +20,6 @@
     },
     "funding": {
       "skill": "funding",
-      "path": "master-skills/signal-sourcer/.claude/skills/funding/SKILL.md",
       "points": 45,
       "tier": "warm",
       "play": null,
@@ -31,7 +28,6 @@
     },
     "hiring": {
       "skill": "hiring",
-      "path": "master-skills/signal-sourcer/.claude/skills/hiring/SKILL.md",
       "points": 40,
       "tier": "warm",
       "play": 1,
@@ -40,7 +36,6 @@
     },
     "new-hire": {
       "skill": "hiring",
-      "path": "master-skills/signal-sourcer/.claude/skills/hiring/SKILL.md",
       "points": 30,
       "tier": "warm",
       "play": 1,
@@ -49,7 +44,6 @@
     },
     "website-visitor": {
       "skill": "website-visitors",
-      "path": "master-skills/signal-sourcer/.claude/skills/website-visitors/SKILL.md",
       "points": 50,
       "tier": "warm",
       "play": 10,
@@ -58,7 +52,6 @@
     },
     "pricing-visit": {
       "skill": "website-visitors",
-      "path": "master-skills/signal-sourcer/.claude/skills/website-visitors/SKILL.md",
       "points": 80,
       "tier": "hot",
       "play": 10,
@@ -67,7 +60,6 @@
     },
     "trial-signup": {
       "skill": "multi-signal",
-      "path": "master-skills/signal-sourcer/.claude/skills/multi-signal/SKILL.md",
       "points": 65,
       "tier": "hot",
       "play": null,
@@ -76,7 +68,6 @@
     },
     "demo-request": {
       "skill": "multi-signal",
-      "path": "master-skills/signal-sourcer/.claude/skills/multi-signal/SKILL.md",
       "points": 100,
       "tier": "red-hot",
       "play": null,
@@ -85,7 +76,6 @@
     },
     "tech-change": {
       "skill": "tech-changes",
-      "path": "master-skills/signal-sourcer/.claude/skills/tech-changes/SKILL.md",
       "points": 35,
       "tier": "warm",
       "play": null,
@@ -94,7 +84,6 @@
     },
     "content-engagement": {
       "skill": "content-engagement",
-      "path": "master-skills/signal-sourcer/.claude/skills/content-engagement/SKILL.md",
       "points": 30,
       "tier": "warm",
       "play": 11,
@@ -103,7 +92,6 @@
     },
     "competitor-review": {
       "skill": "competitor-signals",
-      "path": "master-skills/signal-sourcer/.claude/skills/competitor-signals/SKILL.md",
       "points": 60,
       "tier": "hot",
       "play": 8,
@@ -112,7 +100,6 @@
     },
     "company-event": {
       "skill": "company-events",
-      "path": "master-skills/signal-sourcer/.claude/skills/company-events/SKILL.md",
       "points": 15,
       "tier": "cool",
       "play": null,
@@ -121,7 +108,6 @@
     },
     "linkedin-follower": {
       "skill": "content-engagement",
-      "path": "master-skills/signal-sourcer/.claude/skills/content-engagement/SKILL.md",
       "points": 5,
       "tier": "cool",
       "play": 11,

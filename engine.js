@@ -122,7 +122,7 @@
             <dd>${copyHook}</dd>
           </div>
           <div class="engine-result-item">
-            <dt>ColdIQ skill</dt>
+            <dt>Signal skill</dt>
             <dd>${contexts[0]?.skill || 'multi-signal'}</dd>
           </div>
         </div>
@@ -139,7 +139,7 @@
           <div>
             <strong>${s.name}</strong>
             <span class="engine-step-impl">${s.implementation || ''}</span>
-            ${s.coldiq ? `<span class="engine-step-coldiq">ColdIQ: ${s.coldiq}</span>` : ''}
+            ${s.ref ? `<span class="engine-step-ref">${s.ref}</span>` : ''}
           </div>
         </li>`).join('');
     }
