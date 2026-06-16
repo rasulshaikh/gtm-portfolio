@@ -1,10 +1,6 @@
 # GTM Workflows - Rasul Shaikh
 
-Workflows.io-style playbook library: 32 filterable workflows (9 production repos, ColdIQ skills, workflows.io playbooks).
-
-# Rasul Shaikh - GTM Portfolio
-
-Single-page portfolio deployed via GitHub Pages.
+Workflows.io-style playbook library: 32 filterable workflows (9 production repos, ColdIQ skills, workflows.io playbooks). Deployed via GitHub Pages.
 
 Live: https://rasulshaikh.github.io/gtm-portfolio
 
