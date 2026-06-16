@@ -1,12 +1,13 @@
 {
   "owner": "Rasul Shaikh",
   "updated": "2026-06-16",
-  "master_resume": "rasul-shaikh-gtm-engineer-2026.md",
+  "master_resume": "rasul-shaikh-fullstack-gtm-2026.md",
+  "based_on": "Downloads/Resume_Rasul_FullStackGTMEngineer_v2.docx",
   "portals": {
     "linkedin": {
       "title": "AI GTM Engineer | Clay, Smartlead, n8n | Outbound Systems",
-      "headline": "AI GTM Engineer | Built 9 GTM repos | $550K+ revenue | Clay + Smartlead + n8n | Signal to pipeline with QA gates",
-      "about": "I build outbound systems end to end: capture buying signals, enrich in Clay, write and test copy, gate lists before send, route through n8n to Smartlead and HeyReach, and audit deliverability weekly.\n\nRecent work:\n- 9 open-source repos on GitHub (list scoring, Clay formulas, cadences, personalizer)\n- Live portfolio: rasulshaikh.github.io/gtm-portfolio\n- RemoteState: 250+ domains, $180K ARR in 6 months, deploy time 2 weeks to 3 days\n- Omnibound: 60-column Clay workflow, 1.5%+ reply rate\n\nStack: Clay, Smartlead, HeyReach, HubSpot, Apollo, n8n, Python, Claude API, Playwright.\n\nOpen to GTM Engineer, RevOps, and Founder's Office roles. Remote worldwide.",
+      "headline": "AI GTM Engineer | Full-stack outbound + RevOps | Omnibound + RemoteState | Clay · n8n · Python | 9 GTM repos",
+      "about": "I build the full revenue motion: outbound infrastructure, lead scoring, CRM automation, pipeline attribution, and the Python, Clay, and n8n systems behind it.\n\nCurrent: AI GTM Engineer at Omnibound AI (Founder's Office). Cut deploy 2 weeks to 3 days. Unified 6 data sources into one 0-100 lead score. 1.5%+ positive reply rates across 300+ mailboxes.\n\nPrevious: RemoteState Founder's Office - $180K ARR in 6 months, 250+ domains, scaled SDR team 1 to 4.\n\nPortfolio + 9 open-source repos: rasulshaikh.github.io/gtm-portfolio\n\nStack: Clay, Smartlead, HubSpot, n8n, Claude Code, Python, Playwright, Supabase, SEMrush, Ahrefs.\n\nOpen to GTM Engineer, RevOps, Growth Engineer roles. Remote worldwide.",
       "top_skills": ["Clay", "Smartlead", "n8n", "HubSpot", "Cold Email", "Lead Generation", "Sales Automation", "Python"]
     },
     "indeed": {
