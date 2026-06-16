@@ -25,10 +25,10 @@
   };
 
   const GRADIENT = {
-    Outbound: 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)',
-    Content: 'linear-gradient(135deg, #134e4a 0%, #0891b2 100%)',
-    ABM: 'linear-gradient(135deg, #7c2d12 0%, #ea580c 100%)',
-    RevOps: 'linear-gradient(135deg, #1e293b 0%, #475569 100%)',
+    Outbound: 'linear-gradient(135deg, #000000 0%, #1a1a1a 100%)',
+    Content:  'linear-gradient(135deg, #FF3000 0%, #cc2000 100%)',
+    ABM:      'linear-gradient(135deg, #1a1a1a 0%, #444444 100%)',
+    RevOps:   'linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%)',
   };
 
   function favicon(domain) {
