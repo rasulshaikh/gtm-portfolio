@@ -69,9 +69,21 @@
     }
   ],
   "first_line_map": [
-    {"workflows_io": "Relevancy", "rasul_strategy": "Billboard", "when": "Clear ICP fit, whole-offer opener"},
-    {"workflows_io": "Observation", "rasul_strategy": "Problem Sniffing", "when": "Audit data, rankings, observable gaps"},
-    {"workflows_io": "Recency", "rasul_strategy": "Signal-Led", "when": "News, hiring, funding, product launch"}
+    {
+      "workflows_io": "Relevancy",
+      "rasul_strategy": "Billboard",
+      "when": "Clear ICP fit, whole-offer opener"
+    },
+    {
+      "workflows_io": "Observation",
+      "rasul_strategy": "Problem Sniffing",
+      "when": "Audit data, rankings, observable gaps"
+    },
+    {
+      "workflows_io": "Recency",
+      "rasul_strategy": "Signal-Led",
+      "when": "News, hiring, funding, product launch"
+    }
   ],
   "body_components": [
     "problem_statement",
@@ -87,10 +99,26 @@
     "offer"
   ],
   "cta_types": [
-    {"id": "soft", "example": "Is [problem] a priority right now?", "tier": "cool-warm"},
-    {"id": "resource", "example": "Want me to send the [report/guide]?", "tier": "warm"},
-    {"id": "hard", "example": "Open to a 15-min call this week?", "tier": "hot"},
-    {"id": "colleague", "example": "Is someone else on your team the right person?", "tier": "any"}
+    {
+      "id": "soft",
+      "example": "Is [problem] a priority right now?",
+      "tier": "cool-warm"
+    },
+    {
+      "id": "resource",
+      "example": "Want me to send the [report/guide]?",
+      "tier": "warm"
+    },
+    {
+      "id": "hard",
+      "example": "Open to a 15-min call this week?",
+      "tier": "hot"
+    },
+    {
+      "id": "colleague",
+      "example": "Is someone else on your team the right person?",
+      "tier": "any"
+    }
   ],
   "production_proof": {
     "omnibound": "144 E1 variants, 1.5%+ reply rate",

@@ -440,7 +440,7 @@ footer a:hover { color: var(--accent); }
 .cat-revops   { background: var(--muted); color: var(--fg); border: 1px solid rgba(0,0,0,0.15); }
 .wf-source { font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 3px 7px; text-transform: uppercase; letter-spacing: 0.04em; }
 .wf-source-rasul        { background: var(--fg); color: var(--bg); }
-.wf-source-coldiq       { background: #1a1a1a; color: #FFD700; }
+
 .wf-source-workflows-io { background: var(--muted); color: var(--fg); border: 1px solid rgba(0,0,0,0.15); }
 .wf-author { font-size: 11px; color: var(--gray); }
 

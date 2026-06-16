@@ -106,4 +106,3 @@ BCA, Computer Science | Sabarmati University, Ahmedabad | 2020
 Certified Sales Professional (CSP) | Relevel | 2021
 Product Marketing and GTM Strategy | Dekker Fraser, Udemy | 2022
 
-**Active Community:** CC Strategic AI, AI Agency OS by ColdIQ, The GTM School, AI Automation (A-Z) - 152k members
