@@ -1,5 +1,7 @@
 # GTM Context Engine
 
+**Owner:** Rasul Shaikh. All implementations run on production repos at github.com/rasulshaikh. workflows.io and ColdIQ provide structural inspiration; schemas, n8n, and generators live here.
+
 Read this file at the start of any GTM session. It routes you to the right motion, ColdIQ skill, Rasul repo, and copy framework.
 
 ## How routing works
@@ -23,6 +25,7 @@ CLI: `python3 context-engine/engine/route.py --motion signal-activation --signal
 | gtm-flywheel | workflows.io GTM Flywheel 2026 | gtm-founder-led-loop | Full-funnel: traffic to retention |
 | product-signup | workflows.io Product Sign-Up | gtm-ai-lead-scorer | PLG sign-ups, trial starts, demo requests |
 | outbound-attribution | workflows.io Outbound Attribution | gtm-omnibound-clay-workflow | CRM attribution, silent conversions, channel reporting |
+| cold-outreach-message | Rasul (inspired by workflows.io) | gtm-cold-email-personalizer | E1 copy: first line, body, CTA, P.S., 80-word gate |
 
 Read the motion file in `motions/` before executing.
 

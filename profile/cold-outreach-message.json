@@ -1,0 +1,100 @@
+{
+  "owner": "Rasul Shaikh",
+  "framework": "cold-outreach-message",
+  "version": "1.0",
+  "inspired_by": {
+    "title": "Cold Outreach Messaging Framework 2026",
+    "author": "Dan Rosenthal",
+    "source": "workflows.io",
+    "url": "https://www.workflows.io/workflows/the-cold-outreach-message-playbook"
+  },
+  "implementation": {
+    "primary_repo": "gtm-cold-email-personalizer",
+    "repos": [
+      "gtm-cold-email-personalizer",
+      "gtm-email-cadences",
+      "gtm-clay-formula-library",
+      "gtm-omnibound-clay-workflow"
+    ],
+    "schema": "profile/copy-framework.json",
+    "coldiq_skill": "master-skills/cold-email"
+  },
+  "constraints": {
+    "max_words": 80,
+    "body_components_min": 1,
+    "body_components_max": 4,
+    "single_cta": true,
+    "ps_optional": true
+  },
+  "steps": [
+    {
+      "order": 1,
+      "name": "Strong first line",
+      "workflows_io": "Relevancy, observation, or recency - why you are reaching out",
+      "rasul_hook": "profile/copy-framework.json first_line_strategies",
+      "generator": "gtm-cold-email-personalizer",
+      "clay": "gtm-clay-formula-library opener IIFE"
+    },
+    {
+      "order": 2,
+      "name": "Message body",
+      "workflows_io": "Pick 1-4 components: problem, outcome, case study, value, offer, etc.",
+      "rasul_hook": "gtm-email-cadences YAML body blocks",
+      "generator": "gtm-omnibound-clay-workflow cols 52-59",
+      "clay": "persona + signal routing formulas"
+    },
+    {
+      "order": 3,
+      "name": "Single CTA",
+      "workflows_io": "Soft, resource, hard, or colleague ask - one only",
+      "rasul_hook": "campaign-copywriting step 3",
+      "generator": "gtm-clay-formula-library CTA IIFE",
+      "clay": "intent-tier CTA column"
+    },
+    {
+      "order": 4,
+      "name": "Optional P.S.",
+      "workflows_io": "Signal, social proof, human touch, or value reminder",
+      "rasul_hook": "Signal-Led P.S. in cadence library",
+      "generator": "gtm-email-cadences follow-up variants",
+      "clay": "news-type P.S. formula"
+    },
+    {
+      "order": 5,
+      "name": "Word limit gate",
+      "workflows_io": "Keep entire message under 70-80 words",
+      "rasul_hook": "col 60 PASS validator + spam-word-checker",
+      "generator": "gtm-omnibound-clay-workflow col 60",
+      "clay": "word-count + purple-safety IIFE"
+    }
+  ],
+  "first_line_map": [
+    {"workflows_io": "Relevancy", "rasul_strategy": "Billboard", "when": "Clear ICP fit, whole-offer opener"},
+    {"workflows_io": "Observation", "rasul_strategy": "Problem Sniffing", "when": "Audit data, rankings, observable gaps"},
+    {"workflows_io": "Recency", "rasul_strategy": "Signal-Led", "when": "News, hiring, funding, product launch"}
+  ],
+  "body_components": [
+    "problem_statement",
+    "dream_outcome",
+    "poke_the_bear",
+    "case_study",
+    "problem_solution",
+    "personal_touch",
+    "social_proof",
+    "value",
+    "story",
+    "resource",
+    "offer"
+  ],
+  "cta_types": [
+    {"id": "soft", "example": "Is [problem] a priority right now?", "tier": "cool-warm"},
+    {"id": "resource", "example": "Want me to send the [report/guide]?", "tier": "warm"},
+    {"id": "hard", "example": "Open to a 15-min call this week?", "tier": "hot"},
+    {"id": "colleague", "example": "Is someone else on your team the right person?", "tier": "any"}
+  ],
+  "production_proof": {
+    "omnibound": "144 E1 variants, 1.5%+ reply rate",
+    "remotestate": "23 cadence YAML, persona routing",
+    "deploy": "campaign-copywriting 4-step confirmation loop"
+  }
+}

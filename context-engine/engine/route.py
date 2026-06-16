@@ -15,7 +15,7 @@ from router import list_motions, list_signals, route  # noqa: E402
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="GTM Context Engine router")
-    parser.add_argument("--motion", help="Motion id: signal-activation, gtm-flywheel, product-signup, outbound-attribution")
+    parser.add_argument("--motion", help="Motion id: signal-activation, gtm-flywheel, product-signup, outbound-attribution, cold-outreach-message")
     parser.add_argument("--signal", help="Single signal type")
     parser.add_argument("--signals", help="Comma-separated signals for compound scoring")
     parser.add_argument("--list", action="store_true", help="List available motions")

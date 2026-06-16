@@ -125,6 +125,7 @@
     const metrics = wf.metrics ? Object.entries(wf.metrics).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('') : '';
     const links = [];
     if (wf.repo) links.push(`<a href="${wf.repo}" class="btn-primary" target="_blank" rel="noopener">View repo</a>`);
+    if (wf.schema) links.push(`<a href="${wf.schema}" class="btn-primary">Framework schema (JSON)</a>`);
     if (wf.engine_path) links.push(`<a href="${wf.engine_path}" class="btn-primary">Context Engine motion</a>`);
     if (wf.engine_id) links.push(`<a href="#engine" class="btn-secondary" onclick="document.getElementById('engine-motion').value='${wf.engine_id}';document.getElementById('engine-route-btn')?.click();">Route in engine</a>`);
     if (wf.n8n) links.push(`<a href="${wf.n8n}" class="btn-secondary" target="_blank" rel="noopener">Import n8n</a>`);
@@ -147,7 +148,7 @@
         <h3>Tools</h3>
         <div class="wf-modal-tools">${wf.tools.map(t => `<span><img src="${favicon(toolDomain(t))}" alt="" width="16" height="16" />${t}</span>`).join('')}</div>
         <div class="wf-modal-actions">${links.join('')}</div>
-        <p class="wf-modal-credit">By ${wf.author}${wf.source === 'coldiq' ? ' · <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills" target="_blank" rel="noopener">ColdIQ GTM Skills</a>' : ''}${wf.source === 'workflows-io' ? ' · <a href="https://www.workflows.io/workflows" target="_blank" rel="noopener">workflows.io</a>' : ''}</p>
+        <p class="wf-modal-credit">By ${wf.author}${wf.inspired_by ? ` · Inspired by <a href="${wf.inspired_by}" target="_blank" rel="noopener">workflows.io</a>` : ''}${wf.source === 'coldiq' ? ' · <a href="https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills" target="_blank" rel="noopener">ColdIQ GTM Skills</a>' : ''}${wf.source === 'workflows-io' ? ' · <a href="https://www.workflows.io/workflows" target="_blank" rel="noopener">workflows.io</a>' : ''}${wf.source === 'rasul' && wf.type === 'engine' ? ' · Rasul-owned implementation' : ''}</p>
       </div>`;
     modal.hidden = false;
     document.body.style.overflow = 'hidden';

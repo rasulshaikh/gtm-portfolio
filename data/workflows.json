@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.2",
-    "count": 33,
-    "engine_motions": 4,
+    "version": "1.3",
+    "count": 34,
+    "engine_motions": 5,
     "sources": [
       {"id": "rasul", "name": "Rasul Shaikh", "url": "https://github.com/rasulshaikh"},
       {"id": "coldiq", "name": "ColdIQ GTM Skills", "url": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills"},
@@ -108,6 +108,24 @@
       "tools": ["Python", "Claude", "CSV"],
       "repo": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
       "steps": ["Upload CSV", "Claude Haiku scoring", "0-100 composite", "Export tiered list"]
+    },
+    {
+      "id": "cold-outreach-message-framework",
+      "title": "Cold Outreach Message Framework (Context Engine)",
+      "description": "Rasul-owned messaging system: first line (relevancy/observation/recency), 1-4 body blocks, single CTA, optional P.S., 80-word gate. personalizer + 23 cadences + Clay formulas + col 60 PASS.",
+      "categories": ["Outbound", "Content"],
+      "type": "engine",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
+      "tools": ["Claude", "Clay", "Smartlead", "HeyReach", "Playwright"],
+      "inspired_by": "https://www.workflows.io/workflows/the-cold-outreach-message-playbook",
+      "engine_id": "cold-outreach-message",
+      "engine_path": "context-engine/motions/cold-outreach-message.md",
+      "schema": "profile/cold-outreach-message.json",
+      "repo": "https://github.com/rasulshaikh/gtm-cold-email-personalizer",
+      "n8n": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json",
+      "steps": ["Strong first line", "Body 1-4 components", "Single CTA", "Optional P.S.", "80-word PASS gate"],
+      "metrics": {"reply_rate": "1.5%+", "variants": "144 E1 (Omnibound)"}
     },
     {
       "id": "cold-email-personalizer",
