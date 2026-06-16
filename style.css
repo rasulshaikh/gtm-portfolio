@@ -527,6 +527,22 @@ footer a:hover { color: var(--accent); }
 .skill-card p { font-size: 13px; color: var(--gray); flex: 1; line-height: 1.55; }
 .skill-card a { font-size: 11px; font-weight: 700; color: var(--fg); text-decoration: underline; text-transform: uppercase; letter-spacing: 0.05em; }
 
+/* ── ABOUT BIO ── */
+.about-bio-grid { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: start; margin-bottom: 48px; }
+.about-bio-text p { font-size: 16px; line-height: 1.7; color: var(--fg); margin-bottom: 16px; }
+.about-contact-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
+.about-contact-links a { font-size: 13px; font-weight: 700; color: var(--fg); text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px; letter-spacing: 0.02em; }
+.about-contact-links a:hover { color: var(--accent); }
+.about-bio-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: var(--bw) solid var(--border); min-width: 260px; }
+.about-stat { padding: 20px 24px; border-right: var(--bw) solid var(--border); border-bottom: var(--bw) solid var(--border); display: flex; flex-direction: column; gap: 4px; }
+.about-stat:nth-child(2n) { border-right: none; }
+.about-stat:nth-child(3), .about-stat:nth-child(4) { border-bottom: none; }
+.about-stat-num { font-size: 22px; font-weight: 900; letter-spacing: -0.03em; color: var(--fg); }
+.about-stat-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray); }
+.about-arch { border-top: var(--bw) solid var(--border); padding-top: 40px; }
+.about-arch-label { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.about-arch-sub { font-size: 14px; color: var(--gray); line-height: 1.6; margin-bottom: 24px; max-width: 600px; }
+
 /* ── ABOUT / ARCH LINKS ── */
 .about-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
 .n8n-strip h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; color: var(--fg); }
@@ -552,6 +568,8 @@ footer a:hover { color: var(--accent); }
   .cs-metrics { flex-wrap: wrap; }
   .engine-motion-cards { grid-template-columns: 1fr 1fr; }
   .engine-controls select { min-width: 100%; }
+  .about-bio-grid { grid-template-columns: 1fr; }
+  .about-bio-stats { min-width: auto; }
   .page-hero { padding: 56px 0 48px; }
 }
 @media (max-width: 480px) {
