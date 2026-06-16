@@ -17,7 +17,11 @@
       <span class="nav-logo">RS</span>
       <div class="nav-links">
         <a href="#plays">Open Source</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#copy">Copy Library</a>
         <a href="#projects">Case Studies</a>
+        <a href="#stack">Stack</a>
+        <a href="#downloads">Downloads</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -109,6 +113,140 @@
     </div>
   </section>
 
+  <!-- WORKFLOW -->
+  <section class="section section-dark" id="workflow">
+    <div class="container">
+      <div class="section-label">Architecture</div>
+      <h2>Signal-to-Pipeline Workflow</h2>
+      <p class="section-sub">Six phases, one compounding loop. Each phase maps to a repo or production tool in the stack below.</p>
+
+      <div class="workflow-diagram">
+        <div class="wf-step">
+          <div class="wf-num">01</div>
+          <div class="wf-label">Capture Signal</div>
+          <div class="wf-desc">LinkedIn engagers, funding, hiring, tech changes</div>
+          <div class="wf-tools">PhantomBuster · HeyReach · Trigify</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-num">02</div>
+          <div class="wf-label">Enrich</div>
+          <div class="wf-desc">Firmographics, technographics, contact data</div>
+          <div class="wf-tools">Apollo · Clay · Prospeo · Deepline</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-num">03</div>
+          <div class="wf-label">Score & Route</div>
+          <div class="wf-desc">0–100 ICP score → Hot / Warm / Nurture</div>
+          <div class="wf-tools">gtm-ai-lead-scorer · Clay formulas</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-num">04</div>
+          <div class="wf-label">Personalize</div>
+          <div class="wf-desc">Signal-specific hooks + full copy assembly</div>
+          <div class="wf-tools">MiniMax Text-01 · cadences · Clay IIFE</div>
+        </div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step">
+          <div class="wf-num">05</div>
+          <div class="wf-label">Send</div>
+          <div class="wf-desc">Email sequences + LinkedIn DMs by tier</div>
+          <div class="wf-tools">Smartlead · Instantly · HeyReach</div>
+        </div>
+        <div class="wf-arrow wf-loop">↺</div>
+        <div class="wf-step">
+          <div class="wf-num">06</div>
+          <div class="wf-label">Mine & Loop</div>
+          <div class="wf-desc">Calls → content angles → next signal cycle</div>
+          <div class="wf-tools">founder-led-loop · reply classifier</div>
+        </div>
+      </div>
+
+      <div class="workflow-note">
+        <strong>Founder-led loop:</strong> Content isn't separate from outbound — it's the signal source.
+        Engagers get warm copy referencing their specific interaction. Conversations feed the next post. Loop compounds.
+        <a href="https://github.com/rasulshaikh/gtm-founder-led-loop" target="_blank">See the Python implementation →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COPY LIBRARY -->
+  <section class="section" id="copy">
+    <div class="container">
+      <div class="section-label">Copy Library</div>
+      <h2>Where the Copy Lives</h2>
+      <p class="section-sub">Every copy type in the system — what it is, where to find it, and which AI model generates it.</p>
+
+      <div class="copy-table-wrap">
+        <table class="copy-table">
+          <thead>
+            <tr>
+              <th>Copy Type</th>
+              <th>Count</th>
+              <th>Location</th>
+              <th>AI Engine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cold email cadences</strong></td>
+              <td>23 sequences</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-email-cadences/tree/main/cadences" target="_blank">gtm-email-cadences/cadences/</a></td>
+              <td>MiniMax-Text-01</td>
+            </tr>
+            <tr>
+              <td><strong>Clay copy formulas</strong></td>
+              <td>6 IIFEs</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-clay-formula-library/tree/main/formulas" target="_blank">gtm-clay-formula-library/formulas/</a></td>
+              <td>Claygent (in-table)</td>
+            </tr>
+            <tr>
+              <td><strong>Warm outbound (engager)</strong></td>
+              <td>Dynamic per lead</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-founder-led-loop/blob/main/loop/03_outbound.py" target="_blank">gtm-founder-led-loop/loop/03_outbound.py</a></td>
+              <td>MiniMax-Text-01</td>
+            </tr>
+            <tr>
+              <td><strong>Single-lead email</strong></td>
+              <td>1 email per URL</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-cold-email-personalizer" target="_blank">gtm-cold-email-personalizer/</a></td>
+              <td>Claude API</td>
+            </tr>
+            <tr>
+              <td><strong>Lead scoring rubric</strong></td>
+              <td>0–100 composite</td>
+              <td><a href="https://github.com/rasulshaikh/gtm-ai-lead-scorer" target="_blank">gtm-ai-lead-scorer/</a></td>
+              <td>Claude Haiku</td>
+            </tr>
+            <tr>
+              <td><strong>Production Omnibound</strong></td>
+              <td>60-col Clay workflow</td>
+              <td>Clay table + Clayscript (intel → citation → copy → export)</td>
+              <td>Claygent Neon + purple-safety</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="copy-categories">
+        <div class="copy-cat">
+          <div class="copy-cat-label">Signal cadences (8)</div>
+          <div class="copy-cat-items">Series A · Series B/C · VP Sales hire · Hiring SDRs · Hiring RevOps · Tech stack change · Product launch · Expansion</div>
+        </div>
+        <div class="copy-cat">
+          <div class="copy-cat-label">Persona cadences (7)</div>
+          <div class="copy-cat-items">VP Sales · CRO · CMO · RevOps · Founder/CEO · SDR Manager · Head of Growth</div>
+        </div>
+        <div class="copy-cat">
+          <div class="copy-cat-label">Vertical + Stage (8)</div>
+          <div class="copy-cat-items">B2B SaaS · Fintech · Cybersecurity · Marketplace · Re-engagement · Breakup · Post-demo · Champion mobilizer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CASE STUDIES -->
   <section class="section section-dark" id="projects">
     <div class="container">
@@ -165,11 +303,11 @@
       <div class="stack-grid">
         <div class="stack-group">
           <div class="stack-label">AI / LLM</div>
-          <div class="stack-items">Claude Code · Anthropic API · OpenAI API · MCPs · n8n · Python</div>
+          <div class="stack-items">Claude Code · Anthropic API · OpenAI API · MiniMax (Text-01 + M1) · MCPs · Modal · Python</div>
         </div>
         <div class="stack-group">
           <div class="stack-label">Outbound</div>
-          <div class="stack-items">Clay · Smartlead · Instantly · Apollo · HeyReach · Trigify</div>
+          <div class="stack-items">Clay · Smartlead · Instantly · Apollo · HeyReach · Trigify · Lemlist · Zapmail</div>
         </div>
         <div class="stack-group">
           <div class="stack-label">CRM / RevOps</div>
@@ -181,12 +319,38 @@
         </div>
         <div class="stack-group">
           <div class="stack-label">Enrichment</div>
-          <div class="stack-items">Playwright · Firecrawl · PhantomBuster · Prospeo · Apify</div>
+          <div class="stack-items">Playwright · Firecrawl · PhantomBuster · Prospeo · Apify · Deepline · BuiltWith</div>
         </div>
         <div class="stack-group">
-          <div class="stack-label">Infra</div>
-          <div class="stack-items">Webhooks · REST APIs · Redis · SQL · Supabase</div>
+          <div class="stack-label">Automation / Infra</div>
+          <div class="stack-items">n8n · Webhooks · REST APIs · Redis · SQL · Dynadot · GitHub Actions</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section class="section section-downloads" id="downloads">
+    <div class="container center">
+      <div class="section-label">Exports</div>
+      <h2>Profile & Workflow Files</h2>
+      <p class="section-sub center-sub">Machine-readable JSON for integrations, PDF for sharing with hiring managers or clients.</p>
+      <div class="download-grid">
+        <a href="profile/gtm-profile.pdf" class="download-card" target="_blank">
+          <div class="download-icon">📄</div>
+          <div class="download-title">GTM Profile PDF</div>
+          <div class="download-desc">2-page summary: metrics, stack, workflow, copy map, repos</div>
+        </a>
+        <a href="profile/gtm-profile.json" class="download-card" target="_blank">
+          <div class="download-icon">{ }</div>
+          <div class="download-title">GTM Profile JSON</div>
+          <div class="download-desc">Full profile schema — stack, repos, case studies, copy library</div>
+        </a>
+        <a href="profile/workflow.json" class="download-card" target="_blank">
+          <div class="download-icon">⚙️</div>
+          <div class="download-title">Workflow JSON</div>
+          <div class="download-desc">6-phase pipeline + copy map with repo/script references</div>
+        </a>
       </div>
     </div>
   </section>

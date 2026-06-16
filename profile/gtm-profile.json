@@ -1,0 +1,233 @@
+{
+  "profile_version": "1.0",
+  "updated": "2026-06-16",
+  "name": "Rasul Shaikh",
+  "title": "AI GTM Engineer",
+  "location": "Pune, MH · Remote Worldwide",
+  "email": "shaikhrasul02@gmail.com",
+  "links": {
+    "portfolio": "https://rasulshaikh.github.io/gtm-portfolio/",
+    "github": "https://github.com/rasulshaikh",
+    "linkedin": "https://linkedin.com/in/rasulshaikh"
+  },
+  "headline": "Engineers the full revenue motion — signal architecture, multi-channel outbound, demand gen, and pipeline attribution — then ships the production Python, AI agents, and MCPs that make it run without human coordination.",
+  "metrics": {
+    "revenue_generated": "$550K+",
+    "pipeline_generated": "$3.5M+",
+    "deploy_time_improvement": "2 wks → 3 days",
+    "reply_rate": "1.5%+",
+    "qualification_time": "48h → 4h"
+  },
+  "tech_stack": {
+    "ai_llm": [
+      "Claude Code",
+      "Anthropic API",
+      "OpenAI API",
+      "MiniMax (Text-01 + M1)",
+      "MCPs",
+      "Modal",
+      "Python"
+    ],
+    "outbound": [
+      "Clay",
+      "Smartlead",
+      "Instantly",
+      "Apollo",
+      "HeyReach",
+      "Trigify",
+      "Lemlist",
+      "Zapmail"
+    ],
+    "enrichment": [
+      "Playwright",
+      "Firecrawl",
+      "PhantomBuster",
+      "Prospeo",
+      "Apify",
+      "Deepline",
+      "BuiltWith"
+    ],
+    "crm_revops": [
+      "HubSpot",
+      "Salesforce",
+      "Attio",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "demand_gen": [
+      "LinkedIn Ads",
+      "Google Ads API",
+      "SEMrush",
+      "Ahrefs",
+      "GA4"
+    ],
+    "automation_infra": [
+      "n8n",
+      "Webhooks",
+      "REST APIs",
+      "Redis",
+      "SQL",
+      "Dynadot"
+    ]
+  },
+  "workflow": {
+    "name": "Signal-to-Pipeline Engine",
+    "phases": [
+      {
+        "id": 1,
+        "name": "Signal Capture",
+        "tools": ["PhantomBuster", "LinkedIn", "Crunchbase", "Trigify", "HeyReach"],
+        "output": "engagers.csv / signal feed"
+      },
+      {
+        "id": 2,
+        "name": "Enrich & Qualify",
+        "tools": ["Apollo", "Clay", "Prospeo", "Firecrawl", "Deepline"],
+        "output": "enriched lead table"
+      },
+      {
+        "id": 3,
+        "name": "Score & Route",
+        "tools": ["gtm-ai-lead-scorer", "Clay ICP formulas", "founder-led-loop/02"],
+        "output": "Hot / Warm / Nurture tiers"
+      },
+      {
+        "id": 4,
+        "name": "Personalize Copy",
+        "tools": ["MiniMax Text-01", "gtm-cold-email-personalizer", "Clay formulas"],
+        "output": "hooks, subject lines, body variants"
+      },
+      {
+        "id": 5,
+        "name": "Sequence & Send",
+        "tools": ["gtm-email-cadences", "Smartlead", "Instantly", "HeyReach"],
+        "output": "live campaigns"
+      },
+      {
+        "id": 6,
+        "name": "Mine & Compound",
+        "tools": ["founder-led-loop/04", "call notes", "reply classifier"],
+        "output": "content angles → next signal cycle"
+      }
+    ]
+  },
+  "copy_library": {
+    "email_cadences": {
+      "repo": "gtm-email-cadences",
+      "url": "https://github.com/rasulshaikh/gtm-email-cadences",
+      "path": "cadences/",
+      "count": 23,
+      "categories": {
+        "signal": 8,
+        "persona": 7,
+        "vertical": 4,
+        "stage": 4
+      },
+      "personalization_engine": "MiniMax-Text-01",
+      "format": "YAML"
+    },
+    "clay_formulas": {
+      "repo": "gtm-clay-formula-library",
+      "url": "https://github.com/rasulshaikh/gtm-clay-formula-library",
+      "path": "formulas/",
+      "count": 6,
+      "files": [
+        "lead-scoring.js",
+        "icp-fit-grade.js",
+        "email-quality-check.js",
+        "company-categorization.js",
+        "personalization-hook.js",
+        "reply-intent-classifier.js"
+      ],
+      "format": "JavaScript IIFE"
+    },
+    "warm_outbound": {
+      "repo": "gtm-founder-led-loop",
+      "url": "https://github.com/rasulshaikh/gtm-founder-led-loop",
+      "path": "loop/03_outbound.py",
+      "personalization_engine": "MiniMax-Text-01",
+      "outputs": ["email subject+body", "LinkedIn DM"]
+    },
+    "single_lead_personalizer": {
+      "repo": "gtm-cold-email-personalizer",
+      "url": "https://github.com/rasulshaikh/gtm-cold-email-personalizer",
+      "personalization_engine": "Claude API + Playwright scrape",
+      "format": "Python CLI"
+    },
+    "lead_scoring": {
+      "repo": "gtm-ai-lead-scorer",
+      "url": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
+      "personalization_engine": "Claude Haiku",
+      "format": "Python CSV batch"
+    },
+    "production_omnibound": {
+      "repo": "local notes",
+      "path": "notes/sources/gtm/ + docs/superpowers/specs/",
+      "description": "60-column Clay workflow: intel → citation → copy → purple-safety validation → Smartlead/HeyReach export"
+    }
+  },
+  "open_source_repos": [
+    {
+      "name": "gtm-portfolio",
+      "url": "https://github.com/rasulshaikh/gtm-portfolio",
+      "description": "Portfolio site + case study PDFs + profile exports"
+    },
+    {
+      "name": "gtm-ai-lead-scorer",
+      "url": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
+      "description": "0-100 lead scoring via Claude API"
+    },
+    {
+      "name": "gtm-cold-email-personalizer",
+      "url": "https://github.com/rasulshaikh/gtm-cold-email-personalizer",
+      "description": "Playwright scrape + Claude personalized email"
+    },
+    {
+      "name": "gtm-clay-formula-library",
+      "url": "https://github.com/rasulshaikh/gtm-clay-formula-library",
+      "description": "Production Clay IIFE formulas"
+    },
+    {
+      "name": "gtm-email-cadences",
+      "url": "https://github.com/rasulshaikh/gtm-email-cadences",
+      "description": "23 signal-led cadences with MiniMax hooks"
+    },
+    {
+      "name": "gtm-founder-led-loop",
+      "url": "https://github.com/rasulshaikh/gtm-founder-led-loop",
+      "description": "Content → signal → score → warm outbound → mine loop"
+    }
+  ],
+  "case_studies": [
+    {
+      "company": "Omnibound AI",
+      "title": "Signal-to-Pipeline Engine",
+      "pdf": "case-studies/omnibound-signal-to-pipeline.pdf",
+      "metrics": {
+        "deploy_time": "2 wks → 3 days",
+        "reply_rate": "1.5%+",
+        "qualification": "48h → 4h"
+      }
+    },
+    {
+      "company": "RemoteState",
+      "title": "Greenfield GTM Engine",
+      "pdf": "case-studies/remotestate-gtm-engine.pdf",
+      "metrics": {
+        "arr_6mo": "$180K+",
+        "pipeline_efficiency": "40%",
+        "qualification_cut": "80%"
+      }
+    },
+    {
+      "company": "FalconWise Tech",
+      "title": "Zero-to-One MENA ABM",
+      "pdf": "case-studies/falconwise-mena-abm.pdf",
+      "metrics": {
+        "sqls_per_month": "10+",
+        "engagement_rate": "30%",
+        "partner_pipeline": "25%"
+      }
+    }
+  ]
+}
