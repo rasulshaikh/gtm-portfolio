@@ -1,40 +1,42 @@
 RASUL SHAIKH
-AI GTM Engineer | Full-Stack Outbound, RevOps, Demand Gen
+AI GTM Engineer | Full-Stack from Signal to Pipeline
 +91 7387244006 | shaikhrasul02@gmail.com | linkedin.com/in/rasulshaikh
-Pune, MH (remote worldwide) | rasulshaikh.github.io/gtm-portfolio | github.com/rasulshaikh
+Pune, MH | Remote worldwide | rasulshaikh.github.io/gtm-portfolio | github.com/rasulshaikh
 
 PROFESSIONAL SUMMARY
-AI GTM Engineer who builds the full revenue motion: outbound infrastructure, lead scoring, CRM automation, pipeline attribution, and the Python, Clay, and n8n systems that run it. 3+ years at B2B scale-ups; 5+ years across sales, RevOps, and GTM. At Omnibound AI: cut campaign deploy 2 weeks to under 3 days, unified 6 data sources into one scored lead layer.
-$550K+ Revenue | $3.5M+ Pipeline | 40% Efficiency | 1.5%+ Reply Rates | 27% SQL Conv
+AI GTM Engineer who engineers the full revenue motion: signal architecture, multi-channel outbound, demand gen, and pipeline attribution, then ships production Python, AI agents, and MCPs. 3+ years B2B scale-ups; 5+ years sales, RevOps, GTM. Omnibound AI: deploy 2 weeks to 3 days; unified 6 data sources into AI-scored signal layer.
+$550K+ Revenue | $3.5M+ Pipeline | 2 Wks to 3 Days Deploy | 1.5%+ Reply Rates | 48h to 4h Qualification
 
 CORE SKILLS
-GTM Engineering: outbound system design, ICP segmentation, signal prospecting, multi-channel orchestration, SDR enablement
-AI and Automation: Claude Code, OpenAI, Anthropic, Clay LLM pipelines, Python, Playwright, n8n, lead-scoring agents
-RevOps: HubSpot, Salesforce, Attio, CRM sync, attribution, Supabase, PostgreSQL, SQL
-Demand Gen: LinkedIn Ads, Google Ads, SEMrush, Ahrefs, GA4, content pipelines
+GTM Engineering: outbound system design, ICP segmentation, signal prospecting, A/B testing, multi-channel orchestration, SDR enablement
+AI and Agentic: Claude Code, Anthropic, OpenAI, MCPs, LLM pipelines, lead-scoring agents
+Engineering: Python, Playwright, asyncio, JavaScript, SQL, webhooks, REST APIs, scraping, data pipelines
+Demand Gen: HubSpot, Salesforce, Marketo, LinkedIn/Meta/Google Ads, SEMrush, Ahrefs, GA4, Looker
+PMM Partnership: positioning, messaging frameworks, cross-functional campaign execution
 
 WORK HISTORY
 
 Omnibound AI | AI GTM Engineer (Founder's Office) | Oct 2025 - Present | Remote
-- Cut deploy 2 weeks to under 3 days; 1.5%+ positive reply rates across 300+ mailboxes, 150+ domains
-- Unified 6 data sources into 0-100 lead score; qualification to outreach under 4 hours (was 48h+)
-- Built 7-stage Clay pipeline for stack-displacement targeting and personalized email at scale
-- Shipped deepline-CLI: Playwright enrichment 100+ domains/batch; HubSpot auto-push; sub-30-min vs 6h manual
-- Published 9 open-source GTM repos and portfolio with Context Engine and case studies
+- Deploy 2 weeks to under 3 days; 1.5%+ positive reply rates; 300+ mailboxes; Trigify, PhantomBuster, Claude Code, n8n, Supabase, Clay, HubSpot, Slack; 150+ domains
+- 7-stage Clay LLM pipeline for SEMrush/Ahrefs stack-displacement: role mapping, SEO intel, gap analysis, positioning, email generation
+- Python Playwright enrichment agent: 100+ domains/batch, 0-100 scoring, HubSpot auto-push; 6h manual to sub-30-min
+- PMM + Founder partnership: positioning and messaging to live campaigns same week
+- Unified 6 sources into signal layer; qualification to outreach under 4 hours (was 48h+); 4 Slack channel routing
 
 RemoteState | AI GTM Engineer, Founder's Office | Apr 2023 - Jun 2025 | Noida
-- $180K+ ARR in 6 months; 40% pipeline efficiency; 250+ domains at 95%+ deliverability
-- 1.5%+ reply rates; 18-39% SQL conversion; 12-20 SQLs per campaign
-- Cut qualification 48h to 9.6h with OpenAI scoring; scaled SDR team 1 to 4
+- 40% pipeline efficiency; $180K+ ARR in 6 months; Clay + Smartlead + CloudTalk + n8n; 250+ domains; 95%+ deliverability
+- 1.5%+ reply rates; 18-39% SQL conversion; 12-20 SQLs/campaign; OpenAI scoring 48h to 9.6h
+- 5-source enrichment; 45% targeting accuracy improvement; SDR team 1 to 4; 15h/week manual entry removed
 
 FalconWise Tech | Head of Growth (Contract) | Dec 2022 - Apr 2023 | Dubai
-- ABM from zero: 10+ SQLs/month, 30% engagement; 25% pipeline from partner channel
+- ABM from zero: 10+ SQLs/month, 30% engagement; 25% pipeline from partners
 
 CareerLabs Tech | Senior BDR | Jun 2022 - Dec 2022 | Bangalore
-- SQL conversion 16% to 27%; $25K+ enrollments
+- SQL 16% to 27%; $25K+ enrollments; 50+ demos at 65% show rate
 
 TOOLCHAIN
-Clay, HubSpot, Smartlead, Instantly, Apollo, HeyReach, Claude Code, OpenAI, n8n, Python, Playwright, Trigify, PhantomBuster, Prospeo, Supabase, PostgreSQL, SEMrush, Ahrefs, GA4, Slack
+Salesforce, HubSpot, Marketo, Clay, Apollo, Smartlead, Instantly, HeyReach, Trigify, PhantomBuster, Claude Code, OpenAI, n8n, Python, Playwright, Supabase, PostgreSQL, SEMrush, Ahrefs, GA4, Figma, Slack
 
-EDUCATION
+EDUCATION AND CERTIFICATIONS
 BCA Computer Science, Sabarmati University, 2020 | CSP Relevel 2021 | GTM Strategy Udemy 2022
+Active Community: CC Strategic AI, ColdIQ AI Agency OS, The GTM School

@@ -1,31 +1,36 @@
 # RASUL SHAIKH
 
-AI GTM Engineer | Full-Stack Outbound, RevOps, Demand Gen
+AI GTM Engineer | Full-Stack from Signal to Pipeline
 
 +91 7387244006 | shaikhrasul02@gmail.com | linkedin.com/in/rasulshaikh
-Pune, MH (remote worldwide) | Portfolio: rasulshaikh.github.io/gtm-portfolio | GitHub: github.com/rasulshaikh
+Pune, MH | Remote (worldwide) | Bengaluru / Indore / Singapore hybrid
+Portfolio: rasulshaikh.github.io/gtm-portfolio | GitHub: github.com/rasulshaikh
 
 ---
 
 ## PROFESSIONAL SUMMARY
 
-AI GTM Engineer who builds the full revenue motion: outbound infrastructure, lead scoring, CRM automation, pipeline attribution, and the Python, Clay, and n8n systems that run it. 3+ years at B2B scale-ups (AI search, IT services, cybersecurity); 5+ years across sales, RevOps, and GTM.
+AI GTM Engineer who engineers the full revenue motion - signal architecture, multi-channel outbound, demand gen, and pipeline attribution - then ships the production Python, AI agents, and MCPs that make it run without manual coordination. Bridges Marketing, Sales, Product, and CS through data infrastructure, not through meetings.
 
-At Omnibound AI: cut campaign deploy from 2 weeks to under 3 days, unified 6 data sources into one scored lead layer, and turned PMM positioning changes into live campaigns the same week.
+3+ years at B2B scale-ups (cybersecurity, IT services, AI search); 5+ years across sales, RevOps, and GTM total. At Omnibound AI: cut campaign deploy time 2 weeks to 3 days, unified 6 siloed data sources into a single AI-scored signal layer, and translated PMM positioning shifts into campaign execution the same week.
 
-$550K+ Revenue | $3.5M+ Pipeline | 40% Efficiency Gain | 1.5%+ Reply Rates | 27% SQL Conv (16 to 27%)
+$550K+ Revenue | $3.5M+ Pipeline | 2 Wks to 3 Days Deploy | 1.5%+ Reply Rates | 48h to 4h Qualification
 
 ---
 
 ## CORE SKILLS
 
-**GTM Engineering:** Outbound system design, ICP segmentation, signal-based prospecting, multi-channel orchestration (email, LinkedIn, phone), sequence testing, SDR enablement
+**GTM Engineering** - End-to-end outbound system design, ICP segmentation by title/industry/pain, signal-based prospecting, targeted list building, A/B testing of sequences/messaging/creative, outbound copywriting, nurture sequence design, event-led outreach, multi-channel orchestration (email + LinkedIn + phone), SDR team enablement and scaling.
 
-**AI and Automation:** Claude Code, OpenAI/Anthropic APIs, Clay LLM pipelines, Python (Playwright, asyncio), n8n/webhooks, custom lead-scoring agents
+**AI and Agentic Workflows** - Claude Code, Anthropic API, OpenAI API, MCPs, prompt and context engineering, multi-stage LLM pipelines, hyper-personalization at scale, strategic automation for content/email/SEO, custom lead-scoring rubrics and scoring agents, retry and branching patterns in agent flows.
 
-**RevOps and Data:** HubSpot, Salesforce, Attio, real-time CRM sync, attribution dashboards, Supabase, PostgreSQL, SQL
+**Engineering Depth** - Python (requests, BeautifulSoup, Scrapy, Playwright, asyncio), JavaScript, SQL, bash, async fan-out patterns, headless browser automation, REST APIs, webhooks, web scraping, data pipeline design, custom API integrations.
 
-**Demand Gen and SEO:** LinkedIn/Meta/Google Ads, SEMrush, Ahrefs, GA4, GSC, programmatic content pipelines
+**Funnel Architecture and Demand Gen** - Salesforce, HubSpot, Marketo, Outreach, Attio, LinkedIn Ads, Meta Ads, Google Ads API, GA4, GSC, Looker, SEMrush, Ahrefs, programmatic content and SEO pipelines, performance ad automation with conversion tracking wired to pipeline data.
+
+**Product Marketing Partnership** - Positioning, messaging frameworks, early-to-scale narrative shifts, trend analysis, cross-functional work with PMM, Product, Content, SEO, Founder; systems that turn content, insights, and product signals into campaign programs.
+
+**Cross-Functional Enablement** - Sales, Marketing, Product, Engineering, CS, Support, SEO, Content; real-time CRM sync via webhooks; attribution dashboards for pipeline ROI.
 
 ---
 
@@ -34,59 +39,71 @@ $550K+ Revenue | $3.5M+ Pipeline | 40% Efficiency Gain | 1.5%+ Reply Rates | 27%
 ### Omnibound AI | AI GTM Engineer (Founder's Office / GTM Strategy)
 October 2025 - Present | Remote (EOR: Native Teams)
 
-AI search marketing platform. Signal-led GTM infrastructure for B2B scale-ups.
+AI Search Marketing Platform - signal-led GTM infrastructure for B2B scale-ups.
 
-- Cut campaign deploy from 2 weeks to under 3 days; sustained 1.5%+ positive reply rates across 300+ mailboxes on 150+ sending domains (Trigify, Clay, Smartlead, HubSpot, n8n, Supabase)
-- Unified 6 data sources (product API, GA4, CRM, SEMrush, content, SEO) into one lead score (0-100) with auto-routing to 4 Slack channels; qualification to outreach in under 4 hours (was 48h+)
-- Built 7-stage Clay pipeline for stack-displacement targeting: SEO intel, gap analysis, personalized email per contact at scale
-- Shipped deepline-CLI agent: Python + Playwright enrichment across 100+ domains per batch; qualified accounts auto-pushed to HubSpot; replaced 6+ hrs/batch manual research with sub-30-min runs
-- Published 9 open-source GTM repos and live portfolio with Context Engine, list gates, and case study PDFs
+- Cut campaign deploy time 2 weeks to under 3 days and sustained 1.5%+ positive reply rates across 300+ mailboxes - signal-led outbound engine on Trigify + PhantomBuster, Claude Code, n8n, Supabase, Clay, HubSpot, Slack (150+ sending domains)
+- 7-stage LLM pipeline in Clay for SEMrush/Ahrefs stack-displacement targeting: role mapping, SEO intel, gap analysis, AI search gap analysis, strategic positioning, email generation. Per-contact personalized copy at scale
+- Replaced 6+ hrs/batch manual research with sub-30-min automated pass - Python (Playwright, asyncio) enrichment agent on Supabase: headless scraping across 100+ domains, Claude Code scoring rubric (composite 0-100 from firmographic + technographic + behavioral), qualified accounts auto-pushed to HubSpot with routing context
+- PMM + Founder partnership: worked with Product Marketing, Product, Content, SEO, and Founder on positioning, trend analysis, and scale-stage messaging - translated narrative shifts into campaign execution the same week
+- Cut lead qualification to outreach from 48h+ to under 4 hours - unified 6 siloed sources (Product API webhooks, GA4/Mixpanel, SEMrush API, Content, CRM, SEO) into one AI-scored signal layer (composite 0-100), auto-routing to 4 Slack channels by signal type
 
 ### RemoteState | AI GTM Engineer, Founder's Office
 April 2023 - June 2025 | Noida | IT Services ($12.2M ARR)
 
-Owned outbound engine from greenfield across Product, Marketing, Engineering, and CS.
+Owned the entire outbound engine from greenfield; cross-functional collaboration with Product, Marketing, Engineering, and CS.
 
-- Delivered $180K+ ARR growth in 6 months and 40% pipeline efficiency gain on Clay + Smartlead + n8n across 250+ sending domains at 95%+ deliverability
-- Sustained 1.5%+ reply rates and 18-39% SQL conversion on trigger workflows (12-20 SQLs per campaign)
-- Cut lead qualification 48h to 9.6h (80%) with custom OpenAI scoring rubric; webhook schema built with Product + Engineering for clean CRM ingestion
-- Scaled SDR team 1 to 4 (300% productivity) with automation-first playbooks; HubSpot sync removed 15h/week manual data entry
+- Delivered 40% pipeline efficiency gain and $180K+ ARR growth in 6 months - AI GTM engine on Clay + Smartlead + CloudTalk + n8n across 250+ sending domains (95%+ deliverability), 1.5%+ reply rates, 18-39% SQL conversion on trigger workflows (12-20 SQLs/campaign)
+- Custom OpenAI lead-scoring rubric cut qualification cycle from 48h to 9.6h (80% reduction); webhook schema designed with Product + Engineering for clean CRM ingestion
+- 5-source competitive-intel + market-research enrichment (Apollo + Persana + GPT + Clearbit + internal CRM) - 45% improvement in targeting accuracy. Enriched ICPs for US/EU enterprise IT-services outbound
+- Scaled SDR team 1 to 4 with automation-first playbooks (300% productivity gain). Real-time CRM sync via HubSpot + n8n webhooks eliminated 15h/week manual data entry
 
 ### FalconWise Tech | Head of Growth (Contract)
 December 2022 - April 2023 | Remote | Cybersecurity, Dubai
 
-Zero-to-one ABM engine for MENA enterprise cybersecurity.
+Zero-to-one ABM engine for the MENA cybersecurity market; partnered with Design, Content, and regional cybersecurity vendors.
 
-- Built ABM engine from zero on Apollo + Persana + GPT across 5 data sources; 10+ SQLs/month, 30% engagement, 45% targeting accuracy improvement
-- Co-marketing with 3 regional cybersecurity vendors drove 25% of pipeline from partner referrals
+- Built ABM engine from zero - Apollo + Persana + GPT workflows across 5 data sources, 10+ SQLs/month, 30% engagement rate, 45% improvement in targeting accuracy. Multi-channel campaigns targeting enterprise CISOs, CTOs, and Heads of Security across MENA
+- Co-marketing partnership channel with 3 regional cybersecurity vendors - 25% of total pipeline from partner referrals
 
 ### CareerLabs Tech | Senior BDR
 June 2022 - December 2022 | Bangalore | EdTech ($2.2M funding)
 
-- Rebuilt outbound on Reply + HubSpot: SQL conversion 16% to 27% (+69%), response time 4h to 2.4h, 50+ demos at 65% show rate
-- Closed $25K+ in course enrollments with improved onboarding across Product and CS
+Rebuilt outbound motion end-to-end; partnered with Marketing (UTM), Content (messaging), and Product (demo env).
+
+- Rebuilt outbound automation on Reply + HubSpot - SQL conversion 16% to 27% (+69% lift), response time 4h to 2.4h, 50+ remote demos at 65% show-up rate
+- $25K+ in course enrollments; improved onboarding via Product + CS collaboration on new-user journey
 
 ---
 
 ## TOOLCHAIN
 
-**GTM and Outbound:** Clay, HubSpot, Smartlead, Instantly, Apollo, Attio, Outreach, HeyReach
+**GTM Platforms:** Salesforce, HubSpot, Marketo, Outreach, Pipedrive, Attio, ClickUp
 
-**AI and Automation:** Claude Code, OpenAI API, Anthropic API, n8n, Python, Playwright, Supabase
+**Outbound and Enrichment:** Clay, Apollo, LinkedIn Sales Navigator, Firecrawl, Smartlead, Instantly, Lemlist, Findymail, Prospeo, BetterContact, ZeroBounce
 
-**Intent and Enrichment:** Trigify, PhantomBuster, Firecrawl, Prospeo, Findymail, Apify
+**Intent and Signals:** Trigify, PhantomBuster, CommonRoom, Bombora, RB2B, Sumble, Jungler
 
-**Data and Infra:** Webhooks, REST APIs, PostgreSQL, SQL, Redis
+**AI / LLM / Agentic:** Claude Code, Anthropic API, OpenAI API, MCPs, Openrouter, Groq, deepline CLI, n8n, Make, Zapier, Python, Apify, Playwright, asyncio
 
-**Demand Gen and SEO:** SEMrush, Ahrefs, GA4, GSC, Mixpanel, LinkedIn/Meta/Google Ads
+**Multi-Channel:** HeyReach, LinkedIn, CloudTalk
 
-**Collaboration:** Slack, Figma, ClickUp
+**Data Infra:** Supabase, PostgreSQL, Redis, Webhooks, REST APIs, SQL
+
+**Demand Gen and SEO:** LinkedIn Ads, Meta Ads, Google Ads API, SEMrush, Ahrefs, GA4, GSC, Mixpanel, Looker
+
+**Project Management:** Trello, Asana, Monday, ClickUp
+
+**Design Collab:** Figma (asset request automation via n8n)
 
 ---
 
-## EDUCATION AND CERTIFICATIONS
+## EDUCATION
 
 BCA, Computer Science | Sabarmati University, Ahmedabad | 2020
 
+## CERTIFICATIONS
+
 Certified Sales Professional (CSP) | Relevel | 2021
 Product Marketing and GTM Strategy | Dekker Fraser, Udemy | 2022
+
+**Active Community:** CC Strategic AI, AI Agency OS by ColdIQ, The GTM School, AI Automation (A-Z) - 152k members
