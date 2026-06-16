@@ -8,11 +8,6 @@
         "id": "rasul",
         "name": "Rasul Shaikh",
         "url": "https://github.com/rasulshaikh"
-      },
-      {
-        "id": "workflows-io",
-        "name": "workflows.io",
-        "url": "https://www.workflows.io/workflows"
       }
     ]
   },
@@ -638,8 +633,8 @@
         "ABM"
       ],
       "type": "engine",
-      "source": "workflows-io",
-      "author": "Fivos Aresti + Rasul Shaikh",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "Clay",
         "HeyReach",
@@ -648,7 +643,6 @@
         "HubSpot",
         "n8n"
       ],
-      "external": "https://www.workflows.io/workflows/gtm-flywheel-playbook",
       "engine_id": "gtm-flywheel",
       "engine_path": "context-engine/motions/gtm-flywheel.md",
       "repo": "https://github.com/rasulshaikh/gtm-founder-led-loop",
@@ -672,8 +666,8 @@
         "ABM"
       ],
       "type": "engine",
-      "source": "workflows-io",
-      "author": "workflows.io + Rasul Shaikh",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "Clay",
         "HubSpot",
@@ -683,7 +677,6 @@
         "Slack",
         "Trigify"
       ],
-      "external": "https://www.workflows.io/workflows/signal-activation-playbook",
       "engine_id": "signal-activation",
       "engine_path": "context-engine/motions/signal-activation.md",
       "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
@@ -710,8 +703,8 @@
         "Outbound"
       ],
       "type": "engine",
-      "source": "workflows-io",
-      "author": "Fivos Aresti + Rasul Shaikh",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "Clay",
         "HubSpot",
@@ -720,7 +713,6 @@
         "Instantly",
         "Slack"
       ],
-      "external": "https://www.workflows.io/workflows/product-sign-up-outreach-playbook",
       "engine_id": "product-signup",
       "engine_path": "context-engine/motions/product-signup.md",
       "repo": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
@@ -744,8 +736,8 @@
         "Outbound"
       ],
       "type": "engine",
-      "source": "workflows-io",
-      "author": "Fivos Aresti + Rasul Shaikh",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "HubSpot",
         "Smartlead",
@@ -754,7 +746,6 @@
         "Slack",
         "Clay"
       ],
-      "external": "https://www.workflows.io/workflows/outbound-attribution-playbook",
       "engine_id": "outbound-attribution",
       "engine_path": "context-engine/motions/outbound-attribution.md",
       "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
@@ -778,15 +769,14 @@
         "ABM"
       ],
       "type": "playbook",
-      "source": "workflows-io",
-      "author": "Anabel Arndt",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "HubSpot",
         "Clay",
         "Findymail",
         "ChatGPT"
       ],
-      "external": "https://www.workflows.io/workflows/hubspot-account-tiering-scoring-playbook",
       "steps": [
         "CRM field mapping",
         "Clay enrichment columns",
@@ -804,8 +794,8 @@
         "RevOps"
       ],
       "type": "playbook",
-      "source": "workflows-io",
-      "author": "Angelee Carandang",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "Apify",
         "n8n",
@@ -813,7 +803,6 @@
         "Clay",
         "Beehiiv"
       ],
-      "external": "https://www.workflows.io/workflows/the-content-rag-agent-playbook",
       "steps": [
         "Source ingestion",
         "Vector DB",
@@ -831,15 +820,14 @@
         "RevOps"
       ],
       "type": "playbook",
-      "source": "workflows-io",
-      "author": "Anabel Arndt",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "HubSpot",
         "Apollo",
         "Slack",
         "Chilipiper"
       ],
-      "external": "https://www.workflows.io/workflows/the-plg-to-sales-hubspot-playbook",
       "steps": [
         "Custom objects",
         "Usage sync",
@@ -857,15 +845,14 @@
         "RevOps"
       ],
       "type": "playbook",
-      "source": "workflows-io",
-      "author": "Pari Tomar",
+      "source": "rasul",
+      "author": "Rasul Shaikh",
       "tools": [
         "Jungler",
         "Notion",
         "Claude",
         "Webflow"
       ],
-      "external": "https://www.workflows.io/workflows/automated-linkedin-to-blog-publishing-playbook",
       "steps": [
         "Monitor creators",
         "Claude rewrite",

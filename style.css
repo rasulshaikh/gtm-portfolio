@@ -519,7 +519,7 @@ footer a:hover { color: var(--accent); }
 
 /* ── SKILLS GRID ── */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0; border: var(--bw) solid var(--border); }
-.skill-card { background: var(--bg); border-right: var(--bw) solid var(--border); border-bottom: var(--bw) solid var(--border); padding: 24px; display: flex; flex-direction: column; gap: 10px; transition: background 0.15s; }
+.skill-card { background: var(--bg); border-right: var(--bw) solid var(--border); border-bottom: var(--bw) solid var(--border); padding: 24px; display: flex; flex-direction: column; gap: 10px; transition: background 0.15s; text-decoration: none; cursor: pointer; }
 .skill-card:hover { background: var(--accent); }
 .skill-card:hover h3, .skill-card:hover p { color: #fff; }
 .skill-card:hover a { color: #fff; }
