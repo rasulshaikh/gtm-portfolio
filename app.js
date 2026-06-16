@@ -50,6 +50,7 @@
       Webflow: 'webflow.com', Jungler: 'jungler.ai', Freckle: 'freckle.io',
       ChatGPT: 'openai.com', Chilipiper: 'chilipiper.com', LeadMagic: 'leadmagic.io',
       Deepline: 'deepline.io', CSV: 'python.org', 'Sales Navigator': 'linkedin.com',
+      OutboundSync: 'outboundsync.com',
     };
     return map[name] || `${name.toLowerCase().replace(/\s+/g, '')}.com`;
   }

@@ -1,6 +1,6 @@
 # GTM Workflows - Rasul Shaikh
 
-Workflows.io-style playbook library plus **GTM Context Engine**: 3 fused motions (Signal Activation, GTM Flywheel, Product Sign-Up) routing workflows.io steps to ColdIQ skills and 9 production repos.
+Workflows.io-style playbook library plus **GTM Context Engine**: 4 fused motions (Signal Activation, GTM Flywheel, Product Sign-Up, Outbound Attribution) routing workflows.io steps to ColdIQ skills and 9 production repos.
 
 Live: https://rasulshaikh.github.io/gtm-portfolio
 

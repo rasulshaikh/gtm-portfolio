@@ -29,13 +29,17 @@
   function renderMotionCards() {
     const cards = document.getElementById('engine-motion-cards');
     if (!cards || !engine) return;
-    cards.innerHTML = engine.motions.map(m => `
+    cards.innerHTML = engine.motions.map(m => {
+      const n = (m.layers || m.steps || []).length;
+      const unit = m.layers ? 'layers' : 'steps';
+      return `
       <button type="button" class="engine-motion-card" data-motion="${m.id}">
-        <span class="engine-motion-num">${m.id === 'signal-activation' ? '11' : m.id === 'gtm-flywheel' ? '6' : '7'} steps</span>
+        <span class="engine-motion-num">${n} ${unit}</span>
         <h3>${m.title}</h3>
         <p>${m.description.slice(0, 120)}...</p>
         <span class="engine-motion-repo">${m.primary_repo}</span>
-      </button>`).join('');
+      </button>`;
+    }).join('');
     cards.querySelectorAll('.engine-motion-card').forEach(btn => {
       btn.addEventListener('click', () => {
         motionSelect.value = btn.dataset.motion;

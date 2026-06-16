@@ -1,8 +1,9 @@
 {
   "meta": {
-    "version": "1.0",
+    "version": "1.1",
     "name": "GTM Context Engine",
     "updated": "2026-06-16",
+    "engine_motions": 4,
     "attribution": {
       "workflows_io": "https://www.workflows.io/workflows",
       "coldiq": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills",
@@ -97,6 +98,34 @@
         "tier_2": {"channel": "Instantly", "copy_hook": "billboard", "sla_hours": 72},
         "tier_3": {"channel": "Instantly-nurture", "copy_hook": "billboard", "sla_hours": 168}
       }
+    },
+    {
+      "id": "outbound-attribution",
+      "title": "Outbound Attribution 2026",
+      "source": "workflows.io",
+      "source_url": "https://www.workflows.io/workflows/outbound-attribution-playbook",
+      "description": "Track silent conversions, log every Smartlead/HeyReach touch in HubSpot, tag outbound-influenced signups, and report full-funnel revenue impact by channel.",
+      "motion_file": "motions/outbound-attribution.md",
+      "primary_repo": "gtm-omnibound-clay-workflow",
+      "n8n": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json",
+      "coldiq_skills": ["multi-signal"],
+      "tools": ["HubSpot", "Smartlead", "HeyReach", "n8n", "Slack", "Clay"],
+      "steps": [
+        {"order": 1, "name": "Connect outreach to CRM", "workflows_io": "OutboundSync + Instantly/HeyReach to HubSpot", "implementation": "gtm-omnibound-clay-workflow/n8n/clay-push-pipeline.json", "coldiq": null},
+        {"order": 2, "name": "Core HubSpot properties", "workflows_io": "Outbound Campaign + Sign Up checkboxes", "implementation": "HubSpot custom properties via n8n", "coldiq": null},
+        {"order": 3, "name": "Auto-tag contacts", "workflows_io": "Contact + company outbound flag", "implementation": "Clay col + HubSpot upsert on send", "coldiq": null},
+        {"order": 4, "name": "Track signups", "workflows_io": "Outbound Influenced Signups in HubSpot", "implementation": "product-signup motion + Slack alert", "coldiq": "multi-signal"},
+        {"order": 5, "name": "Deal stages and reporting", "workflows_io": "Outbound Influenced to Closed Won dashboards", "implementation": "HubSpot deal stage automation", "coldiq": null},
+        {"order": 6, "name": "Hidden outbound impact", "workflows_io": "Silent visits, LinkedIn effect, delayed conversions", "implementation": "gtm-founder-led-loop/01_signal_capture.py", "coldiq": "content-engagement"},
+        {"order": 7, "name": "Measurable revenue engine", "workflows_io": "Full-funnel influence vs reply rate only", "implementation": "positive reply rate north star (1.5%+)", "coldiq": "multi-signal"}
+      ],
+      "attribution_properties": [
+        "outbound_campaign",
+        "sign_up",
+        "outbound_influenced_signup",
+        "outbound_channel",
+        "first_outbound_touch_date"
+      ]
     }
   ]
 }

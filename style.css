@@ -1170,7 +1170,7 @@ footer .container {
 .engine-section { background: var(--bg-alt); }
 .engine-motion-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 14px;
   margin-bottom: 24px;
 }

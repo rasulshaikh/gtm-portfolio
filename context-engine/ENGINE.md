@@ -22,6 +22,7 @@ CLI: `python3 context-engine/engine/route.py --motion signal-activation --signal
 | signal-activation | workflows.io Signal Activation | gtm-omnibound-clay-workflow | Buying signals from CRM, intent, content, hiring |
 | gtm-flywheel | workflows.io GTM Flywheel 2026 | gtm-founder-led-loop | Full-funnel: traffic to retention |
 | product-signup | workflows.io Product Sign-Up | gtm-ai-lead-scorer | PLG sign-ups, trial starts, demo requests |
+| outbound-attribution | workflows.io Outbound Attribution | gtm-omnibound-clay-workflow | CRM attribution, silent conversions, channel reporting |
 
 Read the motion file in `motions/` before executing.
 

@@ -30,11 +30,12 @@ python3 context-engine/engine/route.py --motion product-signup --signal trial-si
 | `engine/route.py` | CLI entrypoint |
 | `n8n/signal-activation-pipeline.json` | Import-ready n8n for signal motion |
 
-## Three fused motions
+## Four fused motions
 
 1. **Signal Activation** (workflows.io) - 11 steps from capture to Instantly/HeyReach/Slack
 2. **GTM Flywheel 2026** (workflows.io) - 6 layers: Traffic, Capture, Nurture, Conversion, Qualification, Retention
 3. **Product Sign-Up Outreach** (workflows.io) - 7 steps from Clay webhook to tiered outreach
+4. **Outbound Attribution 2026** (workflows.io) - 7 steps from CRM touch logging to full-funnel revenue reporting
 
 ## Attribution
 

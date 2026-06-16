@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.1",
-    "count": 32,
-    "engine_motions": 3,
+    "version": "1.2",
+    "count": 33,
+    "engine_motions": 4,
     "sources": [
       {"id": "rasul", "name": "Rasul Shaikh", "url": "https://github.com/rasulshaikh"},
       {"id": "coldiq", "name": "ColdIQ GTM Skills", "url": "https://github.com/sachacoldiq/ColdIQ-s-GTM-Skills"},
@@ -332,6 +332,22 @@
       "repo": "https://github.com/rasulshaikh/gtm-ai-lead-scorer",
       "n8n": "context-engine/n8n/signal-activation-pipeline.json",
       "steps": ["Clay webhook signup", "Enrich contact", "Classify email type", "Enrich company", "Lead scoring tiers", "HubSpot sync", "Tiered outreach"]
+    },
+    {
+      "id": "wio-outbound-attribution",
+      "title": "Outbound Attribution 2026 (Context Engine)",
+      "description": "Fused workflows.io attribution playbook: log every Smartlead/HeyReach touch in HubSpot, tag outbound-influenced signups, capture silent conversions, report Outbound to Signup to Revenue by channel.",
+      "categories": ["RevOps", "Outbound"],
+      "type": "engine",
+      "source": "workflows-io",
+      "author": "Fivos Aresti + Rasul Shaikh",
+      "tools": ["HubSpot", "Smartlead", "HeyReach", "n8n", "Slack", "Clay"],
+      "external": "https://www.workflows.io/workflows/outbound-attribution-playbook",
+      "engine_id": "outbound-attribution",
+      "engine_path": "context-engine/motions/outbound-attribution.md",
+      "repo": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow",
+      "n8n": "https://github.com/rasulshaikh/gtm-omnibound-clay-workflow/blob/main/n8n/clay-push-pipeline.json",
+      "steps": ["Connect outreach to CRM", "HubSpot Outbound Campaign + Sign Up props", "Auto-tag contacts and companies", "Track outbound-influenced signups", "Deal stages and dashboards", "Capture hidden impact", "Full-funnel revenue reporting"]
     },
     {
       "id": "wio-hubspot-tiering",
